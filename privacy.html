@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | iCircuit.in | Apple Device Repair Services</title>
+    <meta name="description" content="Privacy Policy for iCircuit.in - Learn how we protect your data and privacy while providing expert Apple device repair services in Bangalore.">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            gray: '#1D1D1F',
+                            lightGray: '#F5F5F7'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-down': 'fadeInDown 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'scroll-bounce': 'scrollBounce 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(0, 122, 255, 0.3)' },
+                            '100%': { boxShadow: '0 0 30px rgba(0, 122, 255, 0.6)' }
+                        },
+                        scrollBounce: {
+                            '0%, 100%': { transform: 'translateY(0px) scale(1)' },
+                            '50%': { transform: 'translateY(-5px) scale(1.05)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Global Poppins font */
+        * {
+            font-family: 'Poppins', sans-serif !important;
+        }
+        
+        /* FontAwesome fallback and icon fixes */
+        .fas, .fab, .far, .fal, .fad, .fa {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free" !important;
+            font-weight: 900;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+        
+        /* Ensure icons are visible */
+        i[class*="fa-"]::before {
+            font-family: "Font Awesome 6 Free" !important;
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+        
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(0, 122, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 122, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        /* Dark mode transitions */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .scroll-offset {
+            scroll-margin-top: 100px;
+        }
+
+        /* Enhanced Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+            box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
+            background: linear-gradient(135deg, #0056CC, #4A47D6);
+        }
+
+        .scroll-to-top:active {
+            transform: translateY(-1px) scale(1.05);
+        }
+
+        .scroll-to-top i {
+            color: white;
+            font-size: 24px;
+            animation: scroll-bounce 2s ease-in-out infinite;
+            position: relative;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .scroll-to-top:hover i {
+            animation-play-state: paused;
+            transform: translateY(-2px);
+        }
+
+        /* Dark mode scroll button */
+        .dark .scroll-to-top {
+            background: linear-gradient(135deg, #1E40AF, #7C3AED);
+            box-shadow: 0 8px 32px rgba(30, 64, 175, 0.3);
+        }
+
+        .dark .scroll-to-top:hover {
+            background: linear-gradient(135deg, #1E3A8A, #6D28D9);
+            box-shadow: 0 12px 40px rgba(30, 64, 175, 0.4);
+        }
+
+        /* Progress ring around button */
+        .scroll-progress {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: conic-gradient(#007AFF 0deg, transparent 0deg);
+            transition: all 0.3s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .scroll-progress::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: transparent;
+            z-index: 2;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .scroll-to-top i {
+                font-size: 20px;
+            }
+
+            .scroll-progress {
+                width: 54px;
+                height: 54px;
+                top: -2px;
+                left: -2px;
+            }
+
+            .scroll-progress::before {
+                width: 50px;
+                height: 50px;
+                top: 2px;
+                left: 2px;
+            }
+        }
+
+        /* Instagram Gradient Background */
+        .instagram-gradient {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        /* Enhanced hover effects for social icons */
+        .social-icon-hover:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Pulse animation for WhatsApp */
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .whatsapp-pulse:hover {
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        /* Privacy page specific styles */
+        .privacy-section {
+            scroll-margin-top: 120px;
+        }
+
+        .privacy-nav {
+            position: sticky;
+            top: 80px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            z-index: 40;
+        }
+
+        .dark .privacy-nav {
+            background: rgba(31, 41, 55, 0.95);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .privacy-nav-item {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .privacy-nav-item.active {
+            border-left-color: #007AFF;
+            background-color: rgba(0, 122, 255, 0.1);
+            color: #007AFF;
+        }
+
+        .privacy-nav-item:hover {
+            background-color: rgba(0, 122, 255, 0.05);
+            color: #007AFF;
+        }
+
+        .dark .privacy-nav-item:hover {
+            background-color: rgba(0, 122, 255, 0.15);
+        }
+
+        /* Content typography */
+        .privacy-content h2 {
+            color: #007AFF;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-content h3 {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .privacy-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .privacy-content ul, .privacy-content ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .privacy-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        /* Highlight boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.1), rgba(88, 86, 214, 0.1));
+            border: 1px solid rgba(0, 122, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .dark .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.15), rgba(88, 86, 214, 0.15));
+            border-color: rgba(0, 122, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 font-poppins">
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <div class="scroll-progress" id="scrollProgress"></div>
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    
+    <!-- Sticky Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect bg-white/90 dark:bg-gray-900/90 border-b border-gray-200 dark:border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3" data-aos="fade-right">
+                    <img src="images/logo.png" alt="iCircuit Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold gradient-text">iCircuit.in</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Home</a>
+                    <a href="index.html#services" class="nav-link hover:text-apple-blue transition-colors font-medium">Services</a>
+                    <a href="index.html#why-us" class="nav-link hover:text-apple-blue transition-colors font-medium">Why Us</a>
+                    <a href="index.html#how-it-works" class="nav-link hover:text-apple-blue transition-colors font-medium">Process</a>
+                    <a href="index.html#locations" class="nav-link hover:text-apple-blue transition-colors font-medium">Locations</a>
+                    <a href="terms.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Terms</a>
+                    <a href="aboutus.html" class="nav-link hover:text-apple-blue transition-colors font-medium">About Us</a>
+                    <a href="blog.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Blog</a>
+                    <a href="index.html#contact" class="nav-link hover:text-apple-blue transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & CTA -->
+                <div class="flex items-center space-x-4" data-aos="fade-left">
+                    <button id="darkModeToggle" class="relative w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:ring-offset-2 dark:focus:ring-offset-gray-900">
+                        <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center dark:translate-x-6">
+                            <i class="fas fa-sun text-xs text-yellow-500 dark:hidden"></i>
+                            <i class="fas fa-moon text-xs text-gray-600 hidden dark:inline"></i>
+                        </div>
+                    </button>
+                    <a href="tel:+919742090321" class="hidden sm:inline-flex items-center px-4 py-2 bg-apple-blue text-white rounded-lg hover:bg-blue-600 btn-glow font-medium">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                    <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-1">
+                <a href="index.html" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Home</a>
+                <a href="index.html#services" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Services</a>
+                <a href="index.html#why-us" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Why Us</a>
+                <a href="index.html#how-it-works" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Process</a>
+                <a href="index.html#locations" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Locations</a>
+                <a href="terms.html" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Terms</a>
+                <a href="aboutus.html" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">About Us</a>
+                <a href="blog.html" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Blog</a>
+                <a href="index.html#contact" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-16 min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-8" data-aos="fade-right" data-aos-duration="800">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                        <span class="block mb-4">Privacy</span>
+                        <span class="gradient-text block">Policy</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                        Your privacy and data security are our top priorities. Learn how we protect your personal information while providing exceptional Apple device repair services.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#overview" class="inline-flex items-center px-8 py-4 bg-apple-blue text-white rounded-xl hover:bg-blue-600 btn-glow font-semibold text-lg">
+                            <i class="fas fa-info-circle mr-3"></i>
+                            Read Policy
+                        </a>
+                        <a href="index.html#contact" class="inline-flex items-center px-8 py-4 border-2 border-apple-blue text-apple-blue rounded-xl hover:bg-apple-blue hover:text-white transition-all font-semibold text-lg">
+                            <i class="fas fa-envelope mr-3"></i>
+                            Contact Us
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-8 text-sm text-gray-600 dark:text-gray-400">
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-alt text-apple-blue mr-2"></i>
+                            <span class="font-medium">Last Updated: January 1, 2025</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-green-500 mr-2"></i>
+                            <span class="font-medium">5 min read</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-purple-500 mr-2"></i>
+                            <span class="font-medium">GDPR Compliant</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative" data-aos="fade-left" data-aos-duration="800">
+                    <div class="relative z-10 animate-float">
+                        <img src="https://www.apple.com/newsroom/images/values/privacy/apple_privacy-day_privacy-logo_01282021.jpg.landing-big_2x.jpg" 
+                             alt="Apple Privacy - Your data belongs to you" 
+                             class="rounded-2xl shadow-2xl w-full">
+                    </div>
+                    <!-- Floating elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-apple-blue rounded-full opacity-20 animate-bounce-slow"></div>
+                    <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-purple-500 rounded-full opacity-10 animate-pulse-slow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Content -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 gap-12">
+                <!-- Sticky Navigation -->
+                <div class="lg:col-span-1">
+                    <div class="privacy-nav p-6" data-aos="fade-right">
+                        <h3 class="text-lg font-bold mb-4 text-gray-900 dark:text-white">Quick Navigation</h3>
+                        <nav class="space-y-2">
+                            <a href="#overview" class="privacy-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Overview
+                            </a>
+                            <a href="#information-we-collect" class="privacy-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-database mr-2"></i>
+                                Information We Collect
+                            </a>
+                            <a href="#how-we-use" class="privacy-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-cogs mr-2"></i>
+                                How We Use Information
+                            </a>
+                            <a href="#data-sharing" class="privacy-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-share-alt mr-2"></i>
+                                Data Sharing
+                            </a>
+                            <a href="#data-security" class="privacy-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-lock mr-2"></i>
+                                Data Security
+                            </a>
+                            <a href="#your-rights" class="privacy-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-user-shield mr-2"></i>
+                                Your Rights
+                            </a>
+                            <a href="#cookies" class="privacy-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-cookie-bite mr-2"></i>
+                                Cookies & Tracking
+                            </a>
+                            <a href="#contact-privacy" class="privacy-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-envelope mr-2"></i>
+                                Contact Us
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="lg:col-span-3 privacy-content" data-aos="fade-left">
+                    <!-- Overview -->
+                    <section id="overview" class="privacy-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-info-circle text-apple-blue mr-4"></i>
+                                Privacy Policy Overview
+                            </h2>
+                            
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-shield-check text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Our Commitment to Your Privacy</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            At iCircuit.in, we are committed to protecting your privacy and ensuring the security of your personal information. This privacy policy explains how we collect, use, protect, and handle your data when you use our Apple device repair services.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                This Privacy Policy applies to all services provided by iCircuit.in, including our website, repair services, customer support, and any related communications. By using our services, you agree to the collection and use of information in accordance with this policy.
+                            </p>
+
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                We understand that your Apple devices contain sensitive personal and professional data. Our privacy practices are designed to ensure that your information remains secure throughout the repair process and beyond.
+                            </p>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Key Principles</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Transparency:</strong> We clearly explain what data we collect and why</li>
+                                <li><strong>Minimal Collection:</strong> We only collect data necessary for our services</li>
+                                <li><strong>Strong Security:</strong> We use industry-standard security measures</li>
+                                <li><strong>User Control:</strong> You have control over your personal information</li>
+                                <li><strong>No Sale:</strong> We never sell your personal data to third parties</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Information We Collect -->
+                    <section id="information-we-collect" class="privacy-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-database text-apple-blue mr-4"></i>
+                                Information We Collect
+                            </h2>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Personal Information</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                When you use our repair services, we collect the following personal information:
+                            </p>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Contact Information:</strong> Name, phone number, email address, physical address</li>
+                                <li><strong>Device Information:</strong> Device model, serial number, IMEI, storage capacity, software version</li>
+                                <li><strong>Repair Details:</strong> Description of issues, repair history, warranty information</li>
+                                <li><strong>Payment Information:</strong> Billing address, payment method details (processed securely by our payment processors)</li>
+                                <li><strong>Communication Records:</strong> Support conversations, service requests, feedback</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Device Data</h3>
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-mobile-alt text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Your Device Data Protection</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            We may need to access your device for diagnostic and repair purposes. We have strict protocols to protect your personal data during this process.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Diagnostic Data:</strong> System logs, error reports, performance metrics necessary for repair</li>
+                                <li><strong>Backup Data:</strong> Temporary backups created for data protection during repair (automatically deleted after completion)</li>
+                                <li><strong>Access Logs:</strong> Records of when and how your device was accessed during repair</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Website & Service Data</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Usage Information:</strong> Pages visited, time spent, click patterns</li>
+                                <li><strong>Technical Data:</strong> IP address, browser type, device type, operating system</li>
+                                <li><strong>Location Data:</strong> General location for service area determination</li>
+                                <li><strong>Cookies & Tracking:</strong> Website functionality and analytics data</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- How We Use Information -->
+                    <section id="how-we-use" class="privacy-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-cogs text-apple-blue mr-4"></i>
+                                How We Use Your Information
+                            </h2>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Service Delivery</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li>Diagnose and repair your Apple devices</li>
+                                <li>Process payments and manage billing</li>
+                                <li>Schedule appointments and coordinate pickup/delivery</li>
+                                <li>Provide customer support and technical assistance</li>
+                                <li>Maintain repair records and warranty information</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Communication</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li>Send repair status updates and notifications</li>
+                                <li>Respond to inquiries and support requests</li>
+                                <li>Provide important service announcements</li>
+                                <li>Send appointment reminders and confirmations</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Service Improvement</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li>Analyze service performance and quality</li>
+                                <li>Improve our repair processes and techniques</li>
+                                <li>Develop new services and features</li>
+                                <li>Train our technical staff</li>
+                            </ul>
+
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-ban text-red-500 mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">What We DON'T Do</h4>
+                                        <ul class="text-gray-600 dark:text-gray-300 font-medium list-disc ml-4">
+                                            <li>We never access your personal files, photos, or private data</li>
+                                            <li>We don't sell or rent your information to third parties</li>
+                                            <li>We don't use your data for advertising purposes</li>
+                                            <li>We don't share data with unauthorized parties</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Data Sharing -->
+                    <section id="data-sharing" class="privacy-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-share-alt text-apple-blue mr-4"></i>
+                                Data Sharing & Disclosure
+                            </h2>
+
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                We value your privacy and limit data sharing to only essential business purposes. We may share your information in the following circumstances:
+                            </p>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Service Partners</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Payment Processors:</strong> Secure payment processing through verified partners</li>
+                                <li><strong>Parts Suppliers:</strong> Device information for sourcing genuine Apple parts</li>
+                                <li><strong>Delivery Services:</strong> Contact information for pickup and delivery coordination</li>
+                                <li><strong>Technical Support:</strong> Specialized technicians for complex repairs</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Legal Requirements</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li>Comply with applicable laws and regulations</li>
+                                <li>Respond to legal process and government requests</li>
+                                <li>Protect our rights and property</li>
+                                <li>Ensure safety and security of our services</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Business Transfers</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the business transaction. We will notify you of any such change and ensure continued protection of your data.
+                            </p>
+
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-handshake text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Partner Agreements</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            All our service partners are required to sign strict confidentiality agreements and maintain the same high standards of data protection that we do.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Data Security -->
+                    <section id="data-security" class="privacy-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-lock text-apple-blue mr-4"></i>
+                                Data Security & Protection
+                            </h2>
+
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                We implement comprehensive security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.
+                            </p>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Technical Safeguards</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Encryption:</strong> All data transmissions and storage use industry-standard encryption</li>
+                                <li><strong>Access Controls:</strong> Multi-factor authentication and role-based access limitations</li>
+                                <li><strong>Network Security:</strong> Firewalls, intrusion detection, and secure network protocols</li>
+                                <li><strong>Regular Updates:</strong> Continuous security patches and system updates</li>
+                                <li><strong>Data Backup:</strong> Secure, encrypted backups with geographic redundancy</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Physical Security</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li>Secured facility with restricted access controls</li>
+                                <li>24/7 surveillance and monitoring systems</li>
+                                <li>Secure device storage areas with individual lockers</li>
+                                <li>Clean desk policy and secure waste disposal</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Operational Security</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li>Staff background checks and confidentiality agreements</li>
+                                <li>Regular security training and awareness programs</li>
+                                <li>Incident response and breach notification procedures</li>
+                                <li>Third-party security audits and assessments</li>
+                            </ul>
+
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-mobile-alt text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Device Security During Repair</h4>
+                                        <ul class="text-gray-600 dark:text-gray-300 font-medium list-disc ml-4">
+                                            <li>Devices are kept in secure, individual lockers</li>
+                                            <li>Access is logged and monitored throughout the repair process</li>
+                                            <li>Data access is limited to diagnostic purposes only</li>
+                                            <li>All temporary files and backups are securely deleted</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Your Rights -->
+                    <section id="your-rights" class="privacy-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-user-shield text-apple-blue mr-4"></i>
+                                Your Privacy Rights
+                            </h2>
+
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                You have important rights regarding your personal information. We are committed to helping you exercise these rights easily and effectively.
+                            </p>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Access & Transparency</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Right to Access:</strong> Request a copy of all personal data we hold about you</li>
+                                <li><strong>Right to Information:</strong> Understand how your data is collected, used, and shared</li>
+                                <li><strong>Data Portability:</strong> Receive your data in a machine-readable format</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Control & Correction</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Right to Rectification:</strong> Correct inaccurate or incomplete information</li>
+                                <li><strong>Right to Update:</strong> Modify your contact details and preferences</li>
+                                <li><strong>Right to Restriction:</strong> Limit how we process your data</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Deletion & Withdrawal</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Right to Erasure:</strong> Request deletion of your personal data</li>
+                                <li><strong>Right to Object:</strong> Opt-out of certain data processing activities</li>
+                                <li><strong>Withdrawal of Consent:</strong> Revoke previously given consent</li>
+                            </ul>
+
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-clock text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Response Timeline</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            We respond to privacy requests within 30 days. For complex requests, we may extend this to 60 days with notification. We'll verify your identity to ensure security.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">How to Exercise Your Rights</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                To exercise any of these rights, contact us using the information in the "Contact Us" section below. Please include:
+                            </p>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li>Your full name and contact information</li>
+                                <li>Specific right you wish to exercise</li>
+                                <li>Details of your request</li>
+                                <li>Proof of identity (for security purposes)</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Cookies & Tracking -->
+                    <section id="cookies" class="privacy-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-cookie-bite text-apple-blue mr-4"></i>
+                                Cookies & Tracking Technologies
+                            </h2>
+
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                We use cookies and similar technologies to enhance your experience on our website and provide personalized services.
+                            </p>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Types of Cookies We Use</h3>
+
+                            <div class="space-y-4">
+                                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <i class="fas fa-cog text-blue-500 mr-2"></i>
+                                        Essential Cookies
+                                    </h4>
+                                    <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                        Required for basic website functionality, security, and service delivery. These cannot be disabled.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <i class="fas fa-chart-line text-green-500 mr-2"></i>
+                                        Analytics Cookies
+                                    </h4>
+                                    <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                        Help us understand how visitors use our website to improve functionality and user experience.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <i class="fas fa-user-cog text-purple-500 mr-2"></i>
+                                        Preference Cookies
+                                    </h4>
+                                    <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                        Remember your settings and preferences, such as language and theme choices.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Managing Cookies</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                You can control cookies through your browser settings. However, disabling certain cookies may affect website functionality. Most browsers allow you to:
+                            </p>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li>View and delete cookies</li>
+                                <li>Block cookies from specific sites</li>
+                                <li>Block third-party cookies</li>
+                                <li>Clear all cookies when closing the browser</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Third-Party Services</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                We use trusted third-party services that may set their own cookies:
+                            </p>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Google Analytics:</strong> Website usage analytics (anonymized data)</li>
+                                <li><strong>Payment Processors:</strong> Secure payment processing</li>
+                                <li><strong>Customer Support:</strong> Live chat and support systems</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Contact Privacy -->
+                    <section id="contact-privacy" class="privacy-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-envelope text-apple-blue mr-4"></i>
+                                Contact Us About Privacy
+                            </h2>
+
+                            <p class="text-gray-700 dark:text-gray-300 font-medium mb-6">
+                                If you have any questions about this Privacy Policy, want to exercise your privacy rights, or have concerns about how we handle your personal information, please contact us:
+                            </p>
+
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Contact Information</h3>
+                                    <div class="space-y-4">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-envelope text-apple-blue mr-3"></i>
+                                            <div>
+                                                <p class="font-semibold">Email</p>
+                                                <a href="mailto:privacy@icircuit.in" class="text-apple-blue hover:underline font-medium">privacy@icircuit.in</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <i class="fas fa-phone text-apple-blue mr-3"></i>
+                                            <div>
+                                                <p class="font-semibold">Phone</p>
+                                                <a href="tel:+919742090321" class="text-apple-blue hover:underline font-medium">+91 97420 90321</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex items-start">
+                                            <i class="fas fa-map-marker-alt text-apple-blue mr-3 mt-1"></i>
+                                            <div>
+                                                <p class="font-semibold">Address</p>
+                                                <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                                    104/A, Shop No. F8, 1st Floor,<br>
+                                                    Anjanadri Krest Complex,<br>
+                                                    Above SBI ATM, Near Govt School,<br>
+                                                    Munnekollala, Bengaluru-560037
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6">
+                                    <h4 class="font-bold text-lg mb-4 flex items-center">
+                                        <i class="fas fa-clock text-apple-blue mr-2"></i>
+                                        Response Commitment
+                                    </h4>
+                                    <ul class="space-y-3 text-gray-600 dark:text-gray-300 font-medium">
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Privacy inquiries: 24-48 hours
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Data requests: 30 days maximum
+                                        </li>
+                                        <li class="flex items-center">
+                                            <i class="fas fa-check text-green-500 mr-2"></i>
+                                            Urgent concerns: Same day response
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="highlight-box mt-8">
+                                <div class="flex items-start">
+                                    <i class="fas fa-info-circle text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Policy Updates</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. We will notify you of any material changes via email or prominent website notice at least 30 days before the changes take effect.
+                                        </p>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium mt-2">
+                                            <strong>Last Updated:</strong> January 1, 2025 | <strong>Effective Date:</strong> January 1, 2025
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-gray-900 text-white font-poppins">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Footer Content -->
+            <div class="py-16 grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+                <!-- Brand Section -->
+                <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="images/logo.png" alt="iCircuit Logo" class="h-10 w-auto">
+                        <span class="text-2xl font-bold">iCircuit.in</span>
+                    </div>
+                    <p class="text-gray-400 mb-8 max-w-md leading-relaxed font-medium">
+                        Bangalore's most trusted Apple repair service. We specialize in iPhone, MacBook, iPad, iMac, and Apple Watch repairs with genuine parts and certified technicians.
+                    </p>
+                    
+                    <!-- Quick Contact -->
+                    <div class="space-y-4 mb-8">
+                        <a href="tel:+919742090321" class="flex items-center text-white hover:text-apple-blue transition-colors group">
+                            <div class="w-10 h-10 bg-apple-blue rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">+91 97420 90321</p>
+                                <p class="text-gray-400 text-sm">Call for instant support</p>
+                            </div>
+                        </a>
+                        
+                        <div class="flex items-center text-gray-400">
+                            <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Mon-Sun: 10AM - 8PM</p>
+                                <p class="text-sm">Always here when you need us</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Social Links -->
+                    <div class="flex space-x-4">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/share/1SG5wiX1b8/?mibextid=qi2Omg" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #1877F2;"
+                           title="Follow us on Facebook">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/icircuit.in/" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg instagram-gradient"
+                           title="Follow us on Instagram">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/vinod-kumar-554932345/" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #0A66C2;"
+                           title="Connect on LinkedIn">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/9742090321" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg whatsapp-pulse"
+                           style="background-color: #25D366;"
+                           title="Chat on WhatsApp">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.89 3.488"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Our Services
+                        </a></li>
+                        <li><a href="index.html#why-us" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Why Choose Us
+                        </a></li>
+                        <li><a href="index.html#how-it-works" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Repair Process
+                        </a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            About Us
+                        </a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Our Blog
+                        </a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Book Repair
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-6 text-white">Repair Services</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-mobile-alt text-apple-blue mr-3"></i>
+                            iPhone Screen & Battery
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-laptop text-apple-blue mr-3"></i>
+                            MacBook Logic Board
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-tablet-alt text-apple-blue mr-3"></i>
+                            iPad Display Repair
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-desktop text-apple-blue mr-3"></i>
+                            iMac Upgrades
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-stopwatch text-apple-blue mr-3"></i>
+                            Apple Watch Service
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 py-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center">
+                    <div class="text-center lg:text-left mb-4 lg:mb-0">
+                        <p class="text-gray-400 text-sm font-medium">
+                            &copy; 2025 iCircuit.in - All Rights Reserved
+                        </p>
+                        <p class="text-gray-500 text-xs mt-1">
+                            Apple and the Apple logo are trademarks of Apple Inc. | Independent repair service
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center space-x-6 text-sm">
+                        <a href="privacy.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium">Privacy Policy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium">Terms of Service</a>
+                        <div class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-shield-check text-green-500 mr-2"></i>
+                            SSL Secured
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.classList.add('dark');
+        }
+
+        darkModeToggle.addEventListener('click', function() {
+            html.classList.toggle('dark');
+            
+            // Save theme preference
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Enhanced Scroll to Top Button Functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        const scrollProgress = document.getElementById('scrollProgress');
+
+        // Show/hide scroll to top button and update progress
+        function updateScrollButton() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+            // Show button after scrolling 300px
+            if (scrollTop > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+
+            // Update progress ring
+            scrollProgress.style.background = `conic-gradient(#007AFF ${scrollPercentage * 3.6}deg, transparent 0deg)`;
+        }
+
+        // Scroll to top functionality
+        scrollToTopBtn.addEventListener('click', function() {
+            // Add click animation
+            scrollToTopBtn.style.transform = 'translateY(-1px) scale(0.95)';
+            
+            // Smooth scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // Reset button animation
+            setTimeout(() => {
+                scrollToTopBtn.style.transform = '';
+            }, 150);
+        });
+
+        // Listen for scroll events
+        window.addEventListener('scroll', updateScrollButton);
+
+        // Initial call
+        updateScrollButton();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Privacy navigation active state and smooth scrolling
+        const privacyNavItems = document.querySelectorAll('.privacy-nav-item');
+        const privacySections = document.querySelectorAll('.privacy-section');
+
+        // Function to update active navigation item
+        function updateActiveNavItem() {
+            const scrollPosition = window.pageYOffset;
+
+            privacySections.forEach((section, index) => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    // Remove active class from all nav items
+                    privacyNavItems.forEach(item => item.classList.remove('active'));
+                    // Add active class to current nav item
+                    if (privacyNavItems[index]) {
+                        privacyNavItems[index].classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // Smooth scroll for privacy navigation
+        privacyNavItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    // Calculate offset for sticky header
+                    const headerHeight = 100;
+                    const elementPosition = targetSection.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: elementPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Listen for scroll to update active navigation item
+        window.addEventListener('scroll', updateActiveNavItem);
+
+        // Initial call to set active nav item
+        updateActiveNavItem();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-md');
+            } else {
+                header.classList.remove('backdrop-blur-md');
+            }
+        });
+
+        // FontAwesome fallback check
+        function checkFontAwesome() {
+            const testIcon = document.createElement('i');
+            testIcon.className = 'fas fa-home';
+            testIcon.style.position = 'absolute';
+            testIcon.style.left = '-9999px';
+            document.body.appendChild(testIcon);
+            
+            const computedStyle = window.getComputedStyle(testIcon, ':before');
+            const isLoaded = computedStyle.getPropertyValue('font-family').includes('Font Awesome');
+            
+            document.body.removeChild(testIcon);
+            
+            if (!isLoaded) {
+                console.log('FontAwesome not loaded, trying alternative CDN...');
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://use.fontawesome.com/releases/v6.4.0/css/all.css';
+                document.head.appendChild(link);
+            }
+        }
+
+        // Check FontAwesome after page load
+        window.addEventListener('load', function() {
+            setTimeout(checkFontAwesome, 1000);
+        });
+
+        // Additional scroll to top button enhancements
+        scrollToTopBtn.addEventListener('mouseenter', function() {
+            this.style.animation = 'none';
+        });
+
+        scrollToTopBtn.addEventListener('mouseleave', function() {
+            this.style.animation = '';
+        });
+
+        // Keyboard accessibility for scroll to top
+        scrollToTopBtn.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+
+        // Add tabindex for keyboard navigation
+        scrollToTopBtn.setAttribute('tabindex', '0');
+        scrollToTopBtn.setAttribute('aria-label', 'Scroll to top');
+        scrollToTopBtn.setAttribute('title', 'Scroll to top');
+    </script>
+</body>
+</html>

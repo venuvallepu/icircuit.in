@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OEM vs. Aftermarket iPhone Screens: Complete Comparison Guide - iCircuit Blog</title>
+    <meta name="description" content="Choosing between OEM and aftermarket iPhone screens? Learn the differences in quality, performance, and price to make the best decision for your iPhone repair.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Multiple FontAwesome CDN sources for reliability -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Backup FontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
+    
+    <!-- Alternative CDN as fallback -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            gray: '#1D1D1F',
+                            lightGray: '#F5F5F7'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-down': 'fadeInDown 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-poppins bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up text-white text-lg"></i>
+    </div>
+    
+    <!-- Sticky Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect bg-white/90 dark:bg-gray-900/90 border-b border-gray-200 dark:border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3" data-aos="fade-right">
+                    <img src="images/logo.png" alt="iCircuit Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold gradient-text">iCircuit.in</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Home</a>
+                    <a href="index.html#services" class="nav-link hover:text-apple-blue transition-colors font-medium">Services</a>
+                    
+                    <a href="index.html#testimonials" class="nav-link hover:text-apple-blue transition-colors font-medium">Reviews</a>
+                    <a href="aboutus.html" class="nav-link hover:text-apple-blue transition-colors font-medium">About Us</a>
+                    <a href="blog.html" class="nav-link text-apple-blue transition-colors font-medium">Blog</a>
+                    <a href="index.html#contact" class="nav-link hover:text-apple-blue transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & CTA -->
+                <div class="flex items-center space-x-4" data-aos="fade-left">
+                    <button id="darkModeToggle" class="relative w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:ring-offset-2 dark:focus:ring-offset-gray-900">
+                        <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center dark:translate-x-6">
+                            <i class="fas fa-sun text-xs text-yellow-500 dark:hidden"></i>
+                            <i class="fas fa-moon text-xs text-gray-600 hidden dark:inline"></i>
+                        </div>
+                    </button>
+                    <a href="tel:+919742090321" class="hidden sm:inline-flex items-center px-4 py-2 bg-apple-blue text-white rounded-lg hover:bg-blue-600 btn-glow font-medium">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                    <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-1">
+                <a href="index.html" class="mobile-nav-item">Home</a>
+                <a href="index.html#services" class="mobile-nav-item">Services</a>
+                <a href="index.html#why-us" class="mobile-nav-item">Why Us</a>
+                <a href="index.html#how-it-works" class="mobile-nav-item">Process</a>
+                <a href="index.html#locations" class="mobile-nav-item">Locations</a>
+                <a href="index.html#testimonials" class="mobile-nav-item">Reviews</a>
+                <a href="aboutus.html" class="mobile-nav-item">About Us</a>
+                <a href="blog.html" class="mobile-nav-item bg-apple-blue text-white">Blog</a>
+                <a href="index.html#contact" class="mobile-nav-item">Contact</a>
+                <a href="tel:+919742090321" class="mobile-nav-item bg-green-500 text-white text-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Mobile Optimized -->
+    <section class="pt-16 min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Content -->
+                <div class="space-y-6 lg:space-y-8 text-center lg:text-left" data-aos="fade-right" data-aos-duration="800">
+                    <div class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-apple-blue/10 dark:bg-apple-blue/20 rounded-full text-apple-blue font-semibold text-xs sm:text-sm mb-4 lg:mb-6">
+                        <i class="fas fa-mobile-alt mr-2"></i>
+                        iPhone Screen Repair
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                        <span class="block mb-2 lg:mb-4">OEM vs. Aftermarket</span>
+                        <span class="gradient-text block">iPhone Screens</span>
+                    </h1>
+                    <p class="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                        Not all iPhone screens are created equal. Learn the crucial differences between OEM and aftermarket displays to make the best choice for your repair.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#screen-comparison" class="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-semibold text-sm sm:text-base lg:text-lg transition-colors shadow-lg">
+                            <i class="fas fa-search mr-2 sm:mr-3"></i>
+                            Compare Options
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-apple-blue text-apple-blue rounded-xl hover:bg-apple-blue hover:text-white transition-all font-semibold text-sm sm:text-base lg:text-lg">
+                            <i class="fas fa-tools mr-2 sm:mr-3"></i>
+                            Get Expert Repair
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative order-first lg:order-last" data-aos="fade-left" data-aos-duration="800">
+                    <div class="relative z-10 animate-float">
+                        <img src="https://www.diyfixtool.com/cdn/shop/articles/3-ultimate-solutions-to-your-cracked-mobile-phone-display-screen-china-phonefix.webp?v=1696754577" 
+                             alt="iPhone screen replacement comparison - OEM vs aftermarket displays" 
+                             class="rounded-2xl shadow-2xl w-full">
+                    </div>
+                    <!-- Floating elements -->
+                    <div class="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-24 sm:h-24 bg-apple-blue rounded-full opacity-20 animate-bounce"></div>
+                    <div class="absolute -bottom-4 -left-4 sm:-bottom-8 sm:-left-8 w-20 h-20 sm:w-32 sm:h-32 bg-blue-500 rounded-full opacity-10 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section id="article-content" class="py-8 sm:py-12 lg:py-20 bg-white dark:bg-gray-900 scroll-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Mobile Author Card -->
+            <div class="lg:hidden mobile-sidebar-section mb-6" data-aos="fade-up">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700">
+                    <div class="text-center">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-apple-blue to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                            <i class="fas fa-mobile-alt text-2xl sm:text-3xl text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-lg sm:text-xl mb-2 text-gray-900 dark:text-white">iPhone Screen Expert</h3>
+                        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-3 sm:mb-4">Certified technician with 8+ years experience in iPhone display repairs</p>
+                        <div class="flex items-center justify-center text-yellow-500 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">5.0 Rating</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Published: June 08, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <!-- Table of Contents - Mobile -->
+                    <div class="lg:hidden mb-8" data-aos="fade-up">
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-4 sm:p-6 border border-blue-200 dark:border-blue-800">
+                            <h3 class="font-bold text-lg sm:text-xl mb-4 text-blue-900 dark:text-blue-100 flex items-center">
+                                <i class="fas fa-list-ul mr-3"></i>
+                                Quick Navigation
+                            </h3>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#understanding-screens" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        1. Understanding iPhone Screens
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#screen-comparison" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        2. OEM vs Aftermarket
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#quality-differences" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        3. Quality Differences
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#cost-analysis" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        4. Cost Analysis
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#making-choice" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        5. Making Your Choice
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Article Content -->
+                    <article class="blog-content" data-aos="fade-up" data-aos-delay="200">
+                        
+                        <!-- Introduction -->
+                        <div class="mb-8 sm:mb-12">
+                            <p>When your iPhone screen cracks or malfunctions, you're faced with an important decision: should you opt for an OEM (Original Equipment Manufacturer) screen or choose an aftermarket alternative? This choice significantly impacts your repair experience, from initial cost to long-term performance and device value retention.</p>
+                            
+                            <p>At iCircuit, we've installed thousands of iPhone screens over the years, giving us extensive experience with both OEM and aftermarket options. We've seen firsthand how the choice of screen affects everything from touch sensitivity and color accuracy to durability and customer satisfaction. This comprehensive guide will help you understand the critical differences and make an informed decision that best suits your needs and budget.</p>
+                        </div>
+
+                        <!-- Understanding iPhone Screens -->
+                        <div id="understanding-screens" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>📱 Understanding iPhone Screen Technology</h2>
+                            
+                            <div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 sm:p-6 rounded-r-xl mb-6">
+                                <div class="flex items-start">
+                                    <i class="fas fa-mobile-screen-button text-blue-500 mr-3 mt-1 text-lg"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-blue-800 dark:text-blue-200 mb-2">Modern iPhone Display Components</h4>
+                                        <p class="text-blue-700 dark:text-blue-300 text-sm sm:text-base">Today's iPhone screens are complex assemblies combining multiple technologies for optimal user experience.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Key Components of an iPhone Screen Assembly</h3>
+                            <p>Modern iPhone screens are sophisticated assemblies that include several critical components:</p>
+                            
+                            <ul>
+                                <li><strong>OLED/LCD Panel:</strong> The actual display technology that produces images and colors</li>
+                                <li><strong>Touch Digitizer:</strong> Capacitive layer that detects finger touches and gestures</li>
+                                <li><strong>3D Touch/Haptic Engine:</strong> Pressure-sensitive technology (iPhone 6s-XS models)</li>
+                                <li><strong>Front Camera Assembly:</strong> Integrated selfie camera and sensors</li>
+                                <li><strong>Ambient Light Sensor:</strong> Automatically adjusts screen brightness</li>
+                                <li><strong>Proximity Sensor:</strong> Detects when phone is held to ear during calls</li>
+                                <li><strong>Speaker Grille:</strong> Earpiece for phone calls</li>
+                                <li><strong>Home Button (older models):</strong> Physical button with Touch ID integration</li>
+                            </ul>
+
+                            <h3>iPhone Screen Evolution</h3>
+                            <p>Apple has continuously advanced iPhone display technology:</p>
+                            <ul>
+                                <li><strong>iPhone 4-6s:</strong> LCD Retina displays with excellent color accuracy</li>
+                                <li><strong>iPhone 6s-8:</strong> Addition of 3D Touch pressure sensitivity</li>
+                                <li><strong>iPhone X and newer:</strong> OLED Super Retina displays with True Tone</li>
+                                <li><strong>iPhone 11-13:</strong> Liquid Retina LCD (standard) and OLED (Pro models)</li>
+                                <li><strong>iPhone 14 and newer:</strong> ProMotion 120Hz displays on Pro models</li>
+                            </ul>
+
+                            <h3>What Makes iPhone Screens Special</h3>
+                            <ul>
+                                <li><strong>Color accuracy:</strong> Wide P3 color gamut for vibrant, true-to-life colors</li>
+                                <li><strong>True Tone technology:</strong> Automatically adjusts white balance based on ambient lighting</li>
+                                <li><strong>High pixel density:</strong> Retina and Super Retina resolutions for crisp text and images</li>
+                                <li><strong>Oleophobic coating:</strong> Fingerprint-resistant coating for easier cleaning</li>
+                                <li><strong>Seamless integration:</strong> Perfect compatibility with iOS and hardware features</li>
+                            </ul>
+                        </div>
+
+                        <!-- Screen Comparison -->
+                        <div id="screen-comparison" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>⚖️ OEM vs. Aftermarket: The Complete Comparison</h2>
+                            
+                            <p>Understanding the fundamental differences between OEM and aftermarket screens is crucial for making an informed repair decision. Each option offers distinct advantages and trade-offs.</p>
+
+                            <h3>OEM (Original Equipment Manufacturer) Screens</h3>
+                            <ul>
+                                <li><strong>Definition:</strong> Screens manufactured by the same suppliers Apple uses for new iPhones</li>
+                                <li><strong>Source:</strong> Genuine Apple parts from authorized distributors or refurbished devices</li>
+                                <li><strong>Quality standard:</strong> Meets Apple's exact specifications and quality requirements</li>
+                                <li><strong>Compatibility:</strong> 100% compatible with all iPhone features and iOS updates</li>
+                                <li><strong>Warranty implications:</strong> Maintains device warranty status when properly installed</li>
+                                <li><strong>Performance:</strong> Identical to factory-installed screens in every aspect</li>
+                            </ul>
+
+                            <h3>Aftermarket Screens - Types and Categories</h3>
+                            <p>Aftermarket screens come in several quality tiers:</p>
+
+                            <h4>High-Quality Aftermarket (Premium)</h4>
+                            <ul>
+                                <li><strong>Manufacturing:</strong> Made by reputable third-party manufacturers</li>
+                                <li><strong>Quality control:</strong> Rigorous testing and quality standards</li>
+                                <li><strong>Performance:</strong> Near-OEM performance with minor compromises</li>
+                                <li><strong>Cost:</strong> 60-80% of OEM screen cost</li>
+                                <li><strong>Features:</strong> Most iPhone features work correctly</li>
+                            </ul>
+
+                            <h4>Standard Aftermarket (Mid-Range)</h4>
+                            <ul>
+                                <li><strong>Manufacturing:</strong> Decent quality third-party production</li>
+                                <li><strong>Performance:</strong> Acceptable performance with noticeable differences</li>
+                                <li><strong>Cost:</strong> 40-60% of OEM screen cost</li>
+                                <li><strong>Compromises:</strong> Color accuracy, touch sensitivity, or durability issues</li>
+                            </ul>
+
+                            <h4>Economy Aftermarket (Budget)</h4>
+                            <ul>
+                                <li><strong>Manufacturing:</strong> Basic quality, minimal testing</li>
+                                <li><strong>Performance:</strong> Functional but with significant compromises</li>
+                                <li><strong>Cost:</strong> 20-40% of OEM screen cost</li>
+                                <li><strong>Issues:</strong> Poor color reproduction, reduced sensitivity, shorter lifespan</li>
+                            </ul>
+
+                            <h3>Feature Compatibility Comparison</h3>
+                            <ul>
+                                <li><strong>3D Touch/Haptic Touch:</strong> OEM (100%), Premium Aftermarket (85-95%), Standard (70-80%), Economy (40-60%)</li>
+                                <li><strong>True Tone:</strong> OEM (Perfect), Premium (Good), Standard (Limited), Economy (None)</li>
+                                <li><strong>Color accuracy:</strong> OEM (Perfect), Premium (Very Good), Standard (Good), Economy (Fair)</li>
+                                <li><strong>Touch sensitivity:</strong> OEM (Perfect), Premium (Excellent), Standard (Good), Economy (Acceptable)</li>
+                                <li><strong>Durability:</strong> OEM (Excellent), Premium (Very Good), Standard (Good), Economy (Fair)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Quality Differences -->
+                        <div id="quality-differences" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>🔍 Quality Differences That Matter</h2>
+                            
+                            <p>The quality differences between OEM and aftermarket screens affect your daily iPhone experience in measurable ways. Understanding these differences helps you set realistic expectations and make the right choice.</p>
+
+                            <h3>Display Quality and Visual Experience</h3>
+                            <ul>
+                                <li><strong>Color accuracy:</strong> OEM screens display colors exactly as Apple intended, while aftermarket screens may have color shifts, especially in blues and whites</li>
+                                <li><strong>Brightness levels:</strong> OEM screens achieve maximum brightness ratings, aftermarket screens often 10-20% dimmer</li>
+                                <li><strong>Contrast ratio:</strong> OLED aftermarket screens may not achieve the deep blacks and high contrast of OEM panels</li>
+                                <li><strong>Viewing angles:</strong> Color and brightness consistency when viewing from different angles</li>
+                                <li><strong>Pixel quality:</strong> Dead pixels, light bleeding, or uneven backlighting more common in lower-quality aftermarket screens</li>
+                            </ul>
+
+                            <h3>Touch Performance and Responsiveness</h3>
+                            <ul>
+                                <li><strong>Touch sensitivity:</strong> Aftermarket screens may require slightly more pressure for touch registration</li>
+                                <li><strong>Multi-touch accuracy:</strong> Precision when using multiple fingers simultaneously</li>
+                                <li><strong>Edge detection:</strong> Accuracy of touches near screen edges, important for iOS gestures</li>
+                                <li><strong>Palm rejection:</strong> Ability to ignore accidental touches when holding the phone</li>
+                                <li><strong>Stylus compatibility:</strong> Precision when using Apple Pencil or similar styluses</li>
+                            </ul>
+
+                            <h3>Advanced Feature Implementation</h3>
+                            <ul>
+                                <li><strong>3D Touch precision:</strong> Accurate pressure detection for peek, pop, and quick actions</li>
+                                <li><strong>True Tone functionality:</strong> Automatic white balance adjustment based on ambient lighting</li>
+                                <li><strong>Auto-brightness accuracy:</strong> Proper response to lighting conditions</li>
+                                <li><strong>Night Shift integration:</strong> Smooth color temperature adjustments for eye comfort</li>
+                                <li><strong>ProMotion (newer models):</strong> 120Hz refresh rate for smooth scrolling and responsive touch</li>
+                            </ul>
+
+                            <h3>Durability and Longevity Factors</h3>
+                            <ul>
+                                <li><strong>Screen longevity:</strong> OEM screens typically last the lifetime of the device, while lower-quality aftermarket screens may degrade within 1-2 years</li>
+                                <li><strong>Touch degradation:</strong> Aftermarket screens more prone to developing dead spots or reduced sensitivity over time</li>
+                                <li><strong>Color stability:</strong> Color accuracy may shift over time with aftermarket displays</li>
+                                <li><strong>Physical durability:</strong> Resistance to impacts and daily wear</li>
+                                <li><strong>Oleophobic coating quality:</strong> Fingerprint resistance and ease of cleaning</li>
+                            </ul>
+
+                            <h3>Integration with iOS Features</h3>
+                            <ul>
+                                <li><strong>Face ID accuracy:</strong> Proper integration with facial recognition sensors</li>
+                                <li><strong>Camera app functionality:</strong> Seamless integration with front-facing camera features</li>
+                                <li><strong>Accessibility features:</strong> Proper support for VoiceOver, magnification, and other accessibility tools</li>
+                                <li><strong>Screen recording quality:</strong> Accurate capture of on-screen content</li>
+                                <li><strong>App compatibility:</strong> Some apps may detect non-OEM screens and limit functionality</li>
+                            </ul>
+                        </div>
+
+                        <!-- Cost Analysis -->
+                        <div id="cost-analysis" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>💰 Cost Analysis: Understanding the Investment</h2>
+                            
+                            <p>The price difference between OEM and aftermarket screens is significant, but understanding the total cost of ownership helps make a more informed decision.</p>
+
+                            <h3>Upfront Cost Comparison (Bangalore Market Prices)</h3>
+                            <ul>
+                                <li><strong>iPhone 14 Pro OEM Screen:</strong> ₹25,000 - ₹30,000 including installation</li>
+                                <li><strong>iPhone 14 Pro Premium Aftermarket:</strong> ₹15,000 - ₹20,000 including installation</li>
+                                <li><strong>iPhone 14 Pro Standard Aftermarket:</strong> ₹8,000 - ₹12,000 including installation</li>
+                                <li><strong>iPhone 13 OEM Screen:</strong> ₹20,000 - ₹25,000 including installation</li>
+                                <li><strong>iPhone 13 Premium Aftermarket:</strong> ₹12,000 - ₹16,000 including installation</li>
+                                <li><strong>iPhone 12 OEM Screen:</strong> ₹18,000 - ₹22,000 including installation</li>
+                                <li><strong>iPhone 11 OEM Screen:</strong> ₹15,000 - ₹18,000 including installation</li>
+                            </ul>
+
+                            <h3>Total Cost of Ownership Factors</h3>
+                            <ul>
+                                <li><strong>Initial repair cost:</strong> Immediate expense for screen replacement</li>
+                                <li><strong>Potential re-repair costs:</strong> Lower-quality aftermarket screens may need replacement sooner</li>
+                                <li><strong>Device resale value:</strong> OEM screens maintain higher resale value</li>
+                                <li><strong>Warranty considerations:</strong> Impact on existing device warranties</li>
+                                <li><strong>Performance satisfaction:</strong> Value of maintaining optimal device performance</li>
+                            </ul>
+
+                            <h3>When OEM Screens Make Financial Sense</h3>
+                            <ul>
+                                <li><strong>New or high-value devices:</strong> iPhone 12 and newer models with high resale value</li>
+                                <li><strong>Primary daily driver:</strong> Main phone that needs optimal performance</li>
+                                <li><strong>Professional use:</strong> Business phones requiring reliability and quality</li>
+                                <li><strong>Long-term ownership:</strong> Planning to keep device for 2+ years</li>
+                                <li><strong>Warranty preservation:</strong> Devices still under Apple warranty or AppleCare</li>
+                            </ul>
+
+                            <h3>When Aftermarket Screens May Be Appropriate</h3>
+                            <ul>
+                                <li><strong>Older devices:</strong> iPhone X and earlier models with lower resale value</li>
+                                <li><strong>Secondary phones:</strong> Backup devices with lighter usage</li>
+                                <li><strong>Budget constraints:</strong> When OEM repair cost approaches device replacement cost</li>
+                                <li><strong>Short-term use:</strong> Planning to upgrade within 6-12 months</li>
+                                <li><strong>Experimental repairs:</strong> Learning experiences or temporary fixes</li>
+                            </ul>
+
+                            <h3>Hidden Costs to Consider</h3>
+                            <ul>
+                                <li><strong>Reduced battery life:</strong> Some aftermarket screens consume more power</li>
+                                <li><strong>App compatibility issues:</strong> Potential problems with banking or security apps</li>
+                                <li><strong>Insurance implications:</strong> Some policies may not cover devices with aftermarket parts</li>
+                                <li><strong>Future repair complications:</strong> Aftermarket screens may complicate future repairs</li>
+                                <li><strong>Calibration requirements:</strong> Additional costs for proper color and touch calibration</li>
+                            </ul>
+                        </div>
+
+                        <!-- Making Your Choice -->
+                        <div id="making-choice" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>🎯 Making the Right Choice for Your Situation</h2>
+                            
+                            <p>Choosing between OEM and aftermarket screens isn't just about cost—it's about matching the solution to your specific needs, usage patterns, and expectations.</p>
+
+                            <h3>Decision Framework Questions</h3>
+                            <ul>
+                                <li><strong>How old is your iPhone?</strong> Newer models (iPhone 12+) generally justify OEM screens</li>
+                                <li><strong>How much is your iPhone worth?</strong> If repair cost exceeds 50% of device value, consider alternatives</li>
+                                <li><strong>How long will you keep it?</strong> Long-term ownership favors OEM quality</li>
+                                <li><strong>What's your usage pattern?</strong> Heavy daily use benefits from OEM reliability</li>
+                                <li><strong>Do you plan to sell it?</strong> OEM screens maintain better resale value</li>
+                                <li><strong>Are you tech-sensitive?</strong> If you notice display quality differences, choose OEM</li>
+                            </ul>
+
+                            <h3>Professional Use Cases - Choose OEM</h3>
+                            <ul>
+                                <li><strong>Business phones:</strong> Reliability and professional appearance matter</li>
+                                <li><strong>Content creation:</strong> Color accuracy critical for photography/videography</li>
+                                <li><strong>Design work:</strong> True color representation essential</li>
+                                <li><strong>Medical/security applications:</strong> Absolute reliability required</li>
+                                <li><strong>High-value devices:</strong> iPhone 13 Pro/Pro Max and newer models</li>
+                            </ul>
+
+                            <h3>Acceptable Aftermarket Use Cases</h3>
+                            <ul>
+                                <li><strong>Older devices:</strong> iPhone X, 8, 7 and earlier models</li>
+                                <li><strong>Backup phones:</strong> Secondary devices with light usage</li>
+                                <li><strong>Children's phones:</strong> Devices prone to repeated damage</li>
+                                <li><strong>Temporary repairs:</strong> Quick fixes before device upgrade</li>
+                                <li><strong>Budget constraints:</strong> When OEM repair isn't financially viable</li>
+                            </ul>
+
+                            <h3>Quality Indicators for Aftermarket Screens</h3>
+                            <p>If choosing aftermarket, look for these quality indicators:</p>
+                            <ul>
+                                <li><strong>Brand reputation:</strong> Established manufacturers with positive reviews</li>
+                                <li><strong>Warranty coverage:</strong> At least 6-month warranty on parts and labor</li>
+                                <li><strong>Feature compatibility:</strong> Support for 3D Touch, True Tone, and other iPhone features</li>
+                                <li><strong>Professional installation:</strong> Certified technicians with proper tools</li>
+                                <li><strong>Return policy:</strong> Option to return if performance is unsatisfactory</li>
+                            </ul>
+
+                            <h3>Red Flags to Avoid</h3>
+                            <ul>
+                                <li><strong>Extremely low prices:</strong> If it seems too good to be true, it probably is</li>
+                                <li><strong>No warranty:</strong> Avoid screens without any warranty coverage</li>
+                                <li><strong>Unknown brands:</strong> Generic or unbranded screens often have quality issues</li>
+                                <li><strong>Installation in non-professional settings:</strong> Proper clean room environment important</li>
+                                <li><strong>Pressure to decide quickly:</strong> Quality repair shops explain options without rushing</li>
+                            </ul>
+
+                            <h3>Expert Recommendations by iPhone Model</h3>
+                            <ul>
+                                <li><strong>iPhone 14/15 series:</strong> OEM strongly recommended for optimal experience</li>
+                                <li><strong>iPhone 13 series:</strong> OEM preferred, premium aftermarket acceptable</li>
+                                <li><strong>iPhone 12 series:</strong> OEM recommended, quality aftermarket viable option</li>
+                                <li><strong>iPhone 11 series:</strong> Premium aftermarket often sufficient</li>
+                                <li><strong>iPhone X/XS series:</strong> Quality aftermarket usually adequate</li>
+                                <li><strong>iPhone 8 and earlier:</strong> Aftermarket often most cost-effective choice</li>
+                            </ul>
+                        </div>
+
+                        <!-- Conclusion -->
+                        <div class="mb-8">
+                            <p class="text-lg font-medium text-gray-800 dark:text-gray-200">The choice between OEM and aftermarket iPhone screens ultimately depends on your specific situation, budget, and priorities. While OEM screens offer the best possible experience, quality aftermarket options can provide satisfactory performance at a lower cost for the right circumstances.</p>
+                            
+                            <p>Remember that screen quality affects your daily iPhone experience for years to come. When in doubt, consult with certified repair professionals who can assess your specific device and usage requirements. At iCircuit, we help customers make informed decisions by explaining the trade-offs and showing sample screens when possible, ensuring you get the repair solution that best matches your needs and expectations.</p>
+                        </div>
+
+                        <!-- Call to Action -->
+                        <div class="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12 text-center text-white overflow-hidden" data-aos="fade-up" data-aos-delay="800">
+                            <!-- Background Pattern -->
+                            <div class="absolute inset-0 opacity-10">
+                                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-blue-300/20"></div>
+                            </div>
+                            
+                            <div class="relative z-10 max-w-2xl mx-auto">
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 border border-white/30">
+                                    <i class="fas fa-mobile-alt text-2xl sm:text-3xl text-white drop-shadow-lg"></i>
+                                </div>
+                                <h3 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-white dark:text-white drop-shadow-lg" style="color: white !important;">Need iPhone Screen Replacement?</h3>
+                                <p class="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-white dark:text-white font-medium leading-relaxed drop-shadow-sm" style="color: white !important;">
+                                    Get expert advice on the best screen option for your iPhone. We offer both OEM and premium aftermarket screens with professional installation and warranty.
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <a href="tel:+919742090321" class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-bold text-base sm:text-lg transition-all transform hover:scale-105 shadow-xl">
+                                        <i class="fas fa-phone mr-2 sm:mr-3"></i>
+                                        Call Expert
+                                    </a>
+                                    <a href="index.html#contact" class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-xl font-bold text-base sm:text-lg transition-all border border-white/30">
+                                        <i class="fas fa-tools mr-2 sm:mr-3"></i>
+                                        Free Consultation
+                                    </a>
+                                </div>
+                                <p class="text-sm sm:text-base text-white/90 mt-4 font-medium">
+                                    <i class="fas fa-shield-alt mr-2"></i>
+                                    Expert installation with 1-year warranty on all screen repairs
+                                </p>
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+
+                <!-- Desktop Sidebar -->
+                <div class="hidden lg:block lg:col-span-1">
+                    <div class="sticky top-24 space-y-6">
+                        
+                        <!-- Author Card -->
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700" data-aos="fade-left" data-aos-delay="300">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gradient-to-br from-apple-blue to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                    <i class="fas fa-mobile-alt text-3xl text-white"></i>
+                                </div>
+                                <h3 class="font-bold text-xl mb-2 text-gray-900 dark:text-white">iPhone Screen Expert</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Certified technician with 8+ years experience in iPhone display repairs</p>
+                                <div class="flex items-center justify-center text-yellow-500 mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">5.0 Rating</span>
+                                </div>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Published: June 08, 2025</p>
+                            </div>
+                        </div>
+
+                        <!-- Table of Contents -->
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-6 border border-blue-200 dark:border-blue-800" data-aos="fade-left" data-aos-delay="400">
+                            <h3 class="font-bold text-xl mb-4 text-blue-900 dark:text-blue-100 flex items-center">
+                                <i class="fas fa-list-ul mr-3"></i>
+                                Quick Navigation
+                            </h3>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="#understanding-screens" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        1. Understanding iPhone Screens
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#screen-comparison" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        2. OEM vs Aftermarket
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#quality-differences" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        3. Quality Differences
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#cost-analysis" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        4. Cost Analysis
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#making-choice" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        5. Making Your Choice
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Screen Repair Contact -->
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-6 border border-blue-200 dark:border-blue-800 text-center" data-aos="fade-left" data-aos-delay="500">
+                            <i class="fas fa-tools text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
+                            <h3 class="font-bold text-lg mb-2 text-blue-900 dark:text-blue-100">Expert Screen Repair</h3>
+                            <p class="text-blue-700 dark:text-blue-300 text-sm mb-4">Professional iPhone screen replacement with OEM and premium aftermarket options</p>
+                            <a href="tel:+919742090321" class="w-full inline-flex items-center justify-center px-4 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold transition-colors">
+                                <i class="fas fa-phone mr-2"></i>
+                                Get Quote
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Posts -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 sm:mb-12" data-aos="fade-up">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Related Articles</h2>
+                <p class="text-gray-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
+                    Discover more expert guides on iPhone repairs and maintenance
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Related Post 1 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-600 group" data-aos="fade-up" data-aos-delay="100">
+                    <a href="blog-post-iphone-battery.html" class="block">
+                        <div class="overflow-hidden">
+                            <img src="images/slide1.webp" alt="iPhone battery replacement" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block mb-3 px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 rounded-full text-xs font-semibold">iPhone</span>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-apple-blue transition-colors">5 Signs Your iPhone Battery Needs Replacing</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Learn the key indicators that it's time for a new iPhone battery and restore your device's performance...</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Related Post 2 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-600 group" data-aos="fade-up" data-aos-delay="200">
+                    <a href="blog-post-macbook-logicboard.html" class="block">
+                        <div class="overflow-hidden">
+                            <img src="images/slide2.jpg" alt="MacBook logic board repair" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block mb-3 px-3 py-1 bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300 rounded-full text-xs font-semibold">MacBook</span>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-apple-blue transition-colors">Understanding MacBook Logic Board Failures</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">The logic board is your MacBook's brain. Learn common failure causes and professional repair solutions...</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Related Post 3 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-600 group" data-aos="fade-up" data-aos-delay="300">
+                    <a href="blog-post-ipad-water.html" class="block">
+                        <div class="overflow-hidden">
+                            <img src="images/slide3.webp" alt="iPad water damage repair" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block mb-3 px-3 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300 rounded-full text-xs font-semibold">iPad</span>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-apple-blue transition-colors">Water Damaged iPad? What to Do</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Spilled liquid on your iPad? Learn the immediate steps and professional solutions for water damage...</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-cta">
+        <div class="flex space-x-3">
+            <a href="index.html#contact" class="flex-1 inline-flex items-center justify-center py-3 bg-blue-500 text-white rounded-lg font-semibold text-sm">
+                <i class="fas fa-tools mr-2"></i>
+                Free Quote
+            </a>
+            <a href="tel:+919742090321" class="flex-1 inline-flex items-center justify-center py-3 border-2 border-blue-500 text-blue-500 rounded-lg font-semibold text-sm">
+                <i class="fas fa-phone mr-2"></i>
+                Call Now
+            </a>
+        </div>
+    </div>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-gray-900 text-white font-poppins">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Footer Content -->
+            <div class="py-12 lg:py-16 grid lg:grid-cols-4 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Brand Section -->
+                <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="images/logo.png" alt="iCircuit Logo" class="h-8 lg:h-10 w-auto">
+                        <span class="text-xl lg:text-2xl font-bold">iCircuit.in</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 lg:mb-8 max-w-md leading-relaxed font-medium text-sm lg:text-base">
+                        Bangalore's most trusted Apple repair service. We specialize in iPhone, MacBook, iPad, iMac, and Apple Watch repairs with genuine parts and certified technicians.
+                    </p>
+                    
+                    <!-- Quick Contact -->
+                    <div class="space-y-4 mb-6 lg:mb-8">
+                        <a href="tel:+919742090321" class="flex items-center text-white hover:text-apple-blue transition-colors group">
+                            <div class="w-8 h-8 lg:w-10 lg:h-10 bg-apple-blue rounded-lg flex items-center justify-center mr-3 lg:mr-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone text-white text-sm lg:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-base lg:text-lg">+91 97420 90321</p>
+                                <p class="text-gray-400 text-xs lg:text-sm">Call for instant support</p>
+                            </div>
+                        </a>
+                        
+                        <div class="flex items-center text-gray-400">
+                            <div class="w-8 h-8 lg:w-10 lg:h-10 bg-gray-700 rounded-lg flex items-center justify-center mr-3 lg:mr-4">
+                                <i class="fas fa-clock text-sm lg:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white text-sm lg:text-base">Mon-Sun: 10AM - 8PM</p>
+                                <p class="text-xs lg:text-sm">Always here when you need us</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex space-x-3 lg:space-x-4">
+                        <a href="https://www.facebook.com/share/1SG5wiX1b8/?mibextid=qi2Omg" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #1877F2;" title="Follow us on Facebook">
+                            <i class="fab fa-facebook-f text-white text-sm lg:text-base"></i>
+                        </a>
+                        <a href="https://www.instagram.com/icircuit.in" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);" title="Follow us on Instagram">
+                            <i class="fab fa-instagram text-white text-sm lg:text-base"></i>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/company/icircuit" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #0077B5;" title="Connect on LinkedIn">
+                            <i class="fab fa-linkedin-in text-white text-sm lg:text-base"></i>
+                        </a>
+                        <a href="https://wa.me/919742090321" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #25D366;" title="Chat on WhatsApp">
+                            <i class="fab fa-whatsapp text-white text-sm lg:text-base"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Column -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg lg:text-xl font-bold mb-4 lg:mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-2 lg:space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Home</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Blog</a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">About Us</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services Column -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-lg lg:text-xl font-bold mb-4 lg:mb-6 text-white">Our Services</h3>
+                    <ul class="space-y-2 lg:space-y-3">
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-mobile-alt text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            iPhone Screen & Battery
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-laptop text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            MacBook Logic Board
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-tablet-alt text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            iPad Display Repair
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-desktop text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            iMac Upgrades
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-stopwatch text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            Apple Watch Service
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 py-6 lg:py-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center">
+                    <div class="text-center lg:text-left mb-4 lg:mb-0">
+                        <p class="text-gray-400 text-xs lg:text-sm font-medium">
+                            &copy; 2025 iCircuit.in - All Rights Reserved
+                        </p>
+                        <p class="text-gray-500 text-xs mt-1">
+                            Apple and the Apple logo are trademarks of Apple Inc.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+                        <div class="flex items-center space-x-2 text-gray-400 text-xs lg:text-sm">
+                            <i class="fas fa-shield-alt text-green-500"></i>
+                            <span>Certified Technicians</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-400 text-xs lg:text-sm">
+                            <i class="fas fa-tools text-blue-500"></i>
+                            <span>Genuine Parts</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-400 text-xs lg:text-sm">
+                            <i class="fas fa-medal text-yellow-500"></i>
+                            <span>1 Year Warranty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Function to detect mobile/tablet devices
+        function isMobileOrTablet() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+            const isTablet = /ipad|android(?!.*mobile)|tablet/i.test(userAgent);
+            const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            const smallScreen = window.innerWidth <= 1024;
+            
+            return isMobile || isTablet || (hasTouch && smallScreen);
+        }
+
+        // Initialize AOS only for desktop devices
+        if (!isMobileOrTablet()) {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out',
+                once: true,
+                offset: 100
+            });
+        } else {
+            // For mobile/tablet, remove all AOS attributes to prevent any issues
+            document.querySelectorAll('[data-aos]').forEach(element => {
+                element.removeAttribute('data-aos');
+                element.removeAttribute('data-aos-delay');
+                element.removeAttribute('data-aos-duration');
+            });
+        }
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.classList.toggle('dark', currentTheme === 'dark');
+
+        darkModeToggle.addEventListener('click', function() {
+            const isDark = html.classList.contains('dark');
+            
+            if (isDark) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        function updateScrollButton() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        }
+
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Performance optimization for mobile
+        let ticking = false;
+        function optimizedScroll() {
+            if (!ticking) {
+                requestAnimationFrame(function() {
+                    updateScrollButton();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', optimizedScroll, { passive: true });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-md');
+            } else {
+                header.classList.remove('backdrop-blur-md');
+            }
+        });
+    </script>
+
+    <style>
+        /* Additional Custom Styles */
+        .gradient-text {
+            background: linear-gradient(135deg, #007AFF, #3B82F6, #1D4ED8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .nav-link {
+            color: #6b7280;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #007AFF;
+            background-color: rgba(0, 122, 255, 0.1);
+        }
+
+        .dark .nav-link {
+            color: #9ca3af;
+        }
+
+        .dark .nav-link:hover {
+            color: #60a5fa;
+            background-color: rgba(96, 165, 250, 0.1);
+        }
+
+        .btn-glow {
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .mobile-nav-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-bottom: 0.25rem;
+            border-radius: 0.5rem;
+        }
+
+        .mobile-nav-item:hover {
+            background-color: rgba(0, 122, 255, 0.1);
+            color: #007AFF;
+            transform: translateX(4px);
+        }
+
+        .dark .mobile-nav-item {
+            color: #d1d5db;
+        }
+
+        .dark .mobile-nav-item:hover {
+            background-color: rgba(96, 165, 250, 0.1);
+            color: #60a5fa;
+        }
+
+        .mobile-sidebar-section {
+            background: white;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #f3f4f6;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-sidebar-section {
+                border-radius: 1.5rem;
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .dark .mobile-sidebar-section {
+            background: #1f2937;
+            border-color: #374151;
+        }
+
+        .mobile-cta {
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            padding: 1rem;
+            z-index: 50;
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-cta {
+                display: none;
+            }
+        }
+
+        .dark .mobile-cta {
+            background: #1f2937;
+            border-top-color: #374151;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #007AFF, #3B82F6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+            box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
+        }
+
+        @media (min-width: 768px) {
+            .scroll-to-top {
+                bottom: 30px;
+                right: 30px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
+        }
+
+        .scroll-offset {
+            scroll-margin-top: 100px;
+        }
+
+        /* Blog Content Styles */
+        .blog-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            color: #1f2937;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h2 {
+                font-size: 2rem;
+                padding-left: 1rem;
+            }
+        }
+
+        .dark .blog-content h2 {
+            color: #f9fafb;
+        }
+
+        .blog-content h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(135deg, #007AFF, #3B82F6);
+            border-radius: 2px;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h2::before {
+                width: 4px;
+            }
+        }
+
+        .blog-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.75rem;
+            color: #374151;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h3 {
+                font-size: 1.5rem;
+                margin: 1.5rem 0 1rem;
+            }
+        }
+
+        .blog-content h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+            color: #4b5563;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h4 {
+                font-size: 1.25rem;
+                margin: 1.25rem 0 0.75rem;
+            }
+        }
+
+        .dark .blog-content h3 {
+            color: #e5e7eb;
+        }
+
+        .dark .blog-content h4 {
+            color: #d1d5db;
+        }
+
+        .blog-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            color: #4b5563;
+            font-weight: 500;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content p {
+                font-size: 1.125rem;
+                line-height: 1.75;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .dark .blog-content p {
+            color: #d1d5db;
+        }
+
+        .blog-content ul {
+            margin: 1.25rem 0;
+            padding-left: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content ul {
+                margin: 1.5rem 0;
+                padding-left: 1.5rem;
+            }
+        }
+
+        .blog-content li {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+            color: #4b5563;
+            font-weight: 500;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content li {
+                font-size: 1.125rem;
+                line-height: 1.75;
+                margin-bottom: 0.75rem;
+            }
+        }
+
+        .dark .blog-content li {
+            color: #d1d5db;
+        }
+
+        .blog-content li::marker {
+            color: #007AFF;
+            font-weight: bold;
+        }
+
+        .blog-content strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .dark .blog-content strong {
+            color: #f9fafb;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .blog-content h2 {
+                font-size: 1.25rem;
+                margin: 1.5rem 0 0.75rem;
+                padding-left: 1rem;
+            }
+            
+            .blog-content h3 {
+                font-size: 1.125rem;
+                margin: 1rem 0 0.5rem;
+            }
+            
+            .blog-content h4 {
+                font-size: 1rem;
+                margin: 0.75rem 0 0.5rem;
+            }
+            
+            .blog-content p, .blog-content li {
+                font-size: 0.875rem;
+                line-height: 1.5;
+            }
+        }
+
+        /* Mobile performance optimizations */
+        @media (max-width: 1024px) {
+            /* Disable hardware acceleration animations on mobile */
+            .animate-float {
+                animation: none;
+            }
+            
+            .animate-bounce {
+                animation: none;
+            }
+            
+            .animate-pulse {
+                animation: none;
+            }
+            
+            /* Reduce transform effects on mobile */
+            .group:hover .group-hover\:scale-105 {
+                transform: none;
+            }
+            
+            /* Optimize hover effects for touch devices */
+            .hover\:scale-105:hover {
+                transform: none;
+            }
+        }
+
+        /* Ensure smooth scrolling on all devices */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Optimize font rendering for mobile */
+        @media (max-width: 1024px) {
+            body {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                text-rendering: optimizeSpeed;
+            }
+        }
+    </style>
+
+</body>
+</html>

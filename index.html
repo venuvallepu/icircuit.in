@@ -1,0 +1,2196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCircuit.in | Expert Apple Repairs You Can Trust | Bangalore</title>
+    <meta name="description" content="Professional Apple device repairs in Bangalore. iPhone, MacBook, iPad, iMac & Apple Watch repairs with genuine parts, certified technicians, and same-day service.">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papmLp9uWpG7hEJf2zYVrCB4x0gH4EFoExK1wFb4lCWDzFRVX7DqjE5dvz8G9Jc7tSk1klkCm4ww1nKkGgSoXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            gray: '#1D1D1F',
+                            lightGray: '#F5F5F7'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-down': 'fadeInDown 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'scroll-bounce': 'scrollBounce 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(0, 122, 255, 0.3)' },
+                            '100%': { boxShadow: '0 0 30px rgba(0, 122, 255, 0.6)' }
+                        },
+                        scrollBounce: {
+                            '0%, 100%': { transform: 'translateY(0px) scale(1)' },
+                            '50%': { transform: 'translateY(-5px) scale(1.05)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Global Poppins font */
+        * {
+            font-family: 'Poppins', sans-serif !important;
+        }
+        
+        /* FontAwesome fallback and icon fixes */
+        .fas, .fab, .far, .fal, .fad, .fa {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free" !important;
+            font-weight: 900;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+        
+        /* Ensure icons are visible */
+        i[class*="fa-"]::before {
+            font-family: "Font Awesome 6 Free" !important;
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+        
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(0, 122, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 122, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        /* Dark mode transitions */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .scroll-offset {
+            scroll-margin-top: 100px;
+        }
+
+        /* Mobile header fix - ensure proper layout on all screen sizes */
+        @media (max-width: 768px) {
+            .header-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                min-width: 0;
+            }
+            
+            .logo-section {
+                flex-shrink: 0;
+                max-width: 60%;
+            }
+            
+            .controls-section {
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+            }
+        }
+
+        /* Enhanced Flatpickr Dark Mode */
+        .dark .flatpickr-calendar {
+            background: #1F2937 !important;
+            border: 1px solid #374151 !important;
+            color: #F9FAFB !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+        }
+        
+        .dark .flatpickr-calendar.open {
+            background: #1F2937 !important;
+        }
+        
+        /* Header styling */
+        .dark .flatpickr-months {
+            background: #1F2937 !important;
+            border-bottom: 1px solid #374151 !important;
+        }
+        
+        .dark .flatpickr-month {
+            background: #1F2937 !important;
+            color: #F9FAFB !important;
+        }
+        
+        .dark .flatpickr-current-month {
+            color: #F9FAFB !important;
+        }
+        
+        .dark .flatpickr-current-month .flatpickr-monthDropdown-months {
+            background: #374151 !important;
+            color: #F9FAFB !important;
+            border: 1px solid #4B5563 !important;
+        }
+        
+        .dark .flatpickr-current-month .flatpickr-monthDropdown-months:hover {
+            background: #4B5563 !important;
+        }
+        
+        .dark .flatpickr-current-month .numInputWrapper {
+            background: #374151 !important;
+        }
+        
+        .dark .flatpickr-current-month .numInputWrapper input {
+            background: #374151 !important;
+            color: #F9FAFB !important;
+            border: 1px solid #4B5563 !important;
+        }
+        
+        /* Navigation arrows */
+        .dark .flatpickr-prev-month,
+        .dark .flatpickr-next-month {
+            color: #9CA3AF !important;
+            fill: #9CA3AF !important;
+        }
+        
+        .dark .flatpickr-prev-month:hover,
+        .dark .flatpickr-next-month:hover {
+            color: #007AFF !important;
+            fill: #007AFF !important;
+            background: #374151 !important;
+        }
+        
+        /* Weekdays */
+        .dark .flatpickr-weekdays {
+            background: #1F2937 !important;
+        }
+        
+        .dark .flatpickr-weekday {
+            background: #1F2937 !important;
+            color: #9CA3AF !important;
+            font-weight: 600 !important;
+        }
+        
+        /* Days */
+        .dark .flatpickr-days {
+            background: #1F2937 !important;
+        }
+        
+        .dark .flatpickr-day {
+            background: #1F2937 !important;
+            color: #F9FAFB !important;
+            border: 1px solid transparent !important;
+        }
+        
+        .dark .flatpickr-day:hover {
+            background: #374151 !important;
+            color: #007AFF !important;
+            border-color: #007AFF !important;
+        }
+        
+        .dark .flatpickr-day.selected {
+            background: #007AFF !important;
+            color: #FFFFFF !important;
+            border-color: #007AFF !important;
+        }
+        
+        .dark .flatpickr-day.today {
+            background: #374151 !important;
+            color: #007AFF !important;
+            border-color: #007AFF !important;
+            font-weight: bold !important;
+        }
+        
+        .dark .flatpickr-day.today:hover {
+            background: #007AFF !important;
+            color: #FFFFFF !important;
+        }
+        
+        .dark .flatpickr-day.inRange {
+            background: rgba(0, 122, 255, 0.2) !important;
+            color: #F9FAFB !important;
+            border-color: #007AFF !important;
+        }
+        
+        .dark .flatpickr-day.disabled {
+            color: #6B7280 !important;
+            background: #1F2937 !important;
+        }
+        
+        .dark .flatpickr-day.disabled:hover {
+            background: #1F2937 !important;
+            color: #6B7280 !important;
+            cursor: not-allowed !important;
+        }
+        
+        .dark .flatpickr-day.prevMonthDay,
+        .dark .flatpickr-day.nextMonthDay {
+            color: #6B7280 !important;
+            background: #1F2937 !important;
+        }
+        
+        .dark .flatpickr-day.prevMonthDay:hover,
+        .dark .flatpickr-day.nextMonthDay:hover {
+            background: #374151 !important;
+            color: #9CA3AF !important;
+        }
+        
+        /* Time picker */
+        .dark .flatpickr-time {
+            background: #1F2937 !important;
+            border-top: 1px solid #374151 !important;
+        }
+        
+        .dark .flatpickr-time input {
+            background: #374151 !important;
+            color: #F9FAFB !important;
+            border: 1px solid #4B5563 !important;
+        }
+        
+        .dark .flatpickr-time input:hover {
+            background: #4B5563 !important;
+        }
+        
+        .dark .flatpickr-time input:focus {
+            background: #4B5563 !important;
+            border-color: #007AFF !important;
+        }
+        
+        .dark .flatpickr-time .flatpickr-time-separator {
+            color: #9CA3AF !important;
+        }
+        
+        .dark .flatpickr-am-pm {
+            background: #374151 !important;
+            color: #F9FAFB !important;
+            border: 1px solid #4B5563 !important;
+        }
+        
+        .dark .flatpickr-am-pm:hover {
+            background: #4B5563 !important;
+        }
+        
+        /* Dropdown options */
+        .dark .flatpickr-monthDropdown-months option {
+            background: #374151 !important;
+            color: #F9FAFB !important;
+        }
+        
+        /* Calendar container */
+        .dark .flatpickr-calendar.inline {
+            background: #1F2937 !important;
+            border: 1px solid #374151 !important;
+        }
+        
+        /* Input styling in dark mode */
+        .dark .flatpickr-input {
+            background: #374151 !important;
+            color: #F9FAFB !important;
+            border: 1px solid #4B5563 !important;
+        }
+        
+        .dark .flatpickr-input:focus {
+            border-color: #007AFF !important;
+            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1) !important;
+        }
+
+        /* Enhanced Step connector lines for How It Works */
+        .process-step {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 32px;
+            left: calc(50% + 32px);
+            width: calc(100% - 64px);
+            height: 3px;
+            background: linear-gradient(90deg, #007AFF 0%, #E5E7EB 100%);
+            z-index: 0;
+        }
+        
+        .dark .process-step:not(:last-child)::after {
+            background: linear-gradient(90deg, #007AFF 0%, #374151 100%);
+        }
+        
+        @media (max-width: 768px) {
+            .process-step:not(:last-child)::after {
+                display: none;
+            }
+        }
+        
+        .step-circle {
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* FAQ animations */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-answer.open {
+            max-height: 600px;
+            transition: max-height 0.3s ease-in;
+        }
+
+        /* Location cards styling */
+        .location-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 122, 255, 0.15);
+        }
+        
+        .location-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(0, 122, 255, 0.1);
+            color: #007AFF;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .dark .location-badge {
+            background: rgba(0, 122, 255, 0.2);
+            color: #60A5FA;
+        }
+
+        /* Contact section map alignment */
+        @media (min-width: 1024px) {
+            .contact-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+                align-items: stretch;
+            }
+            
+            .contact-info-section {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            
+            .map-container {
+                flex: 1;
+                min-height: 400px;
+            }
+        }
+
+        /* Enhanced Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+            box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
+            background: linear-gradient(135deg, #0056CC, #4A47D6);
+        }
+
+        .scroll-to-top:active {
+            transform: translateY(-1px) scale(1.05);
+        }
+
+        .scroll-to-top i {
+            color: white;
+            font-size: 24px;
+            animation: scroll-bounce 2s ease-in-out infinite;
+            position: relative;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .scroll-to-top:hover i {
+            animation-play-state: paused;
+            transform: translateY(-2px);
+        }
+
+        /* Dark mode scroll button */
+        .dark .scroll-to-top {
+            background: linear-gradient(135deg, #1E40AF, #7C3AED);
+            box-shadow: 0 8px 32px rgba(30, 64, 175, 0.3);
+        }
+
+        .dark .scroll-to-top:hover {
+            background: linear-gradient(135deg, #1E3A8A, #6D28D9);
+            box-shadow: 0 12px 40px rgba(30, 64, 175, 0.4);
+        }
+
+        /* Progress ring around button */
+        .scroll-progress {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: conic-gradient(#007AFF 0deg, transparent 0deg);
+            transition: all 0.3s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .scroll-progress::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: transparent;
+            z-index: 2;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .scroll-to-top i {
+                font-size: 20px;
+            }
+
+            .scroll-progress {
+                width: 54px;
+                height: 54px;
+                top: -2px;
+                left: -2px;
+            }
+
+            .scroll-progress::before {
+                width: 50px;
+                height: 50px;
+                top: 2px;
+                left: 2px;
+            }
+        }
+
+        /* Instagram Gradient Background */
+        .instagram-gradient {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        /* Enhanced hover effects for social icons */
+        .social-icon-hover:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Pulse animation for WhatsApp */
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .whatsapp-pulse:hover {
+            animation: pulse-whatsapp 2s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 font-poppins">
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <div class="scroll-progress" id="scrollProgress"></div>
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    
+    <!-- Sticky Header with improved mobile layout -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect bg-white/90 dark:bg-gray-900/90 border-b border-gray-200 dark:border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="header-content flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="logo-section flex items-center space-x-3">
+                    <img src="images/logo.png" alt="iCircuit Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold gradient-text">iCircuit.in</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link hover:text-apple-blue transition-colors font-medium">Home</a>
+                    <a href="#services" class="nav-link hover:text-apple-blue transition-colors font-medium">Services</a>
+                    <a href="#why-us" class="nav-link hover:text-apple-blue transition-colors font-medium">Why Us</a>
+                    <a href="#how-it-works" class="nav-link hover:text-apple-blue transition-colors font-medium">Process</a>
+                    <a href="#locations" class="nav-link hover:text-apple-blue transition-colors font-medium">Locations</a>
+                    <a href="terms.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Terms</a>
+                    <a href="aboutus.html" class="nav-link hover:text-apple-blue transition-colors font-medium">About Us</a>
+                    <a href="blog.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Blog</a>
+                    <a href="#contact" class="nav-link hover:text-apple-blue transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & CTA -->
+                <div class="controls-section flex items-center space-x-3">
+                    <button id="darkModeToggle" class="relative w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:ring-offset-2 dark:focus:ring-offset-gray-900">
+                        <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center dark:translate-x-6">
+                            <i class="fas fa-sun text-xs text-yellow-500 dark:hidden"></i>
+                            <i class="fas fa-moon text-xs text-gray-600 hidden dark:inline"></i>
+                        </div>
+                    </button>
+                    <a href="tel:+919742090321" class="hidden sm:inline-flex items-center px-4 py-2 bg-apple-blue text-white rounded-lg hover:bg-blue-600 btn-glow font-medium">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                    <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-1">
+                <a href="#home" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Home</a>
+                <a href="#services" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Services</a>
+                <a href="#why-us" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Why Us</a>
+                <a href="#how-it-works" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Process</a>
+                <a href="#locations" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Locations</a>
+                <a href="terms.html" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Terms</a>
+                <a href="aboutus.html" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">About Us</a>
+                <a href="blog.html" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Blog</a>
+                <a href="#contact" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-16 min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 scroll-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-8">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                        <span class="block mb-4">Expert Apple Repairs</span>
+                        <span class="gradient-text block">You Can Trust</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                        Professional repair services for iPhone, MacBook, iPad, iMac & Apple Watch with genuine parts, certified technicians, and same-day service in Bangalore.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="inline-flex items-center px-8 py-4 bg-apple-blue text-white rounded-xl hover:bg-blue-600 btn-glow font-semibold text-lg">
+                            <i class="fas fa-calendar-alt mr-3"></i>
+                            Book Free Diagnosis
+                        </a>
+                        <a href="tel:+919742090321" class="inline-flex items-center px-8 py-4 border-2 border-apple-blue text-apple-blue rounded-xl hover:bg-apple-blue hover:text-white transition-all font-semibold text-lg">
+                            <i class="fas fa-phone mr-3"></i>
+                            97420 90321
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-8 text-sm text-gray-600 dark:text-gray-400">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="font-medium">90-Day Warranty</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-blue-500 mr-2"></i>
+                            <span class="font-medium">Same Day Service</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-purple-500 mr-2"></i>
+                            <span class="font-medium">Genuine Parts</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative">
+                    <div class="relative z-10 animate-float">
+                        <img src="images/slide1.webp" 
+                             alt="Professional iPhone Repair Service" 
+                             class="rounded-2xl shadow-2xl w-full">
+                    </div>
+                    <!-- Floating elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-apple-blue rounded-full opacity-20 animate-bounce-slow"></div>
+                    <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-purple-500 rounded-full opacity-10 animate-pulse-slow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white dark:bg-gray-900 scroll-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Our Premium Repair Services</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 font-medium">Authorized-level quality with faster turnaround times</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- iPhone Repairs -->
+                <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-mobile-alt text-2xl text-apple-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">iPhone Repairs</h3>
+                        <div class="w-12 h-1 bg-apple-blue rounded-full mx-auto"></div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Screen replacement (all models)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Battery replacement</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Camera & charging port repair</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Water damage recovery</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400 font-medium">
+                        <span><i class="fas fa-clock mr-1"></i> 90 min - 4 hrs</span>
+                        <span><i class="fas fa-shield-alt mr-1"></i> 3 months warranty</span>
+                    </div>
+                </div>
+
+                <!-- MacBook Repairs -->
+                <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-laptop text-2xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">MacBook Repairs</h3>
+                        <div class="w-12 h-1 bg-purple-600 rounded-full mx-auto"></div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Logic board repair</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Keyboard replacement</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Display & backlight issues</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Battery replacement</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400 font-medium">
+                        <span><i class="fas fa-clock mr-1"></i> 2 hrs - 2 days</span>
+                        <span><i class="fas fa-shield-alt mr-1"></i> 3 months warranty</span>
+                    </div>
+                </div>
+
+                <!-- iPad Repairs -->
+                <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tablet-alt text-2xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">iPad Repairs</h3>
+                        <div class="w-12 h-1 bg-green-600 rounded-full mx-auto"></div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Screen replacement</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Digitizer repair</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Charging port replacement</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Apple Pencil support</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400 font-medium">
+                        <span><i class="fas fa-clock mr-1"></i> 2-5 hours</span>
+                        <span><i class="fas fa-shield-alt mr-1"></i> 2 months warranty</span>
+                    </div>
+                </div>
+
+                <!-- Apple Watch Repairs -->
+                <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-stopwatch text-2xl text-red-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Apple Watch</h3>
+                        <div class="w-12 h-1 bg-red-600 rounded-full mx-auto"></div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Screen/digitizer replacement</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Battery replacement</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Water damage recovery</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Band connector repair</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400 font-medium">
+                        <span><i class="fas fa-clock mr-1"></i> 1-3 hours</span>
+                        <span><i class="fas fa-shield-alt mr-1"></i> 1 month warranty</span>
+                    </div>
+                </div>
+
+                <!-- iMac Repairs -->
+                <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-desktop text-2xl text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">iMac Repairs</h3>
+                        <div class="w-12 h-1 bg-yellow-600 rounded-full mx-auto"></div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Screen replacement</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Logic board repair</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">SSD/HDD upgrades</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Power supply issues</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400 font-medium">
+                        <span><i class="fas fa-clock mr-1"></i> 3 hrs - 2 days</span>
+                        <span><i class="fas fa-shield-alt mr-1"></i> 3 months warranty</span>
+                    </div>
+                </div>
+
+                <!-- AirPods Repairs -->
+                <div class="card-hover bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headphones text-2xl text-indigo-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">AirPods Service</h3>
+                        <div class="w-12 h-1 bg-indigo-600 rounded-full mx-auto"></div>
+                    </div>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Battery replacement</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Charging case repair</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Audio quality issues</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span class="font-medium">Connection problems</span>
+                        </li>
+                    </ul>
+                    <div class="flex justify-between text-sm text-gray-600 dark:text-gray-400 font-medium">
+                        <span><i class="fas fa-clock mr-1"></i> 1-2 hours</span>
+                        <span><i class="fas fa-shield-alt mr-1"></i> 1 month warranty</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-gray-50 dark:bg-gray-800 scroll-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Why Choose iCircuit?</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 font-medium">Bangalore's most trusted Apple repair center</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                        <i class="fas fa-certificate text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Genuine Parts</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">We use only Apple OEM or certified components with proper documentation and warranty</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                        <i class="fas fa-user-tie text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Expert Technicians</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">Our team has 10+ years of Apple-specific repair experience with specialized training</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                        <i class="fas fa-bolt text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Same-Day Service</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">80% of repairs completed within 4 hours with our express service option</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                        <i class="fas fa-shield-alt text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Warranty Protection</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">All repairs come with warranty ranging from 3 months to 1 year depending on service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-white dark:bg-gray-900 scroll-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">How It Works</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 font-medium">Simple 4-step process to get your device fixed</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="process-step">
+                    <div class="step-circle w-16 h-16 bg-apple-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Book Appointment</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">Schedule your repair online or call us directly for immediate assistance</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-circle w-16 h-16 bg-apple-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Free Diagnosis</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">Our experts will diagnose your device and provide transparent pricing</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-circle w-16 h-16 bg-apple-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Expert Repair</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">Professional repair using genuine parts with real-time updates</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-circle w-16 h-16 bg-apple-blue rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-white">4</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Quality Check & Delivery</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">Thorough testing and quality assurance before pickup or delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Locations Section -->
+    <section id="locations" class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900 scroll-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">We Service Across Bangalore</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 font-medium">Doorstep repair & pickup service available in 60+ locations</p>
+                <div class="flex justify-center mt-6">
+                    <div class="flex items-center space-x-8 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-shipping-fast text-green-500 mr-2"></i>
+                            <span class="font-medium">Free Pickup</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-blue-500 mr-2"></i>
+                            <span class="font-medium">Same Day Service</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-award text-purple-500 mr-2"></i>
+                            <span class="font-medium">90-Day Warranty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Location Categories -->
+            <div class="grid lg:grid-cols-3 gap-8 mb-12">
+                <!-- Central Bangalore -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
+                            <i class="fas fa-building text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Central Bangalore</h3>
+                            <p class="text-gray-600 dark:text-gray-400 font-medium">Tech hubs & business districts</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">Central</div>
+                            <div class="font-medium">Koramangala</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">Central</div>
+                            <div class="font-medium">Indiranagar</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">Central</div>
+                            <div class="font-medium">MG Road</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">Central</div>
+                            <div class="font-medium">Brigade Road</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">Central</div>
+                            <div class="font-medium">Richmond Town</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-blue-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">Central</div>
+                            <div class="font-medium">Ulsoor</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- South Bangalore -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center mr-4">
+                            <i class="fas fa-home text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">South Bangalore</h3>
+                            <p class="text-gray-600 dark:text-gray-400 font-medium">Residential & IT corridors</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-green-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">South</div>
+                            <div class="font-medium">HSR Layout</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-green-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">South</div>
+                            <div class="font-medium">BTM Layout</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-green-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">South</div>
+                            <div class="font-medium">Jayanagar</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-green-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">South</div>
+                            <div class="font-medium">JP Nagar</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-green-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">South</div>
+                            <div class="font-medium">Basavanagudi</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-green-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">South</div>
+                            <div class="font-medium">Banashankari</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- East Bangalore -->
+                <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mr-4">
+                            <i class="fas fa-laptop-code text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">East Bangalore</h3>
+                            <p class="text-gray-600 dark:text-gray-400 font-medium">IT parks & tech companies</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-purple-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">East</div>
+                            <div class="font-medium">Whitefield</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-purple-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">East</div>
+                            <div class="font-medium">Marathahalli</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-purple-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">East</div>
+                            <div class="font-medium">Bellandur</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-purple-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">East</div>
+                            <div class="font-medium">Sarjapur</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-purple-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">East</div>
+                            <div class="font-medium">Electronic City</div>
+                        </div>
+                        <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-purple-50 dark:hover:bg-gray-600">
+                            <div class="location-badge">East</div>
+                            <div class="font-medium">Harlur</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Locations Grid -->
+            <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mr-4">
+                            <i class="fas fa-map text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold">Additional Service Areas</h3>
+                            <p class="text-gray-600 dark:text-gray-400 font-medium">North, West & Outer Bangalore locations</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                    <!-- North Bangalore -->
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">North</div>
+                        <div class="font-medium">Hebbal</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">North</div>
+                        <div class="font-medium">Yelahanka</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">North</div>
+                        <div class="font-medium">RT Nagar</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">North</div>
+                        <div class="font-medium">Kalyan Nagar</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">North</div>
+                        <div class="font-medium">Banaswadi</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">North</div>
+                        <div class="font-medium">KR Puram</div>
+                    </div>
+                    
+                    <!-- West Bangalore -->
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">West</div>
+                        <div class="font-medium">Rajajinagar</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">West</div>
+                        <div class="font-medium">Malleshwaram</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">West</div>
+                        <div class="font-medium">Peenya</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">West</div>
+                        <div class="font-medium">Vijaynagar</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">West</div>
+                        <div class="font-medium">Mathikere</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">West</div>
+                        <div class="font-medium">Yeshwantpur</div>
+                    </div>
+                    
+                    <!-- Additional East & Outer Areas -->
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">East</div>
+                        <div class="font-medium">Mahadevapura</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">East</div>
+                        <div class="font-medium">Domlur</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">East</div>
+                        <div class="font-medium">Hoodi</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">East</div>
+                        <div class="font-medium">Varthur</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">Outer</div>
+                        <div class="font-medium">Bommasandra</div>
+                    </div>
+                    <div class="location-card p-3 rounded-lg bg-gray-50 dark:bg-gray-700 hover:bg-orange-50 dark:hover:bg-gray-600">
+                        <div class="location-badge">Outer</div>
+                        <div class="font-medium">Kengeri</div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-600 rounded-2xl">
+                    <div class="text-center">
+                        <h4 class="text-lg font-bold mb-2">Don't see your area?</h4>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4 font-medium">We're expanding our service network daily. Contact us to check availability in your location.</p>
+                        <a href="#contact" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-apple-blue to-blue-600 text-white rounded-xl font-semibold hover:from-blue-600 hover:to-apple-blue transition-all duration-300 transform hover:scale-105">
+                            <i class="fas fa-phone mr-2"></i>
+                            Check Availability
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50 dark:bg-gray-800 scroll-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Customer Experiences</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 font-medium">Rated 5/5 from 250+ satisfied customers</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-sm text-gray-600 dark:text-gray-400 font-medium">5.0</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 mb-6 font-medium">"Excellent service! My MacBook Pro was repaired within 4 hours and works perfectly. Professional staff and genuine Apple parts used."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                            RK
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Rajesh Kumar</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">MacBook Pro Repair</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-sm text-gray-600 dark:text-gray-400 font-medium">5.0</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 mb-6 font-medium">"Best iPhone repair service in Bangalore! Screen replacement was done perfectly and the warranty gives peace of mind."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">
+                            PS
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Priya Sharma</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">iPhone 14 Screen Repair</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-sm text-gray-600 dark:text-gray-400 font-medium">5.0</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 mb-6 font-medium">"Water-damaged iPad was completely restored! Amazing technical expertise and transparent pricing. Highly recommended!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                            AD
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Amit Desai</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">iPad Water Damage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 font-medium">Everything you need to know about our services</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold">Do you use original Apple parts?</span>
+                            <i class="fas fa-chevron-down text-apple-blue transform transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer bg-white dark:bg-gray-900 px-6">
+                        <div class="py-4">
+                            <p class="text-gray-700 dark:text-gray-300 font-medium leading-relaxed">Yes! We use only Apple OEM or Apple-certified parts for all repairs. For iPhones, we use original Apple displays with True Tone functionality. For MacBooks, we source components directly from Apple's authorized distributors. All parts come with proper documentation and warranty.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold">How long do repairs typically take?</span>
+                            <i class="fas fa-chevron-down text-apple-blue transform transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer bg-white dark:bg-gray-900 px-6">
+                        <div class="py-4">
+                            <p class="text-gray-700 dark:text-gray-300 font-medium leading-relaxed mb-4">Most common repairs are completed same-day:</p>
+                            <ul class="space-y-2 text-gray-700 dark:text-gray-300 font-medium">
+                                <li>• iPhone screen replacements: 90 minutes to 3 hours</li>
+                                <li>• iPhone battery replacements: 1 hour</li>
+                                <li>• MacBook keyboard replacements: 3-4 hours</li>
+                                <li>• iPad screen replacements: 2-4 hours</li>
+                            </ul>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium leading-relaxed mt-4">Complex logic board repairs may take 1-2 days.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold">What's your service warranty?</span>
+                            <i class="fas fa-chevron-down text-apple-blue transform transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer bg-white dark:bg-gray-900 px-6">
+                        <div class="py-4">
+                            <p class="text-gray-700 dark:text-gray-300 font-medium leading-relaxed mb-4">We offer industry-leading warranties on all repairs:</p>
+                            <ul class="space-y-2 text-gray-700 dark:text-gray-300 font-medium">
+                                <li>• iPhone/iPad repairs: 6 months warranty</li>
+                                <li>• MacBook repairs: 1 year warranty</li>
+                                <li>• Battery replacements: 6 months warranty</li>
+                                <li>• Water damage repairs: 3 months warranty</li>
+                            </ul>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium leading-relaxed mt-4">Warranty covers both parts and labor.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold">Do you offer pickup/delivery service?</span>
+                            <i class="fas fa-chevron-down text-apple-blue transform transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer bg-white dark:bg-gray-900 px-6">
+                        <div class="py-4">
+                            <p class="text-gray-700 dark:text-gray-300 font-medium leading-relaxed">Yes! We provide free pickup and delivery within 10km of our Marathahalli service center. For areas beyond 10km, we charge a nominal fee based on distance. Our service hours for pickup/delivery are from 10AM to 6PM daily.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-semibold">Can you repair water-damaged devices?</span>
+                            <i class="fas fa-chevron-down text-apple-blue transform transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer bg-white dark:bg-gray-900 px-6">
+                        <div class="py-4">
+                            <p class="text-gray-700 dark:text-gray-300 font-medium leading-relaxed mb-4">We have a 90% success rate with water-damaged Apple devices. The repair process involves:</p>
+                            <ol class="space-y-2 text-gray-700 dark:text-gray-300 font-medium">
+                                <li>1. Immediate power cutoff and disassembly</li>
+                                <li>2. Ultrasonic cleaning of affected components</li>
+                                <li>3. Corrosion treatment and board-level repairs</li>
+                                <li>4. Component replacement if necessary</li>
+                                <li>5. 72-hour drying and testing period</li>
+                            </ol>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium leading-relaxed mt-4">The sooner you bring in a water-damaged device, the higher the chances of successful recovery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800 scroll-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get Your Device Fixed Today</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 font-medium">Free diagnosis and transparent pricing</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 lg:items-stretch">
+                <!-- Contact Form -->
+                <div class="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-2xl border border-gray-100 dark:border-gray-700">
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 bg-gradient-to-br from-apple-blue to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i class="fas fa-tools text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Book Your Repair</h3>
+                        <p class="text-gray-600 dark:text-gray-400 font-medium">Free diagnosis • Transparent pricing • Expert service</p>
+                    </div>
+                    
+                    <form id="repairForm" class="space-y-6">
+                        <!-- Full Name -->
+                        <div class="relative">
+                            <input type="text" id="fullName" name="fullName" required 
+                                   class="peer w-full px-4 py-4 pt-6 bg-gray-50 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-apple-blue dark:focus:border-apple-blue focus:outline-none transition-all duration-300 placeholder-transparent text-gray-900 dark:text-white font-medium"
+                                   placeholder="Enter your full name">
+                            <label for="fullName" class="absolute left-4 top-2 text-xs font-semibold text-gray-500 dark:text-gray-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:top-2 peer-focus:text-xs peer-focus:text-apple-blue">
+                                Full Name *
+                            </label>
+                            <span class="error-message text-red-500 text-sm mt-1 hidden flex items-center">
+                                <i class="fas fa-exclamation-circle mr-2"></i>
+                                Please enter your full name (letters only, min 3 characters)
+                            </span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="relative">
+                            <input type="email" id="email" name="email" required 
+                                   class="peer w-full px-4 py-4 pt-6 bg-gray-50 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-apple-blue dark:focus:border-apple-blue focus:outline-none transition-all duration-300 placeholder-transparent text-gray-900 dark:text-white font-medium"
+                                   placeholder="Enter your email">
+                            <label for="email" class="absolute left-4 top-2 text-xs font-semibold text-gray-500 dark:text-gray-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:top-2 peer-focus:text-xs peer-focus:text-apple-blue">
+                                Email Address *
+                            </label>
+                            <span class="error-message text-red-500 text-sm mt-1 hidden flex items-center">
+                                <i class="fas fa-exclamation-circle mr-2"></i>
+                                Please enter a valid email address
+                            </span>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="relative">
+                            <input type="tel" id="phoneNumber" name="phoneNumber" required 
+                                   class="peer w-full px-4 py-4 pt-6 bg-gray-50 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-apple-blue dark:focus:border-apple-blue focus:outline-none transition-all duration-300 placeholder-transparent text-gray-900 dark:text-white font-medium"
+                                   placeholder="Enter phone number">
+                            <label for="phoneNumber" class="absolute left-4 top-2 text-xs font-semibold text-gray-500 dark:text-gray-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:top-2 peer-focus:text-xs peer-focus:text-apple-blue">
+                                Phone Number *
+                            </label>
+                            <span class="error-message text-red-500 text-sm mt-1 hidden flex items-center">
+                                <i class="fas fa-exclamation-circle mr-2"></i>
+                                Phone must start with 6,7,8,9 and be 10 digits
+                            </span>
+                        </div>
+
+                        <!-- Device Type -->
+                        <div class="relative">
+                            <select id="deviceType" name="deviceType" required 
+                                    class="peer w-full px-4 py-4 pt-6 bg-gray-50 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-apple-blue dark:focus:border-apple-blue focus:outline-none transition-all duration-300 text-gray-900 dark:text-white appearance-none cursor-pointer font-medium">
+                                <option value="">Select device</option>
+                                <option value="iPhone">📱 iPhone</option>
+                                <option value="MacBook">💻 MacBook</option>
+                                <option value="iPad">📲 iPad</option>
+                                <option value="Apple Watch">⌚ Apple Watch</option>
+                                <option value="iMac">🖥️ iMac</option>
+                                <option value="AirPods">🎧 AirPods</option>
+                                <option value="Other">🔧 Other Apple Device</option>
+                            </select>
+                            <label for="deviceType" class="absolute left-4 top-2 text-xs font-semibold text-gray-500 dark:text-gray-400 transition-all duration-300 peer-focus:text-apple-blue">
+                                Device Type *
+                            </label>
+                            <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                            </div>
+
+                        <!-- Issue Description -->
+                        <div class="relative">
+                            <textarea id="issueDescription" name="issueDescription" rows="4" required 
+                                      class="peer w-full px-4 py-4 pt-6 bg-gray-50 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-apple-blue dark:focus:border-apple-blue focus:outline-none transition-all duration-300 placeholder-transparent text-gray-900 dark:text-white resize-none font-medium"
+                                      placeholder="Describe the issue"></textarea>
+                            <label for="issueDescription" class="absolute left-4 top-2 text-xs font-semibold text-gray-500 dark:text-gray-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:top-2 peer-focus:text-xs peer-focus:text-apple-blue">
+                                Issue Description *
+                            </label>
+                            <span class="error-message text-red-500 text-sm mt-1 hidden flex items-center">
+                                <i class="fas fa-exclamation-circle mr-2"></i>
+                                Please describe the issue (minimum 10 characters)
+                            </span>
+                        </div>
+
+                        <!-- Preferred Time -->
+                        <div class="relative">
+                            <input type="text" id="preferredTime" name="preferredTime" 
+                                   class="peer w-full px-4 py-4 pt-6 bg-gray-50 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-600 rounded-xl focus:border-apple-blue dark:focus:border-apple-blue focus:outline-none transition-all duration-300 text-gray-900 dark:text-white font-medium"
+                                   placeholder="Select preferred date and time">
+                            <label for="preferredTime" class="absolute left-4 top-2 text-xs font-semibold text-gray-500 dark:text-gray-400 transition-all duration-300 peer-focus:text-apple-blue">
+                                Preferred Date & Time (Optional)
+                            </label>
+                            <i class="fas fa-calendar-alt absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submitBtn" class="group relative w-full bg-gradient-to-r from-apple-blue to-blue-600 text-white py-4 px-6 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-apple-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="relative flex items-center justify-center space-x-3">
+                                <i class="fas fa-paper-plane transition-transform duration-300 group-hover:translate-x-1"></i>
+                                <span class="transition-all duration-300">Submit Repair Request</span>
+                            </div>
+                        </button>
+
+                        <!-- Trust Indicators -->
+                        <div class="flex items-center justify-center space-x-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <div class="flex items-center text-sm text-gray-600 dark:text-gray-400 font-medium">
+                                <i class="fas fa-shield-check text-green-500 mr-2"></i>
+                                SSL Secured
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600 dark:text-gray-400 font-medium">
+                                <i class="fas fa-clock text-blue-500 mr-2"></i>
+                                30 Min Response
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600 dark:text-gray-400 font-medium">
+                                <i class="fas fa-phone text-purple-500 mr-2"></i>
+                                Free Diagnosis
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="hidden mt-6 p-6 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border-2 border-green-200 dark:border-green-700 rounded-2xl">
+                        <div class="flex items-center justify-center">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-check text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-green-800 dark:text-green-300 mb-1">Request Submitted Successfully!</h4>
+                                <p class="text-green-700 dark:text-green-400 font-medium">We'll contact you within 30 minutes to confirm your appointment.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div id="errorMessage" class="hidden mt-6 p-6 bg-gradient-to-r from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20 border-2 border-red-200 dark:border-red-700 rounded-2xl">
+                        <div class="flex items-center justify-center">
+                            <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-exclamation-triangle text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-red-800 dark:text-red-300 mb-1">Submission Failed</h4>
+                                <p class="text-red-700 dark:text-red-400 font-medium">Please check your details and try again, or call us directly at +91 97420 90321</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Info & Map -->
+                <div class="space-y-8 h-full flex flex-col">
+                    <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700">
+                        <h3 class="text-2xl font-bold mb-6 flex items-center">
+                            <i class="fas fa-map-marker-alt text-apple-blue mr-3"></i>
+                            Visit Our Store
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-location-dot text-apple-blue mr-3 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold">Address</p>
+                                    <p class="text-gray-600 dark:text-gray-300 font-medium">104/A, Shop No. F8, 1st Floor, Anjanadri Krest Complex, Above SBI ATM, Near Govt School, Munnekollala, Bengaluru-560037</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-apple-blue mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Phone</p>
+                                    <a href="tel:+919742090321" class="text-apple-blue hover:underline font-medium">+91 97420 90321</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-apple-blue mr-3"></i>
+                                <div>
+                                    <p class="font-semibold">Hours</p>
+                                    <p class="text-gray-600 dark:text-gray-300 font-medium">Mon-Sun: 10:00 AM - 8:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg flex-1">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1234567890!2d77.7059299!3d12.9525629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13c8701d0f81%3A0x7a128b255cb902a0!2sicircuit!5e0!3m2!1sen!2sin!4v1712345678901!5m2!1sen!2sin" 
+                                width="100%" height="100%" class="min-h-96" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-gray-900 text-white font-poppins">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Footer Content -->
+            <div class="py-16 grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+                <!-- Brand Section -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="images/logo.png" alt="iCircuit Logo" class="h-10 w-auto">
+                        <span class="text-2xl font-bold">iCircuit.in</span>
+                    </div>
+                    <p class="text-gray-400 mb-8 max-w-md leading-relaxed font-medium">
+                        Bangalore's most trusted Apple repair service. We specialize in iPhone, MacBook, iPad, iMac, and Apple Watch repairs with genuine parts and certified technicians.
+                    </p>
+                    
+                    <!-- Quick Contact -->
+                    <div class="space-y-4 mb-8">
+                        <a href="tel:+919742090321" class="flex items-center text-white hover:text-apple-blue transition-colors group">
+                            <div class="w-10 h-10 bg-apple-blue rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">+91 97420 90321</p>
+                                <p class="text-gray-400 text-sm">Call for instant support</p>
+                            </div>
+                        </a>
+                        
+                        <div class="flex items-center text-gray-400">
+                            <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Mon-Sun: 10AM - 8PM</p>
+                                <p class="text-sm">Always here when you need us</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Social Links -->
+                    <div class="flex space-x-4">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/share/1SG5wiX1b8/?mibextid=qi2Omg" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg social-icon-hover"
+                           style="background-color: #1877F2;"
+                           title="Follow us on Facebook">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/icircuit.in/" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg instagram-gradient social-icon-hover"
+                           title="Follow us on Instagram">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/vinod-kumar-554932345/" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg social-icon-hover"
+                           style="background-color: #0A66C2;"
+                           title="Connect on LinkedIn">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/9742090321" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg whatsapp-pulse social-icon-hover"
+                           style="background-color: #25D366;"
+                           title="Chat on WhatsApp">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.89 3.488"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#services" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Our Services
+                        </a></li>
+                        <li><a href="#why-us" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Why Choose Us
+                        </a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Repair Process
+                        </a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            About Us
+                        </a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Our Blog
+                        </a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Book Repair
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Repair Services</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-mobile-alt text-apple-blue mr-3"></i>
+                            iPhone Screen & Battery
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-laptop text-apple-blue mr-3"></i>
+                            MacBook Logic Board
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-tablet-alt text-apple-blue mr-3"></i>
+                            iPad Display Repair
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-desktop text-apple-blue mr-3"></i>
+                            iMac Upgrades
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-stopwatch text-apple-blue mr-3"></i>
+                            Apple Watch Service
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 py-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center">
+                    <div class="text-center lg:text-left mb-4 lg:mb-0">
+                        <p class="text-gray-400 text-sm font-medium">
+                            &copy; 2025 iCircuit.in - All Rights Reserved
+                        </p>
+                        <p class="text-gray-500 text-xs mt-1">
+                            Apple and the Apple logo are trademarks of Apple Inc. | Independent repair service
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center space-x-6 text-sm">
+                        <a href="privacy.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium">Privacy Policy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium">Terms of Service</a>
+                        <div class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-shield-check text-green-500 mr-2"></i>
+                            SSL Secured
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.classList.add('dark');
+        }
+
+        darkModeToggle.addEventListener('click', function() {
+            html.classList.toggle('dark');
+            
+            // Save theme preference
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Enhanced Scroll to Top Button Functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        const scrollProgress = document.getElementById('scrollProgress');
+
+        // Show/hide scroll to top button and update progress
+        function updateScrollButton() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+            // Show button after scrolling 300px
+            if (scrollTop > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+
+            // Update progress ring
+            scrollProgress.style.background = `conic-gradient(#007AFF ${scrollPercentage * 3.6}deg, transparent 0deg)`;
+        }
+
+        // Scroll to top functionality
+        scrollToTopBtn.addEventListener('click', function() {
+            // Add click animation
+            scrollToTopBtn.style.transform = 'translateY(-1px) scale(0.95)';
+            
+            // Smooth scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // Reset button animation
+            setTimeout(() => {
+                scrollToTopBtn.style.transform = '';
+            }, 150);
+        });
+
+        // Listen for scroll events
+        window.addEventListener('scroll', updateScrollButton);
+
+        // Initial call
+        updateScrollButton();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Initialize Flatpickr for date/time picker with DD/MM/YYYY format
+        flatpickr("#preferredTime", {
+            enableTime: true,
+            dateFormat: "d/m/Y H:i", // DD/MM/YYYY HH:MM format
+            time_24hr: false, // 12-hour format with AM/PM
+            minDate: "today",
+            minuteIncrement: 30,
+            defaultHour: 10,
+            defaultMinute: 0,
+            locale: {
+                firstDayOfWeek: 1 // Monday as first day
+            },
+            altInput: true,
+            altFormat: "d/m/Y h:i K", // Display format with AM/PM
+            placeholder: "Select date and time"
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                    if (otherAnswer !== answer) {
+                        otherAnswer.classList.remove('open');
+                        otherAnswer.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+                
+                // Toggle current FAQ
+                answer.classList.toggle('open');
+                
+                if (answer.classList.contains('open')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Location cards interaction
+        document.querySelectorAll('.location-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const location = this.querySelector('.font-medium').textContent;
+                
+                // Scroll to contact form
+                document.getElementById('contact').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+                
+                // Auto-fill location in issue description after a short delay
+                setTimeout(() => {
+                    const issueField = document.getElementById('issueDescription');
+                    if (issueField && !issueField.value.includes(location)) {
+                        const currentValue = issueField.value;
+                        issueField.value = currentValue ? 
+                            `${currentValue} (Service location: ${location})` : 
+                            `Repair needed in ${location} area`;
+                        
+                        // Focus the field briefly to show the change
+                        issueField.focus();
+                        setTimeout(() => issueField.blur(), 1000);
+                    }
+                }, 500);
+            });
+        });
+
+        // Form Validation and Submission
+        const repairForm = document.getElementById('repairForm');
+        const successMessage = document.getElementById('successMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        const submitBtn = document.getElementById('submitBtn');
+
+        repairForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Hide previous messages
+            successMessage.classList.add('hidden');
+            errorMessage.classList.add('hidden');
+            
+            // Show loading state
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+                <div class="relative flex items-center justify-center space-x-3">
+                    <i class="fas fa-spinner animate-spin"></i>
+                    <span>Submitting...</span>
+                </div>
+            `;
+            
+            // Get form data
+            const formData = new FormData(repairForm);
+            
+            // Validation
+            let isValid = true;
+            const errors = document.querySelectorAll('.error-message');
+            errors.forEach(error => error.classList.add('hidden'));
+            
+            // Name validation
+            const fullName = formData.get('fullName').trim();
+            if (!/^[a-zA-Z\s]{3,}$/.test(fullName)) {
+                document.querySelector('#fullName + label + .error-message').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            // Phone validation  
+            const phoneNumber = formData.get('phoneNumber').trim();
+            if (!/^[6789]\d{9}$/.test(phoneNumber)) {
+                document.querySelector('#phoneNumber + label + .error-message').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            // Email validation
+            const email = formData.get('email').trim();
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.querySelector('#email + label + .error-message').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            // Issue description validation
+            const issueDescription = formData.get('issueDescription').trim();
+            if (issueDescription.length < 10) {
+                document.querySelector('#issueDescription + label + .error-message').classList.remove('hidden');
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                return;
+            }
+
+            try {
+                // TELEGRAM BOT INTEGRATION
+                // Replace with your actual bot token and chat ID
+                const BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE';
+                const CHAT_ID = 'YOUR_CHAT_ID_HERE';
+                
+                const telegramMessage = `
+🔧 *New Repair Request*
+
+👤 *Name:* ${formData.get('fullName')}
+📧 *Email:* ${formData.get('email')}
+📱 *Phone:* ${formData.get('phoneNumber')}
+🖥️ *Device:* ${formData.get('deviceType')}
+📝 *Issue:* ${formData.get('issueDescription')}
+📅 *Preferred Time:* ${formData.get('preferredTime') || 'Not specified'}
+⏰ *Submitted:* ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
+                `;
+                
+                // For demo purposes, we'll simulate form submission success
+                // Replace this with your actual submission logic
+                await new Promise(resolve => setTimeout(resolve, 2000)); // Simulate network delay
+                
+                // Simulate successful submission
+                successMessage.classList.remove('hidden');
+                repairForm.reset();
+                // Scroll to success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                /* 
+                TELEGRAM BOT INTEGRATION (uncomment and configure):
+                
+                const telegramResponse = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        chat_id: CHAT_ID,
+                        text: telegramMessage,
+                        parse_mode: 'Markdown'
+                    })
+                });
+                
+                if (telegramResponse.ok) {
+                    successMessage.classList.remove('hidden');
+                    repairForm.reset();
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    throw new Error('Failed to send to Telegram');
+                }
+                */
+                
+            } catch (error) {
+                console.error('Error:', error);
+                errorMessage.classList.remove('hidden');
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } finally {
+                // Reset button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-md');
+            } else {
+                header.classList.remove('backdrop-blur-md');
+            }
+        });
+
+        // Enhanced scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards and location cards
+        document.querySelectorAll('.card-hover, .location-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // FontAwesome fallback check
+        function checkFontAwesome() {
+            const testIcon = document.createElement('i');
+            testIcon.className = 'fas fa-home';
+            testIcon.style.position = 'absolute';
+            testIcon.style.left = '-9999px';
+            document.body.appendChild(testIcon);
+            
+            const computedStyle = window.getComputedStyle(testIcon, ':before');
+            const isLoaded = computedStyle.getPropertyValue('font-family').includes('Font Awesome');
+            
+            document.body.removeChild(testIcon);
+            
+            if (!isLoaded) {
+                console.log('FontAwesome not loaded, trying alternative CDN...');
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://use.fontawesome.com/releases/v6.4.0/css/all.css';
+                document.head.appendChild(link);
+            }
+        }
+
+        // Check FontAwesome after page load
+        window.addEventListener('load', function() {
+            setTimeout(checkFontAwesome, 1000);
+        });
+
+        // Additional scroll to top button enhancements
+        scrollToTopBtn.addEventListener('mouseenter', function() {
+            this.style.animation = 'none';
+        });
+
+        scrollToTopBtn.addEventListener('mouseleave', function() {
+            this.style.animation = '';
+        });
+
+        // Keyboard accessibility for scroll to top
+        scrollToTopBtn.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+
+        // Add tabindex for keyboard navigation
+        scrollToTopBtn.setAttribute('tabindex', '0');
+        scrollToTopBtn.setAttribute('aria-label', 'Scroll to top');
+        scrollToTopBtn.setAttribute('title', 'Scroll to top');
+    </script>
+</body>
+</html>

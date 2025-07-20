@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Signs Your iPhone Battery Needs Replacing: Complete Guide - iCircuit Blog</title>
+    <meta name="description" content="Is your iPhone dying too quickly? Learn the key indicators that it's time for a new battery and how professional replacement can restore your device's performance.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Multiple FontAwesome CDN sources for reliability -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Backup FontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
+    
+    <!-- Alternative CDN as fallback -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            gray: '#1D1D1F',
+                            lightGray: '#F5F5F7'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-down': 'fadeInDown 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-poppins bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up text-white text-lg"></i>
+    </div>
+    
+    <!-- Sticky Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect bg-white/90 dark:bg-gray-900/90 border-b border-gray-200 dark:border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3" data-aos="fade-right">
+                    <img src="images/logo.png" alt="iCircuit Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold gradient-text">iCircuit.in</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Home</a>
+                    <a href="index.html#services" class="nav-link hover:text-apple-blue transition-colors font-medium">Services</a>
+                    
+                    <a href="index.html#testimonials" class="nav-link hover:text-apple-blue transition-colors font-medium">Reviews</a>
+                    <a href="aboutus.html" class="nav-link hover:text-apple-blue transition-colors font-medium">About Us</a>
+                    <a href="blog.html" class="nav-link text-apple-blue transition-colors font-medium">Blog</a>
+                    <a href="index.html#contact" class="nav-link hover:text-apple-blue transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & CTA -->
+                <div class="flex items-center space-x-4" data-aos="fade-left">
+                    <button id="darkModeToggle" class="relative w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:ring-offset-2 dark:focus:ring-offset-gray-900">
+                        <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center dark:translate-x-6">
+                            <i class="fas fa-sun text-xs text-yellow-500 dark:hidden"></i>
+                            <i class="fas fa-moon text-xs text-gray-600 hidden dark:inline"></i>
+                        </div>
+                    </button>
+                    <a href="tel:+919742090321" class="hidden sm:inline-flex items-center px-4 py-2 bg-apple-blue text-white rounded-lg hover:bg-blue-600 btn-glow font-medium">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                    <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-1">
+                <a href="index.html" class="mobile-nav-item">Home</a>
+                <a href="index.html#services" class="mobile-nav-item">Services</a>
+                <a href="index.html#why-us" class="mobile-nav-item">Why Us</a>
+                <a href="index.html#how-it-works" class="mobile-nav-item">Process</a>
+                <a href="index.html#locations" class="mobile-nav-item">Locations</a>
+                <a href="index.html#testimonials" class="mobile-nav-item">Reviews</a>
+                <a href="aboutus.html" class="mobile-nav-item">About Us</a>
+                <a href="blog.html" class="mobile-nav-item bg-apple-blue text-white">Blog</a>
+                <a href="index.html#contact" class="mobile-nav-item">Contact</a>
+                <a href="tel:+919742090321" class="mobile-nav-item bg-green-500 text-white text-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Mobile Optimized -->
+    <section class="pt-16 min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Content -->
+                <div class="space-y-6 lg:space-y-8 text-center lg:text-left" data-aos="fade-right" data-aos-duration="800">
+                    <div class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-apple-blue/10 dark:bg-apple-blue/20 rounded-full text-apple-blue font-semibold text-xs sm:text-sm mb-4 lg:mb-6">
+                        <i class="fas fa-battery-quarter mr-2"></i>
+                        iPhone Battery Health
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                        <span class="block mb-2 lg:mb-4">5 Signs Your iPhone</span>
+                        <span class="gradient-text block">Battery Needs Replacing</span>
+                    </h1>
+                    <p class="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                        Is your iPhone dying too quickly? Learn the key warning signs that indicate it's time for a battery replacement and how to restore your device's performance.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#warning-signs" class="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-apple-blue hover:bg-blue-600 text-white rounded-xl font-semibold text-sm sm:text-base lg:text-lg transition-colors shadow-lg">
+                            <i class="fas fa-exclamation-triangle mr-2 sm:mr-3"></i>
+                            Check Signs
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-apple-blue text-apple-blue rounded-xl hover:bg-apple-blue hover:text-white transition-all font-semibold text-sm sm:text-base lg:text-lg">
+                            <i class="fas fa-tools mr-2 sm:mr-3"></i>
+                            Battery Replacement
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative order-first lg:order-last" data-aos="fade-left" data-aos-duration="800">
+                    <div class="relative z-10 animate-float">
+                        <img src="images/slide1.webp" 
+                             alt="iPhone battery replacement and performance restoration" 
+                             class="rounded-2xl shadow-2xl w-full">
+                    </div>
+                    <!-- Floating elements -->
+                    <div class="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-24 sm:h-24 bg-apple-blue rounded-full opacity-20 animate-bounce"></div>
+                    <div class="absolute -bottom-4 -left-4 sm:-bottom-8 sm:-left-8 w-20 h-20 sm:w-32 sm:h-32 bg-blue-500 rounded-full opacity-10 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section id="article-content" class="py-8 sm:py-12 lg:py-20 bg-white dark:bg-gray-900 scroll-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Mobile Author Card -->
+            <div class="lg:hidden mobile-sidebar-section mb-6" data-aos="fade-up">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700">
+                    <div class="text-center">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-apple-blue to-blue-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                            <i class="fas fa-battery-half text-2xl sm:text-3xl text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-lg sm:text-xl mb-2 text-gray-900 dark:text-white">Battery Specialist</h3>
+                        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-3 sm:mb-4">Certified technician with 8+ years experience in iPhone battery replacements</p>
+                        <div class="flex items-center justify-center text-yellow-500 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">5.0 Rating</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Published: July 05, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <!-- Table of Contents - Mobile -->
+                    <div class="lg:hidden mb-8" data-aos="fade-up">
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-4 sm:p-6 border border-blue-200 dark:border-blue-800">
+                            <h3 class="font-bold text-lg sm:text-xl mb-4 text-blue-900 dark:text-blue-100 flex items-center">
+                                <i class="fas fa-list-ul mr-3"></i>
+                                Quick Navigation
+                            </h3>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#battery-basics" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        1. Understanding Battery Health
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#warning-signs" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        2. 5 Warning Signs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#checking-health" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        3. How to Check Battery Health
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#replacement-options" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        4. Replacement Options
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#prevention-tips" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        5. Prevention Tips
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Article Content -->
+                    <article class="blog-content" data-aos="fade-up" data-aos-delay="200">
+                        
+                        <!-- Introduction -->
+                        <div class="mb-8 sm:mb-12">
+                            <p>iPhone battery degradation is inevitable, but knowing when to replace your battery can mean the difference between a phone that lasts all day and one that dies before lunch. As lithium-ion batteries age, they lose capacity and ability to deliver peak performance, directly impacting your iPhone's usability and functionality.</p>
+                            
+                            <p>At iCircuit, we perform hundreds of iPhone battery replacements monthly, and we've identified clear patterns that indicate when a battery replacement is necessary. Understanding these warning signs helps you make informed decisions about battery replacement timing, potentially saving money and extending your iPhone's useful life significantly. This guide will help you recognize when your iPhone battery needs professional attention.</p>
+                        </div>
+
+                        <!-- Battery Basics -->
+                        <div id="battery-basics" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>🔋 Understanding iPhone Battery Health</h2>
+                            
+                            <div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 sm:p-6 rounded-r-xl mb-6">
+                                <div class="flex items-start">
+                                    <i class="fas fa-info-circle text-blue-500 mr-3 mt-1 text-lg"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-blue-800 dark:text-blue-200 mb-2">Battery Health Fundamentals</h4>
+                                        <p class="text-blue-700 dark:text-blue-300 text-sm sm:text-base">iPhone batteries are designed to retain 80% of original capacity at 500 complete charge cycles under normal conditions.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>How iPhone Batteries Work</h3>
+                            <p>iPhone batteries use lithium-ion technology, which offers several advantages but also has inherent limitations:</p>
+                            
+                            <ul>
+                                <li><strong>Chemical aging:</strong> Batteries naturally degrade over time due to chemical reactions</li>
+                                <li><strong>Charge cycles:</strong> Each complete 0-100% charge counts as one cycle</li>
+                                <li><strong>Capacity loss:</strong> Maximum storage capacity decreases with age and usage</li>
+                                <li><strong>Peak performance capability:</strong> Ability to deliver maximum power diminishes</li>
+                                <li><strong>Internal resistance:</strong> Increases over time, affecting power delivery</li>
+                                <li><strong>Temperature sensitivity:</strong> Extreme temperatures accelerate degradation</li>
+                            </ul>
+
+                            <h3>Normal Battery Degradation Timeline</h3>
+                            <ul>
+                                <li><strong>0-6 months:</strong> 100-95% capacity - minimal noticeable degradation</li>
+                                <li><strong>6-12 months:</strong> 95-90% capacity - slight reduction in battery life</li>
+                                <li><strong>1-2 years:</strong> 90-85% capacity - noticeable battery life decrease</li>
+                                <li><strong>2-3 years:</strong> 85-80% capacity - significant impact on daily usage</li>
+                                <li><strong>3+ years:</strong> Below 80% capacity - replacement strongly recommended</li>
+                            </ul>
+
+                            <h3>Factors That Accelerate Battery Degradation</h3>
+                            <ul>
+                                <li><strong>High temperatures:</strong> Leaving iPhone in hot cars, direct sunlight</li>
+                                <li><strong>Fast charging habits:</strong> Frequent use of fast chargers generates heat</li>
+                                <li><strong>Deep discharge cycles:</strong> Regularly draining battery to 0%</li>
+                                <li><strong>Overnight charging:</strong> Keeping battery at 100% for extended periods</li>
+                                <li><strong>Intensive usage:</strong> Gaming, video streaming, GPS navigation</li>
+                                <li><strong>Age:</strong> Natural chemical aging regardless of usage patterns</li>
+                            </ul>
+
+                            <h3>Apple's Battery Health Metrics</h3>
+                            <ul>
+                                <li><strong>Maximum Capacity:</strong> Percentage of original battery capacity remaining</li>
+                                <li><strong>Peak Performance Capability:</strong> Battery's ability to deliver maximum power</li>
+                                <li><strong>Performance Management:</strong> iOS feature that prevents unexpected shutdowns</li>
+                                <li><strong>Service recommended:</strong> Apple's indication that replacement is needed</li>
+                                <li><strong>Important battery message:</strong> Critical degradation warning</li>
+                            </ul>
+                        </div>
+
+                        <!-- Warning Signs -->
+                        <div id="warning-signs" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>⚠️ 5 Key Warning Signs Your iPhone Battery Needs Replacing</h2>
+                            
+                            <p>These five warning signs are the most reliable indicators that your iPhone battery has degraded beyond acceptable performance levels and requires professional replacement.</p>
+
+                            <h3>1. Rapid Battery Drain and Short Battery Life</h3>
+                            <ul>
+                                <li><strong>Symptoms:</strong> iPhone battery drains significantly faster than when new</li>
+                                <li><strong>Normal usage impact:</strong> Phone dies before end of typical day</li>
+                                <li><strong>Quantified decline:</strong> Battery life less than 60% of original performance</li>
+                                <li><strong>Charging frequency:</strong> Need to charge 2-3 times per day for normal usage</li>
+                                <li><strong>Standby drain:</strong> Significant battery loss even when not actively using phone</li>
+                                <li><strong>App-specific issues:</strong> Basic apps like messaging or calls drain battery quickly</li>
+                                <li><strong>Background drain:</strong> Battery depletes rapidly even with background app refresh disabled</li>
+                            </ul>
+
+                            <h3>2. Unexpected Shutdowns and Power Issues</h3>
+                            <ul>
+                                <li><strong>Random shutdowns:</strong> iPhone turns off suddenly, even with remaining battery percentage</li>
+                                <li><strong>Cold weather shutdowns:</strong> Phone dies in normal cool temperatures (60-70°F)</li>
+                                <li><strong>High-demand shutdowns:</strong> Shuts down when opening camera, games, or GPS apps</li>
+                                <li><strong>Restart loops:</strong> Phone gets stuck in restart cycles</li>
+                                <li><strong>Power button unresponsive:</strong> Difficulty turning phone on after shutdown</li>
+                                <li><strong>Performance throttling:</strong> iOS automatically slows down phone to prevent shutdowns</li>
+                                <li><strong>Inconsistent power readings:</strong> Battery percentage jumps erratically</li>
+                            </ul>
+
+                            <h3>3. Extremely Slow Charging and Charging Problems</h3>
+                            <ul>
+                                <li><strong>Charging time increase:</strong> Takes significantly longer to reach 100% charge</li>
+                                <li><strong>Charging stops prematurely:</strong> Charging pauses or stops before reaching full capacity</li>
+                                <li><strong>Heat during charging:</strong> iPhone becomes extremely hot while charging</li>
+                                <li><strong>Intermittent charging:</strong> Charging starts and stops repeatedly</li>
+                                <li><strong>Won't reach 100%:</strong> Charging stops at 80-90% and won't continue</li>
+                                <li><strong>Fast charging ineffective:</strong> Fast chargers provide minimal speed improvement</li>
+                                <li><strong>Wireless charging issues:</strong> Frequent disconnections or failure to charge wirelessly</li>
+                            </ul>
+
+                            <h3>4. Performance Degradation and iOS Slowdowns</h3>
+                            <ul>
+                                <li><strong>Overall sluggishness:</strong> Apps load slowly, interface lag, delayed responses</li>
+                                <li><strong>Camera performance:</strong> Slow camera startup, delayed photo processing</li>
+                                <li><strong>App crashes:</strong> Frequent unexpected app closures</li>
+                                <li><strong>Reduced processing power:</strong> Noticeable performance throttling by iOS</li>
+                                <li><strong>Multitasking issues:</strong> Difficulty running multiple apps simultaneously</li>
+                                <li><strong>Gaming performance:</strong> Frame rate drops, game crashes, overheating</li>
+                                <li><strong>iOS performance management:</strong> System notifications about reduced performance</li>
+                            </ul>
+
+                            <h3>5. Physical Battery Issues and Swelling</h3>
+                            <ul>
+                                <li><strong>Screen lifting:</strong> Display separating from phone frame</li>
+                                <li><strong>Back panel bulging:</strong> Rear case appears swollen or distorted</li>
+                                <li><strong>Case fit issues:</strong> Phone cases no longer fit properly</li>
+                                <li><strong>Button responsiveness:</strong> Volume or power buttons feel different or stuck</li>
+                                <li><strong>Screen pressure:</strong> Visible pressure marks or discoloration on display</li>
+                                <li><strong>Camera misalignment:</strong> Camera lens appears tilted or protruding</li>
+                                <li><strong>Safety concern:</strong> Swollen batteries pose potential safety risks</li>
+                            </ul>
+
+                            <h3>Combination of Symptoms - Time for Immediate Action</h3>
+                            <ul>
+                                <li><strong>Multiple warning signs:</strong> Experiencing 2-3 symptoms simultaneously</li>
+                                <li><strong>Progressive worsening:</strong> Symptoms getting worse over weeks or months</li>
+                                <li><strong>Daily impact:</strong> Battery issues affecting work, communication, or daily routines</li>
+                                <li><strong>Safety indicators:</strong> Any physical swelling requires immediate professional attention</li>
+                                <li><strong>Age factor:</strong> iPhone 2+ years old showing multiple symptoms</li>
+                            </ul>
+                        </div>
+
+                        <!-- Checking Health -->
+                        <div id="checking-health" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>📊 How to Check Your iPhone Battery Health</h2>
+                            
+                            <p>Apple provides built-in tools to monitor battery health, but understanding the data and knowing when to act requires additional insight.</p>
+
+                            <h3>Using iPhone's Built-in Battery Health Feature</h3>
+                            <ul>
+                                <li><strong>Access path:</strong> Settings > Battery > Battery Health & Charging</li>
+                                <li><strong>Maximum Capacity:</strong> Shows percentage of original battery capacity remaining</li>
+                                <li><strong>Peak Performance Capability:</strong> Indicates if performance management is active</li>
+                                <li><strong>Service recommendation:</strong> Apple's official replacement recommendation</li>
+                                <li><strong>Important battery message:</strong> Critical warnings about battery condition</li>
+                            </ul>
+
+                            <h3>Interpreting Battery Health Percentages</h3>
+                            <ul>
+                                <li><strong>100-95%:</strong> Excellent condition, no replacement needed</li>
+                                <li><strong>95-90%:</strong> Good condition, normal degradation for age</li>
+                                <li><strong>90-85%:</strong> Fair condition, noticeable battery life reduction</li>
+                                <li><strong>85-80%:</strong> Poor condition, significant daily impact</li>
+                                <li><strong>Below 80%:</strong> Service recommended, replacement highly advised</li>
+                                <li><strong>Below 70%:</strong> Critical condition, immediate replacement needed</li>
+                            </ul>
+
+                            <h3>Advanced Battery Monitoring with Third-Party Apps</h3>
+                            <ul>
+                                <li><strong>Battery Life:</strong> Detailed battery statistics and health monitoring</li>
+                                <li><strong>CoconutBattery (Mac):</strong> Comprehensive battery analysis when connected to Mac</li>
+                                <li><strong>3uTools:</strong> Complete device diagnostics including detailed battery data</li>
+                                <li><strong>Cycle count tracking:</strong> Monitor total charge cycles (not available in iOS)</li>
+                                <li><strong>Temperature monitoring:</strong> Track battery temperature during usage and charging</li>
+                            </ul>
+
+                            <h3>Professional Battery Diagnostics</h3>
+                            <ul>
+                                <li><strong>Apple Store diagnostics:</strong> Free comprehensive battery testing</li>
+                                <li><strong>Authorized service provider testing:</strong> Detailed analysis with specialized tools</li>
+                                <li><strong>Independent repair shop testing:</strong> Often more detailed than Apple's basic tests</li>
+                                <li><strong>Diagnostic software:</strong> Professional-grade tools reveal additional battery metrics</li>
+                                <li><strong>Load testing:</strong> Tests battery performance under various usage scenarios</li>
+                            </ul>
+
+                            <h3>Understanding Battery Usage Statistics</h3>
+                            <ul>
+                                <li><strong>Battery usage by app:</strong> Settings > Battery > usage breakdown</li>
+                                <li><strong>Screen-on time analysis:</strong> Compare current vs. historical screen time</li>
+                                <li><strong>Background activity review:</strong> Identify apps draining battery when not in use</li>
+                                <li><strong>Charging patterns:</strong> Monitor charging frequency and duration changes</li>
+                                <li><strong>Performance correlation:</strong> Connect battery health to actual usage experience</li>
+                            </ul>
+
+                            <h3>When Built-in Diagnostics Aren't Enough</h3>
+                            <ul>
+                                <li><strong>Inconsistent readings:</strong> Battery health percentage seems inaccurate</li>
+                                <li><strong>Delayed updates:</strong> iOS sometimes lags in updating battery health status</li>
+                                <li><strong>Performance doesn't match health:</strong> 90% health but poor performance</li>
+                                <li><strong>Recent iOS updates:</strong> Software changes can affect battery reporting accuracy</li>
+                                <li><strong>Professional verification needed:</strong> Get second opinion from qualified technician</li>
+                            </ul>
+                        </div>
+
+                        <!-- Replacement Options -->
+                        <div id="replacement-options" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>🔧 iPhone Battery Replacement Options</h2>
+                            
+                            <p>When battery replacement becomes necessary, understanding your options helps you make the best decision for your specific situation and budget.</p>
+
+                            <h3>Apple Official Battery Replacement</h3>
+                            <ul>
+                                <li><strong>Genuine Apple batteries:</strong> OEM parts with full compatibility guarantee</li>
+                                <li><strong>Warranty coverage:</strong> 90-day limited warranty on battery replacement</li>
+                                <li><strong>Professional installation:</strong> Certified technicians with proper training</li>
+                                <li><strong>Pricing (India):</strong> ₹4,900-₹7,500 depending on iPhone model</li>
+                                <li><strong>Appointment required:</strong> Advance booking necessary at Apple Stores</li>
+                                <li><strong>Data preservation:</strong> No data loss during replacement process</li>
+                                <li><strong>Water resistance restoration:</strong> Proper sealing maintains IP rating</li>
+                            </ul>
+
+                            <h3>Authorized Service Provider Replacement</h3>
+                            <ul>
+                                <li><strong>Apple-certified parts:</strong> Genuine batteries through authorized channels</li>
+                                <li><strong>Trained technicians:</strong> Apple-certified repair specialists</li>
+                                <li><strong>Warranty terms:</strong> Similar warranty coverage to Apple Stores</li>
+                                <li><strong>Convenience:</strong> Often more locations and flexible scheduling</li>
+                                <li><strong>Quality assurance:</strong> Meets Apple's repair standards</li>
+                                <li><strong>Pricing:</strong> Comparable to Apple Store pricing</li>
+                                <li><strong>Turnaround time:</strong> Usually same-day service</li>
+                            </ul>
+
+                            <h3>Independent Repair Shop Options</h3>
+                            <ul>
+                                <li><strong>Cost advantage:</strong> Typically 30-50% less expensive than Apple</li>
+                                <li><strong>Faster service:</strong> Often immediate or same-day replacement</li>
+                                <li><strong>Battery quality varies:</strong> Range from high-quality to budget options</li>
+                                <li><strong>Warranty terms:</strong> Usually 6-12 months on parts and labor</li>
+                                <li><strong>Experience matters:</strong> Quality depends heavily on technician skill</li>
+                                <li><strong>No Apple warranty impact:</strong> Won't void existing Apple warranty if done properly</li>
+                                <li><strong>Local convenience:</strong> Multiple locations, flexible hours</li>
+                            </ul>
+
+                            <h3>Battery Quality Tiers in Independent Repair</h3>
+                            <ul>
+                                <li><strong>OEM equivalent (Premium):</strong> Same quality as Apple batteries, highest cost</li>
+                                <li><strong>High-quality aftermarket:</strong> Excellent performance, good value</li>
+                                <li><strong>Standard aftermarket:</strong> Acceptable performance, budget-friendly</li>
+                                <li><strong>Budget options:</strong> Lower capacity and shorter lifespan</li>
+                                <li><strong>Refurbished batteries:</strong> Generally not recommended for optimal performance</li>
+                            </ul>
+
+                            <h3>DIY Battery Replacement Considerations</h3>
+                            <ul>
+                                <li><strong>Technical complexity:</strong> Requires specialized tools and skills</li>
+                                <li><strong>Risk factors:</strong> Potential damage to phone, voided warranty</li>
+                                <li><strong>Safety concerns:</strong> Risk of battery puncture, fire, or explosion</li>
+                                <li><strong>Tools required:</strong> Pentalobe screwdrivers, suction cups, spudgers</li>
+                                <li><strong>Water resistance:</strong> Difficult to restore proper sealing</li>
+                                <li><strong>Cost savings:</strong> Significant savings on labor costs</li>
+                                <li><strong>Battery sourcing:</strong> Difficulty ensuring genuine or high-quality parts</li>
+                            </ul>
+
+                            <h3>Choosing the Right Replacement Option</h3>
+                            <ul>
+                                <li><strong>iPhone value:</strong> Newer models justify premium replacement options</li>
+                                <li><strong>Budget constraints:</strong> Balance cost vs. quality based on financial situation</li>
+                                <li><strong>Warranty status:</strong> Consider impact on existing warranty coverage</li>
+                                <li><strong>Usage importance:</strong> Critical devices need most reliable replacement</li>
+                                <li><strong>Local options:</strong> Research reputation and reviews of local repair shops</li>
+                                <li><strong>Turnaround time:</strong> Consider how long you can be without your phone</li>
+                                <li><strong>Future plans:</strong> Factor in phone upgrade timeline</li>
+                            </ul>
+                        </div>
+
+                        <!-- Prevention Tips -->
+                        <div id="prevention-tips" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>🛡️ Preventing Premature Battery Degradation</h2>
+                            
+                            <p>While battery degradation is inevitable, proper care and charging habits can significantly extend battery lifespan and delay the need for replacement.</p>
+
+                            <h3>Optimal Charging Habits</h3>
+                            <ul>
+                                <li><strong>Partial charging preferred:</strong> Charge to 80-90% rather than 100% when possible</li>
+                                <li><strong>Avoid deep discharges:</strong> Don't let battery regularly drop below 20%</li>
+                                <li><strong>Remove case while charging:</strong> Prevent overheating during charge cycles</li>
+                                <li><strong>Use original chargers:</strong> Apple-certified chargers provide optimal charging profiles</li>
+                                <li><strong>Overnight charging management:</strong> Use Optimized Battery Charging feature</li>
+                                <li><strong>Temperature awareness:</strong> Avoid charging in hot environments</li>
+                                <li><strong>Wireless charging moderation:</strong> Use occasionally, not as primary charging method</li>
+                            </ul>
+
+                            <h3>Temperature Management</h3>
+                            <ul>
+                                <li><strong>Avoid extreme heat:</strong> Don't leave iPhone in hot cars or direct sunlight</li>
+                                <li><strong>Cold weather protection:</strong> Keep phone close to body in freezing temperatures</li>
+                                <li><strong>Charging temperature:</strong> Charge at room temperature (68-72°F optimal)</li>
+                                <li><strong>Hot environment usage:</strong> Limit intensive tasks in warm conditions</li>
+                                <li><strong>Case consideration:</strong> Remove thick cases during intensive use</li>
+                                <li><strong>Storage temperature:</strong> Store in cool, dry places when not in use</li>
+                            </ul>
+
+                            <h3>Usage Pattern Optimization</h3>
+                            <ul>
+                                <li><strong>Background app refresh:</strong> Limit unnecessary background activity</li>
+                                <li><strong>Location services:</strong> Turn off GPS for apps that don't need it</li>
+                                <li><strong>Push notifications:</strong> Reduce frequency of email and app notifications</li>
+                                <li><strong>Screen brightness:</strong> Use auto-brightness or manual adjustment</li>
+                                <li><strong>Low Power Mode:</strong> Use proactively when battery drops to 30%</li>
+                                <li><strong>App management:</strong> Close power-hungry apps when not needed</li>
+                                <li><strong>Cellular vs. Wi-Fi:</strong> Use Wi-Fi when available to reduce cellular drain</li>
+                            </ul>
+
+                            <h3>iOS Settings for Battery Longevity</h3>
+                            <ul>
+                                <li><strong>Optimized Battery Charging:</strong> Enable in Settings > Battery > Battery Health</li>
+                                <li><strong>Low Power Mode automation:</strong> Enable automatically at 20% battery</li>
+                                <li><strong>Background App Refresh:</strong> Disable for non-essential apps</li>
+                                <li><strong>Fetch email manually:</strong> Change from push to manual or longer intervals</li>
+                                <li><strong>Reduce motion effects:</strong> Disable unnecessary animations</li>
+                                <li><strong>Auto-lock timing:</strong> Set shorter auto-lock times</li>
+                                <li><strong>Sound and vibration:</strong> Reduce unnecessary vibrations and sounds</li>
+                            </ul>
+
+                            <h3>Regular Maintenance Practices</h3>
+                            <ul>
+                                <li><strong>Monthly restart:</strong> Restart iPhone monthly to clear temporary files</li>
+                                <li><strong>iOS updates:</strong> Install updates for battery optimization improvements</li>
+                                <li><strong>Storage management:</strong> Keep at least 10% storage free for optimal performance</li>
+                                <li><strong>App updates:</strong> Update apps regularly for efficiency improvements</li>
+                                <li><strong>Clean charging port:</strong> Remove debris that could interfere with charging</li>
+                                <li><strong>Battery monitoring:</strong> Check battery health monthly</li>
+                                <li><strong>Professional check-ups:</strong> Annual battery assessment for older iPhones</li>
+                            </ul>
+
+                            <h3>Signs to Start Preservation Efforts</h3>
+                            <ul>
+                                <li><strong>Battery health 95-90%:</strong> Begin implementing optimization practices</li>
+                                <li><strong>One year of use:</strong> Start monitoring battery health regularly</li>
+                                <li><strong>Heavy usage patterns:</strong> Implement preservation habits earlier</li>
+                                <li><strong>Hot climate users:</strong> Extra attention to temperature management</li>
+                                <li><strong>Before symptoms appear:</strong> Prevention is easier than restoration</li>
+                            </ul>
+                        </div>
+
+                        <!-- Conclusion -->
+                        <div class="mb-8">
+                            <p class="text-lg font-medium text-gray-800 dark:text-gray-200">Recognizing the warning signs of iPhone battery degradation empowers you to make timely decisions about battery replacement, potentially saving money and extending your device's useful life. While battery aging is inevitable, understanding these symptoms helps you plan for replacement before performance becomes unacceptable.</p>
+                            
+                            <p>Remember that battery replacement is often more cost-effective than upgrading to a new iPhone, especially for devices that are otherwise functioning well. Professional battery replacement can restore your iPhone to like-new performance, providing another 1-2 years of reliable service. When in doubt, consult with qualified technicians who can provide accurate diagnostics and recommend the best solution for your specific situation.</p>
+                        </div>
+
+                        <!-- Call to Action -->
+                        <div class="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12 text-center text-white overflow-hidden" data-aos="fade-up" data-aos-delay="800">
+                            <!-- Background Pattern -->
+                            <div class="absolute inset-0 opacity-10">
+                                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-blue-300/20"></div>
+                            </div>
+                            
+                            <div class="relative z-10 max-w-2xl mx-auto">
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 border border-white/30">
+                                    <i class="fas fa-battery-half text-2xl sm:text-3xl text-white drop-shadow-lg"></i>
+                                </div>
+                                <h3 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-white dark:text-white drop-shadow-lg" style="color: white !important;">iPhone Battery Issues? We're Here to Help</h3>
+                                <p class="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-white dark:text-white font-medium leading-relaxed drop-shadow-sm" style="color: white !important;">
+                                    Our expert technicians provide professional iPhone battery replacement with genuine parts, thorough diagnostics, and comprehensive warranty coverage.
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <a href="tel:+919742090321" class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-blue-500 hover:bg-blue-600 text-white rounded-xl font-bold text-base sm:text-lg transition-all transform hover:scale-105 shadow-xl">
+                                        <i class="fas fa-phone mr-2 sm:mr-3"></i>
+                                        Call Expert
+                                    </a>
+                                    <a href="index.html#contact" class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-xl font-bold text-base sm:text-lg transition-all border border-white/30">
+                                        <i class="fas fa-tools mr-2 sm:mr-3"></i>
+                                        Battery Service
+                                    </a>
+                                </div>
+                                <p class="text-sm sm:text-base !text-white mt-4 font-medium">
+    <i class="fas fa-shield-alt mr-2"></i>
+    Professional replacement with genuine parts and 1-year warranty
+</p>
+
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+
+                <!-- Desktop Sidebar -->
+                <div class="hidden lg:block lg:col-span-1">
+                    <div class="sticky top-24 space-y-6">
+                        
+                        <!-- Author Card -->
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700" data-aos="fade-left" data-aos-delay="300">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gradient-to-br from-apple-blue to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                    <i class="fas fa-battery-half text-3xl text-white"></i>
+                                </div>
+                                <h3 class="font-bold text-xl mb-2 text-gray-900 dark:text-white">Battery Specialist</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Certified technician with 8+ years experience in iPhone battery replacements</p>
+                                <div class="flex items-center justify-center text-yellow-500 mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">5.0 Rating</span>
+                                </div>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Published: July 05, 2025</p>
+                            </div>
+                        </div>
+
+                        <!-- Table of Contents -->
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-6 border border-blue-200 dark:border-blue-800" data-aos="fade-left" data-aos-delay="400">
+                            <h3 class="font-bold text-xl mb-4 text-blue-900 dark:text-blue-100 flex items-center">
+                                <i class="fas fa-list-ul mr-3"></i>
+                                Quick Navigation
+                            </h3>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="#battery-basics" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        1. Understanding Battery Health
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#warning-signs" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        2. 5 Warning Signs
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#checking-health" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        3. How to Check Battery Health
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#replacement-options" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        4. Replacement Options
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#prevention-tips" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        5. Prevention Tips
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Battery Service Contact -->
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-6 border border-blue-200 dark:border-blue-800 text-center" data-aos="fade-left" data-aos-delay="500">
+                            <i class="fas fa-tools text-3xl text-blue-600 dark:text-blue-400 mb-3"></i>
+                            <h3 class="font-bold text-lg mb-2 text-blue-900 dark:text-blue-100">Battery Replacement</h3>
+                            <p class="text-blue-700 dark:text-blue-300 text-sm mb-4">Professional iPhone battery replacement with genuine parts and warranty</p>
+                            <a href="tel:+919742090321" class="w-full inline-flex items-center justify-center px-4 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold transition-colors">
+                                <i class="fas fa-phone mr-2"></i>
+                                Get Quote
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Posts -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 sm:mb-12" data-aos="fade-up">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Related Articles</h2>
+                <p class="text-gray-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
+                    Discover more expert guides on iPhone care and Apple device maintenance
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Related Post 1 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-600 group" data-aos="fade-up" data-aos-delay="100">
+                    <a href="blog-post-iphone-screen.html" class="block">
+                        <div class="overflow-hidden">
+                            <img src="https://www.diyfixtool.com/cdn/shop/articles/3-ultimate-solutions-to-your-cracked-mobile-phone-display-screen-china-phonefix.webp?v=1696754577" alt="iPhone screen repair comparison" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block mb-3 px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 rounded-full text-xs font-semibold">iPhone</span>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-apple-blue transition-colors">OEM vs. Aftermarket iPhone Screens</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Learn the differences between OEM and aftermarket iPhone screens to make the best repair choice...</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Related Post 2 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-600 group" data-aos="fade-up" data-aos-delay="200">
+                    <a href="blog-post-watch-battery.html" class="block">
+                        <div class="overflow-hidden">
+                            <img src="images/slide4.webp" alt="Apple Watch battery optimization" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block mb-3 px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 rounded-full text-xs font-semibold">Apple Watch</span>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-apple-blue transition-colors">Maximizing Your Apple Watch Battery Life</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Get more out of every charge with proven optimization techniques and smart usage habits...</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Related Post 3 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-600 group" data-aos="fade-up" data-aos-delay="300">
+                    <a href="blog-post.html" class="block">
+                        <div class="overflow-hidden">
+                            <img src="images/slide2.webp" alt="MacBook maintenance guide" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block mb-3 px-3 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300 rounded-full text-xs font-semibold">MacBook</span>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-apple-blue transition-colors">Ultimate MacBook Maintenance Guide</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Essential maintenance tips to keep your MacBook running smoothly and prevent costly repairs...</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-cta">
+        <div class="flex space-x-3">
+            <a href="index.html#contact" class="flex-1 inline-flex items-center justify-center py-3 bg-apple-blue text-white rounded-lg font-semibold text-sm">
+                <i class="fas fa-tools mr-2"></i>
+                Battery Service
+            </a>
+            <a href="tel:+919742090321" class="flex-1 inline-flex items-center justify-center py-3 border-2 border-apple-blue text-apple-blue rounded-lg font-semibold text-sm">
+                <i class="fas fa-phone mr-2"></i>
+                Call Now
+            </a>
+        </div>
+    </div>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-gray-900 text-white font-poppins">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Footer Content -->
+            <div class="py-12 lg:py-16 grid lg:grid-cols-4 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Brand Section -->
+                <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="images/logo.png" alt="iCircuit Logo" class="h-8 lg:h-10 w-auto">
+                        <span class="text-xl lg:text-2xl font-bold">iCircuit.in</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 lg:mb-8 max-w-md leading-relaxed font-medium text-sm lg:text-base">
+                        Bangalore's most trusted Apple repair service. We specialize in iPhone, MacBook, iPad, iMac, and Apple Watch repairs with genuine parts and certified technicians.
+                    </p>
+                    
+                    <!-- Quick Contact -->
+                    <div class="space-y-4 mb-6 lg:mb-8">
+                        <a href="tel:+919742090321" class="flex items-center text-white hover:text-apple-blue transition-colors group">
+                            <div class="w-8 h-8 lg:w-10 lg:h-10 bg-apple-blue rounded-lg flex items-center justify-center mr-3 lg:mr-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone text-white text-sm lg:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-base lg:text-lg">+91 97420 90321</p>
+                                <p class="text-gray-400 text-xs lg:text-sm">Call for instant support</p>
+                            </div>
+                        </a>
+                        
+                        <div class="flex items-center text-gray-400">
+                            <div class="w-8 h-8 lg:w-10 lg:h-10 bg-gray-700 rounded-lg flex items-center justify-center mr-3 lg:mr-4">
+                                <i class="fas fa-clock text-sm lg:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white text-sm lg:text-base">Mon-Sun: 10AM - 8PM</p>
+                                <p class="text-xs lg:text-sm">Always here when you need us</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex space-x-3 lg:space-x-4">
+                        <a href="https://www.facebook.com/share/1SG5wiX1b8/?mibextid=qi2Omg" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #1877F2;" title="Follow us on Facebook">
+                            <i class="fab fa-facebook-f text-white text-sm lg:text-base"></i>
+                        </a>
+                        <a href="https://www.instagram.com/icircuit.in" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);" title="Follow us on Instagram">
+                            <i class="fab fa-instagram text-white text-sm lg:text-base"></i>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/company/icircuit" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #0077B5;" title="Connect on LinkedIn">
+                            <i class="fab fa-linkedin-in text-white text-sm lg:text-base"></i>
+                        </a>
+                        <a href="https://wa.me/919742090321" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #25D366;" title="Chat on WhatsApp">
+                            <i class="fab fa-whatsapp text-white text-sm lg:text-base"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Column -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg lg:text-xl font-bold mb-4 lg:mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-2 lg:space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Home</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Blog</a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">About Us</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services Column -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-lg lg:text-xl font-bold mb-4 lg:mb-6 text-white">Our Services</h3>
+                    <ul class="space-y-2 lg:space-y-3">
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-mobile-alt text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            iPhone Screen & Battery
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-laptop text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            MacBook Logic Board
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-tablet-alt text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            iPad Display Repair
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-desktop text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            iMac Upgrades
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-stopwatch text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            Apple Watch Service
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 py-6 lg:py-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center">
+                    <div class="text-center lg:text-left mb-4 lg:mb-0">
+                        <p class="text-gray-400 text-xs lg:text-sm font-medium">
+                            &copy; 2025 iCircuit.in - All Rights Reserved
+                        </p>
+                        <p class="text-gray-500 text-xs mt-1">
+                            Apple and the Apple logo are trademarks of Apple Inc.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+                        <div class="flex items-center space-x-2 text-gray-400 text-xs lg:text-sm">
+                            <i class="fas fa-shield-alt text-green-500"></i>
+                            <span>Certified Technicians</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-400 text-xs lg:text-sm">
+                            <i class="fas fa-tools text-blue-500"></i>
+                            <span>Genuine Parts</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-400 text-xs lg:text-sm">
+                            <i class="fas fa-medal text-yellow-500"></i>
+                            <span>1 Year Warranty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Device detection for AOS initialization
+        function isDesktopDevice() {
+            return window.innerWidth > 1024 && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+        }
+
+        // Initialize AOS only on desktop devices
+        if (isDesktopDevice()) {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out',
+                once: true,
+                offset: 100
+            });
+        } else {
+            // For mobile/tablet devices, remove all AOS attributes for smooth scrolling
+            document.querySelectorAll('[data-aos]').forEach(element => {
+                element.removeAttribute('data-aos');
+                element.removeAttribute('data-aos-delay');
+                element.removeAttribute('data-aos-duration');
+            });
+        }
+
+        // Re-check on resize
+        window.addEventListener('resize', function() {
+            if (isDesktopDevice() && typeof AOS !== 'undefined') {
+                AOS.refresh();
+            }
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.classList.toggle('dark', currentTheme === 'dark');
+
+        darkModeToggle.addEventListener('click', function() {
+            const isDark = html.classList.contains('dark');
+            
+            if (isDark) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        function updateScrollButton() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        }
+
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Performance optimization for mobile
+        let ticking = false;
+        function optimizedScroll() {
+            if (!ticking) {
+                requestAnimationFrame(function() {
+                    updateScrollButton();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', optimizedScroll, { passive: true });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-md');
+            } else {
+                header.classList.remove('backdrop-blur-md');
+            }
+        });
+    </script>
+
+    <style>
+        /* Additional Custom Styles */
+        .gradient-text {
+            background: linear-gradient(135deg, #007AFF, #3B82F6, #1D4ED8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .nav-link {
+            color: #6b7280;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #007AFF;
+            background-color: rgba(0, 122, 255, 0.1);
+        }
+
+        .dark .nav-link {
+            color: #9ca3af;
+        }
+
+        .dark .nav-link:hover {
+            color: #60a5fa;
+            background-color: rgba(96, 165, 250, 0.1);
+        }
+
+        .btn-glow {
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .mobile-nav-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-bottom: 0.25rem;
+            border-radius: 0.5rem;
+        }
+
+        .mobile-nav-item:hover {
+            background-color: rgba(0, 122, 255, 0.1);
+            color: #007AFF;
+            transform: translateX(4px);
+        }
+
+        .dark .mobile-nav-item {
+            color: #d1d5db;
+        }
+
+        .dark .mobile-nav-item:hover {
+            background-color: rgba(96, 165, 250, 0.1);
+            color: #60a5fa;
+        }
+
+        .mobile-sidebar-section {
+            background: white;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #f3f4f6;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-sidebar-section {
+                border-radius: 1.5rem;
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .dark .mobile-sidebar-section {
+            background: #1f2937;
+            border-color: #374151;
+        }
+
+        .mobile-cta {
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            padding: 1rem;
+            z-index: 50;
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-cta {
+                display: none;
+            }
+        }
+
+        .dark .mobile-cta {
+            background: #1f2937;
+            border-top-color: #374151;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #007AFF, #3B82F6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+            box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
+        }
+
+        @media (min-width: 768px) {
+            .scroll-to-top {
+                bottom: 30px;
+                right: 30px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
+        }
+
+        .scroll-offset {
+            scroll-margin-top: 100px;
+        }
+
+        /* Blog Content Styles */
+        .blog-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            color: #1f2937;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h2 {
+                font-size: 2rem;
+                padding-left: 1rem;
+            }
+        }
+
+        .dark .blog-content h2 {
+            color: #f9fafb;
+        }
+
+        .blog-content h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(135deg, #007AFF, #3B82F6);
+            border-radius: 2px;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h2::before {
+                width: 4px;
+            }
+        }
+
+        .blog-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.75rem;
+            color: #374151;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h3 {
+                font-size: 1.5rem;
+                margin: 1.5rem 0 1rem;
+            }
+        }
+
+        .dark .blog-content h3 {
+            color: #e5e7eb;
+        }
+
+        .blog-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            color: #4b5563;
+            font-weight: 500;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content p {
+                font-size: 1.125rem;
+                line-height: 1.75;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .dark .blog-content p {
+            color: #d1d5db;
+        }
+
+        .blog-content ul {
+            margin: 1.25rem 0;
+            padding-left: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content ul {
+                margin: 1.5rem 0;
+                padding-left: 1.5rem;
+            }
+        }
+
+        .blog-content li {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+            color: #4b5563;
+            font-weight: 500;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content li {
+                font-size: 1.125rem;
+                line-height: 1.75;
+                margin-bottom: 0.75rem;
+            }
+        }
+
+        .dark .blog-content li {
+            color: #d1d5db;
+        }
+
+        .blog-content li::marker {
+            color: #007AFF;
+            font-weight: bold;
+        }
+
+        .blog-content strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .dark .blog-content strong {
+            color: #f9fafb;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .blog-content h2 {
+                font-size: 1.25rem;
+                margin: 1.5rem 0 0.75rem;
+                padding-left: 1rem;
+            }
+            
+            .blog-content h3 {
+                font-size: 1.125rem;
+                margin: 1rem 0 0.5rem;
+            }
+            
+            .blog-content p, .blog-content li {
+                font-size: 0.875rem;
+                line-height: 1.5;
+            }
+        }
+
+        /* Enhanced mobile optimizations */
+        @media (max-width: 1024px) {
+            * {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+            
+            body {
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .blog-content {
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+            }
+        }
+    </style>
+
+</body>
+</html> 

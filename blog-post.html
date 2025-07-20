@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Guide to MacBook Maintenance: Keep Your Mac Running Like New - iCircuit Blog</title>
+    <meta name="description" content="Learn essential MacBook maintenance tips to extend your Mac's lifespan, optimize performance, and prevent costly repairs. Expert guide from iCircuit.in.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Multiple FontAwesome CDN sources for reliability -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Backup FontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
+    
+    <!-- Alternative CDN as fallback -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            gray: '#1D1D1F',
+                            lightGray: '#F5F5F7'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-down': 'fadeInDown 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-poppins bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up text-white text-lg"></i>
+    </div>
+    
+    <!-- Sticky Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect bg-white/90 dark:bg-gray-900/90 border-b border-gray-200 dark:border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3" data-aos="fade-right">
+                    <img src="images/logo.png" alt="iCircuit Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold gradient-text">iCircuit.in</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Home</a>
+                    <a href="index.html#services" class="nav-link hover:text-apple-blue transition-colors font-medium">Services</a>
+                    
+                    <a href="index.html#testimonials" class="nav-link hover:text-apple-blue transition-colors font-medium">Reviews</a>
+                    <a href="aboutus.html" class="nav-link hover:text-apple-blue transition-colors font-medium">About Us</a>
+                    <a href="blog.html" class="nav-link text-apple-blue transition-colors font-medium">Blog</a>
+                    <a href="index.html#contact" class="nav-link hover:text-apple-blue transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & CTA -->
+                <div class="flex items-center space-x-4" data-aos="fade-left">
+                    <button id="darkModeToggle" class="relative w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:ring-offset-2 dark:focus:ring-offset-gray-900">
+                        <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center dark:translate-x-6">
+                            <i class="fas fa-sun text-xs text-yellow-500 dark:hidden"></i>
+                            <i class="fas fa-moon text-xs text-gray-600 hidden dark:inline"></i>
+                        </div>
+                    </button>
+                    <a href="tel:+919742090321" class="hidden sm:inline-flex items-center px-4 py-2 bg-apple-blue text-white rounded-lg hover:bg-blue-600 btn-glow font-medium">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                    <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-1">
+                <a href="index.html" class="mobile-nav-item">Home</a>
+                <a href="index.html#services" class="mobile-nav-item">Services</a>
+                <a href="index.html#why-us" class="mobile-nav-item">Why Us</a>
+                <a href="index.html#how-it-works" class="mobile-nav-item">Process</a>
+                <a href="index.html#locations" class="mobile-nav-item">Locations</a>
+                <a href="index.html#testimonials" class="mobile-nav-item">Reviews</a>
+                <a href="aboutus.html" class="mobile-nav-item">About Us</a>
+                <a href="blog.html" class="mobile-nav-item bg-apple-blue text-white">Blog</a>
+                <a href="index.html#contact" class="mobile-nav-item">Contact</a>
+                <a href="tel:+919742090321" class="mobile-nav-item bg-green-500 text-white text-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Mobile Optimized -->
+    <section class="pt-16 min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Content -->
+                <div class="space-y-6 lg:space-y-8 text-center lg:text-left" data-aos="fade-right" data-aos-duration="800">
+                    <div class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-apple-blue/10 dark:bg-apple-blue/20 rounded-full text-apple-blue font-semibold text-xs sm:text-sm mb-4 lg:mb-6">
+                        <i class="fas fa-laptop mr-2"></i>
+                        MacBook Maintenance Guide
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                        <span class="block mb-2 lg:mb-4">The Ultimate Guide to</span>
+                        <span class="gradient-text block">MacBook Maintenance</span>
+                    </h1>
+                    <p class="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                        Learn the essential tips to keep your MacBook running smoothly, extend its lifespan, and avoid common issues. From battery health to software updates, our experts cover it all.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#maintenance-checklist" class="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold text-sm sm:text-base lg:text-lg transition-colors shadow-lg">
+                            <i class="fas fa-check-circle mr-2 sm:mr-3"></i>
+                            Maintenance Checklist
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-apple-blue text-apple-blue rounded-xl hover:bg-apple-blue hover:text-white transition-all font-semibold text-sm sm:text-base lg:text-lg">
+                            <i class="fas fa-tools mr-2 sm:mr-3"></i>
+                            Professional Service
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative order-first lg:order-last" data-aos="fade-left" data-aos-duration="800">
+                    <div class="relative z-10 animate-float">
+                        <img src="images/slide2.webp" 
+                             alt="MacBook maintenance and care" 
+                             class="rounded-2xl shadow-2xl w-full">
+                    </div>
+                    <!-- Floating elements -->
+                    <div class="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-24 sm:h-24 bg-apple-blue rounded-full opacity-20 animate-bounce"></div>
+                    <div class="absolute -bottom-4 -left-4 sm:-bottom-8 sm:-left-8 w-20 h-20 sm:w-32 sm:h-32 bg-green-500 rounded-full opacity-10 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section id="article-content" class="py-8 sm:py-12 lg:py-20 bg-white dark:bg-gray-900 scroll-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Mobile Author Card -->
+            <div class="lg:hidden mobile-sidebar-section mb-6" data-aos="fade-up">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700">
+                    <div class="text-center">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-apple-blue to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                            <i class="fas fa-user-cog text-2xl sm:text-3xl text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-lg sm:text-xl mb-2 text-gray-900 dark:text-white">Expert Technician</h3>
+                        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-3 sm:mb-4">Certified MacBook specialist with 10+ years experience in Apple device maintenance</p>
+                        <div class="flex items-center justify-center text-yellow-500 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">5.0 Rating</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Published: July 10, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <!-- Table of Contents - Mobile -->
+                    <div class="lg:hidden mb-8" data-aos="fade-up">
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-4 sm:p-6 border border-blue-200 dark:border-blue-800">
+                            <h3 class="font-bold text-lg sm:text-xl mb-4 text-blue-900 dark:text-blue-100 flex items-center">
+                                <i class="fas fa-list-ul mr-3"></i>
+                                Quick Navigation
+                            </h3>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#maintenance-checklist" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        1. Maintenance Checklist
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#battery-care" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        2. Battery Health
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#software-optimization" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        3. Software Optimization
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#hardware-care" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        4. Hardware Care
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#professional-maintenance" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        5. Professional Service
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Article Content -->
+                    <article class="blog-content" data-aos="fade-up" data-aos-delay="200">
+                        
+                        <!-- Introduction -->
+                        <div class="mb-8 sm:mb-12">
+                            <p>Your MacBook is a significant investment that, with proper care and maintenance, can serve you reliably for many years. Regular maintenance not only extends your device's lifespan but also ensures optimal performance, prevents costly repairs, and maintains its resale value. Whether you own a MacBook Air or MacBook Pro, following these expert-recommended maintenance practices will keep your Mac running like new.</p>
+                            
+                            <p>At iCircuit, we've serviced thousands of MacBooks, and we've noticed that well-maintained devices rarely need major repairs. The difference between a MacBook that lasts 3 years versus one that serves faithfully for 7+ years often comes down to consistent, proper maintenance. This comprehensive guide covers everything you need to know to maximize your MacBook's performance and longevity.</p>
+                        </div>
+
+                        <!-- Maintenance Checklist -->
+                        <div id="maintenance-checklist" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>✅ Essential MacBook Maintenance Checklist</h2>
+                            
+                            <div class="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4 sm:p-6 rounded-r-xl mb-6">
+                                <div class="flex items-start">
+                                    <i class="fas fa-calendar-check text-green-500 mr-3 mt-1 text-lg"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-green-800 dark:text-green-200 mb-2">Monthly Maintenance Routine</h4>
+                                        <p class="text-green-700 dark:text-green-300 text-sm sm:text-base">Following this monthly checklist will keep your MacBook in optimal condition:</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Daily Habits (2-3 minutes)</h3>
+                            <ul>
+                                <li>Shut down your MacBook properly rather than just closing the lid</li>
+                                <li>Clean the screen and keyboard with a microfiber cloth</li>
+                                <li>Check available storage space (keep at least 15% free)</li>
+                                <li>Close unnecessary applications and browser tabs</li>
+                                <li>Ensure proper ventilation around your device</li>
+                            </ul>
+
+                            <h3>Weekly Tasks (10-15 minutes)</h3>
+                            <ul>
+                                <li>Restart your MacBook to clear memory and refresh system processes</li>
+                                <li>Empty Trash and Downloads folder</li>
+                                <li>Run Disk Utility's First Aid to check for disk errors</li>
+                                <li>Update apps through the App Store</li>
+                                <li>Check Activity Monitor for resource-heavy processes</li>
+                                <li>Backup important files to external storage or cloud</li>
+                            </ul>
+
+                            <h3>Monthly Deep Maintenance (30-45 minutes)</h3>
+                            <ul>
+                                <li>Install macOS updates and security patches</li>
+                                <li>Clean system cache and temporary files</li>
+                                <li>Organize and clean up desktop and Documents folder</li>
+                                <li>Review and uninstall unused applications</li>
+                                <li>Check battery health and cycle count</li>
+                                <li>Clean ports, vents, and external surfaces thoroughly</li>
+                                <li>Review startup items and login items</li>
+                            </ul>
+                        </div>
+
+                        <!-- Battery Care -->
+                        <div id="battery-care" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>🔋 Maximizing Battery Health & Longevity</h2>
+                            
+                            <p>The battery is often the first component to show signs of aging in a MacBook. Proper battery care can significantly extend its lifespan and maintain optimal performance throughout the day.</p>
+
+                            <h3>Understanding Battery Cycles</h3>
+                            <p>A battery cycle occurs when you use 100% of your battery's capacity, though not necessarily in a single charge. For example, using 50% one day and 50% the next equals one cycle. Most MacBook batteries are designed for:</p>
+                            
+                            <ul>
+                                <li><strong>MacBook Air (2018-2024):</strong> 1000 cycles</li>
+                                <li><strong>MacBook Pro 13" (2016-2024):</strong> 1000 cycles</li>
+                                <li><strong>MacBook Pro 14"/16" (2021-2024):</strong> 1000 cycles</li>
+                                <li><strong>Older MacBooks (2015 and earlier):</strong> 300-1000 cycles depending on model</li>
+                            </ul>
+
+                            <h3>Best Battery Practices</h3>
+                            <ul>
+                                <li><strong>Keep it cool:</strong> Heat is the battery's biggest enemy. Avoid leaving your MacBook in hot cars or direct sunlight</li>
+                                <li><strong>Partial charging is fine:</strong> Modern lithium batteries don't need to be fully discharged before charging</li>
+                                <li><strong>Use Optimized Battery Charging:</strong> Enable this feature in System Preferences to reduce battery aging</li>
+                                <li><strong>Calibrate monthly:</strong> Once a month, let the battery drain to about 10%, then charge to 100%</li>
+                                <li><strong>Store properly:</strong> If storing for extended periods, keep the battery at 50% charge</li>
+                            </ul>
+
+                            <h3>Checking Battery Health</h3>
+                            <p>To check your battery's condition:</p>
+                            <ul>
+                                <li>Hold Option key and click the Apple menu, then select "System Information"</li>
+                                <li>Under Hardware, select "Power"</li>
+                                <li>Look for "Cycle Count" and "Condition"</li>
+                                <li>A condition of "Normal" indicates good battery health</li>
+                                <li>Consider replacement when condition shows "Replace Soon" or cycle count approaches the limit</li>
+                            </ul>
+                        </div>
+
+                        <!-- Software Optimization -->
+                        <div id="software-optimization" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>💻 Software Optimization for Peak Performance</h2>
+                            
+                            <p>A well-optimized software environment is crucial for maintaining your MacBook's performance. Over time, accumulated files, outdated software, and inefficient settings can significantly slow down your system.</p>
+
+                            <h3>macOS Updates & Security</h3>
+                            <ul>
+                                <li><strong>Enable automatic updates:</strong> Keep your system current with the latest security patches and performance improvements</li>
+                                <li><strong>Major version updates:</strong> Wait 2-3 weeks after release for initial bugs to be fixed, then update</li>
+                                <li><strong>Backup before updates:</strong> Always create a Time Machine backup before major system updates</li>
+                                <li><strong>Security settings:</strong> Enable FileVault disk encryption and Firewall protection</li>
+                            </ul>
+
+                            <h3>Storage Management</h3>
+                            <p>Maintaining adequate free storage is essential for optimal performance:</p>
+                            <ul>
+                                <li><strong>15% rule:</strong> Keep at least 15% of your storage free for system operations</li>
+                                <li><strong>Use built-in tools:</strong> Go to Apple Menu > About This Mac > Storage > Manage to access optimization tools</li>
+                                <li><strong>Empty Trash regularly:</strong> Files remain on disk until Trash is emptied</li>
+                                <li><strong>Clear Downloads folder:</strong> This often contains large forgotten files</li>
+                                <li><strong>Review large files:</strong> Use Storage Management to identify and remove large, unnecessary files</li>
+                            </ul>
+
+                            <h3>Application Management</h3>
+                            <ul>
+                                <li><strong>Uninstall properly:</strong> Use AppCleaner or similar tools to remove all associated files</li>
+                                <li><strong>Manage startup items:</strong> System Preferences > Users & Groups > Login Items</li>
+                                <li><strong>Monitor resource usage:</strong> Use Activity Monitor to identify memory and CPU-heavy apps</li>
+                                <li><strong>Keep apps updated:</strong> Enable automatic updates in App Store preferences</li>
+                                <li><strong>Close unused apps:</strong> Don't rely on just hiding applications; actually quit them</li>
+                            </ul>
+                        </div>
+
+                        <!-- Hardware Care -->
+                        <div id="hardware-care" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>🔧 Physical Hardware Care & Cleaning</h2>
+                            
+                            <p>Proper physical care prevents damage and maintains your MacBook's appearance and functionality. Regular cleaning also prevents overheating and component failure.</p>
+
+                            <h3>Screen & Display Care</h3>
+                            <ul>
+                                <li><strong>Daily cleaning:</strong> Use a dry microfiber cloth to remove fingerprints and dust</li>
+                                <li><strong>Deep cleaning:</strong> Slightly dampen microfiber cloth with distilled water for stubborn marks</li>
+                                <li><strong>Avoid harsh chemicals:</strong> Never use alcohol, ammonia, or abrasive cleaners</li>
+                                <li><strong>Close carefully:</strong> Ensure no debris on keyboard before closing to prevent screen damage</li>
+                                <li><strong>Brightness management:</strong> Use automatic brightness or keep at moderate levels to extend backlight life</li>
+                            </ul>
+
+                            <h3>Keyboard & Trackpad Maintenance</h3>
+                            <ul>
+                                <li><strong>Regular cleaning:</strong> Use compressed air to blow out debris between keys</li>
+                                <li><strong>Deep cleaning:</strong> Slightly damp cloth for trackpad; dry cloth for keys</li>
+                                <li><strong>Avoid eating while typing:</strong> Crumbs and liquids can damage the keyboard mechanism</li>
+                                <li><strong>Gentle pressure:</strong> Don't press keys harder than necessary</li>
+                                <li><strong>For newer models:</strong> Butterfly keyboards are particularly sensitive to debris</li>
+                            </ul>
+
+                            <h3>Port & Ventilation Care</h3>
+                            <ul>
+                                <li><strong>Monthly cleaning:</strong> Use compressed air to clear dust from vents and ports</li>
+                                <li><strong>Cable care:</strong> Remove cables gently; don't yank or twist connectors</li>
+                                <li><strong>Ventilation:</strong> Ensure at least 6 inches clearance around vents during use</li>
+                                <li><strong>Avoid blocking vents:</strong> Don't use on soft surfaces like beds or couches</li>
+                                <li><strong>Temperature monitoring:</strong> If the fan runs constantly, investigate for blockages or heavy processes</li>
+                            </ul>
+
+                            <h3>External Case & Body</h3>
+                            <ul>
+                                <li><strong>Protective case:</strong> Use a hard shell case for added protection</li>
+                                <li><strong>Transportation:</strong> Always use a padded sleeve or bag when carrying</li>
+                                <li><strong>Surface cleaning:</strong> Use appropriate cleaners for aluminum surfaces</li>
+                                <li><strong>Avoid stickers:</strong> Adhesive residue can be difficult to remove and may damage finish</li>
+                                <li><strong>Handle with care:</strong> Always lift and carry with both hands</li>
+                            </ul>
+                        </div>
+
+                        <!-- Professional Maintenance -->
+                        <div id="professional-maintenance" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>👨‍🔧 When to Seek Professional Maintenance</h2>
+                            
+                            <p>While regular user maintenance can prevent many issues, professional service is sometimes necessary to maintain optimal performance and address problems beyond user-level fixes.</p>
+
+                            <h3>Annual Professional Checkup</h3>
+                            <p>Consider professional maintenance service annually, especially for:</p>
+                            <ul>
+                                <li>Thorough internal cleaning and dust removal</li>
+                                <li>Thermal paste replacement (for models 3+ years old)</li>
+                                <li>Detailed hardware diagnostics</li>
+                                <li>Battery health assessment and potential replacement</li>
+                                <li>SSD health check and optimization</li>
+                                <li>Port and connector inspection</li>
+                            </ul>
+
+                            <h3>Warning Signs Requiring Professional Attention</h3>
+                            <ul>
+                                <li><strong>Overheating:</strong> Excessive heat, loud fan noise, or thermal shutdowns</li>
+                                <li><strong>Performance issues:</strong> Significant slowdowns that don't improve with software optimization</li>
+                                <li><strong>Battery problems:</strong> Rapid discharge, swelling, or failure to charge</li>
+                                <li><strong>Display issues:</strong> Flickering, dead pixels, or backlight problems</li>
+                                <li><strong>Keyboard/trackpad problems:</strong> Stuck keys, erratic cursor movement, or unresponsive input</li>
+                                <li><strong>Strange noises:</strong> Clicking, grinding, or unusual sounds during operation</li>
+                                <li><strong>Connectivity issues:</strong> Wi-Fi drops, Bluetooth problems, or port malfunctions</li>
+                            </ul>
+
+                            <h3>Professional Services at iCircuit</h3>
+                            <ul>
+                                <li><strong>Comprehensive diagnostics:</strong> Full system health check with detailed report</li>
+                                <li><strong>Internal cleaning:</strong> Professional-grade cleaning of internal components</li>
+                                <li><strong>Performance optimization:</strong> Hardware and software tuning for maximum efficiency</li>
+                                <li><strong>Preventive maintenance:</strong> Address potential issues before they become problems</li>
+                                <li><strong>Genuine parts:</strong> Only Apple-certified components for replacements</li>
+                                <li><strong>1-year warranty:</strong> All professional maintenance comes with service guarantee</li>
+                            </ul>
+                        </div>
+
+                        <!-- Conclusion -->
+                        <div class="mb-8">
+                            <p class="text-lg font-medium text-gray-800 dark:text-gray-200">Consistent maintenance is the key to getting the most from your MacBook investment. By following these guidelines and establishing regular maintenance habits, you can ensure your MacBook serves you reliably for many years while maintaining optimal performance.</p>
+                            
+                            <p>Remember, prevention is always more cost-effective than repair. A small investment in regular maintenance can save you hundreds or thousands in major repairs or premature replacement. When in doubt, consult with professionals who understand the intricacies of Apple hardware and can provide expert guidance tailored to your specific model and usage patterns.</p>
+                        </div>
+
+                        <!-- Call to Action -->
+                        <div class="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12 text-center text-white overflow-hidden" data-aos="fade-up" data-aos-delay="800">
+                            <!-- Background Pattern -->
+                            <div class="absolute inset-0 opacity-10">
+                                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-pink-300/20"></div>
+                            </div>
+                            
+                            <div class="relative z-10 max-w-2xl mx-auto">
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 border border-white/30">
+                                    <i class="fas fa-laptop text-2xl sm:text-3xl text-white drop-shadow-lg"></i>
+                                </div>
+                                <h3 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-white dark:text-white drop-shadow-lg" style="color: white !important;">Need Professional MacBook Service?</h3>
+                                <p class="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-white dark:text-white font-medium leading-relaxed drop-shadow-sm" style="color: white !important;">
+                                    Our certified technicians provide comprehensive MacBook maintenance services. From deep cleaning to performance optimization, we keep your Mac running like new.
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <a href="tel:+919742090321" class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold text-base sm:text-lg transition-all transform hover:scale-105 shadow-xl">
+                                        <i class="fas fa-phone mr-2 sm:mr-3"></i>
+                                        Call Now
+                                    </a>
+                                    <a href="index.html#contact" class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-xl font-bold text-base sm:text-lg transition-all border border-white/30">
+                                        <i class="fas fa-calendar-check mr-2 sm:mr-3"></i>
+                                        Book Service
+                                    </a>
+                                </div>
+                                <p class="text-sm sm:text-base text-white/90 mt-4 font-medium">
+                                    <i class="fas fa-shield-alt mr-2"></i>
+                                    1-year warranty on all maintenance services
+                                </p>
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+
+                <!-- Desktop Sidebar -->
+                <div class="hidden lg:block lg:col-span-1">
+                    <div class="sticky top-24 space-y-6">
+                        
+                        <!-- Author Card -->
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700" data-aos="fade-left" data-aos-delay="300">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gradient-to-br from-apple-blue to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                    <i class="fas fa-user-cog text-3xl text-white"></i>
+                                </div>
+                                <h3 class="font-bold text-xl mb-2 text-gray-900 dark:text-white">Expert Technician</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Certified MacBook specialist with 10+ years experience in Apple device maintenance</p>
+                                <div class="flex items-center justify-center text-yellow-500 mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">5.0 Rating</span>
+                                </div>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Published: July 10, 2025</p>
+                            </div>
+                        </div>
+
+                        <!-- Table of Contents -->
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-6 border border-blue-200 dark:border-blue-800" data-aos="fade-left" data-aos-delay="400">
+                            <h3 class="font-bold text-xl mb-4 text-blue-900 dark:text-blue-100 flex items-center">
+                                <i class="fas fa-list-ul mr-3"></i>
+                                Quick Navigation
+                            </h3>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="#maintenance-checklist" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        1. Maintenance Checklist
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#battery-care" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        2. Battery Health
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#software-optimization" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        3. Software Optimization
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#hardware-care" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        4. Hardware Care
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#professional-maintenance" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        5. Professional Service
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Service Contact -->
+                        <div class="bg-green-50 dark:bg-green-900/20 rounded-2xl p-6 border border-green-200 dark:border-green-800 text-center" data-aos="fade-left" data-aos-delay="500">
+                            <i class="fas fa-tools text-3xl text-green-600 dark:text-green-400 mb-3"></i>
+                            <h3 class="font-bold text-lg mb-2 text-green-900 dark:text-green-100">Professional Service</h3>
+                            <p class="text-green-700 dark:text-green-300 text-sm mb-4">Let our experts maintain your MacBook for optimal performance</p>
+                            <a href="tel:+919742090321" class="w-full inline-flex items-center justify-center px-4 py-3 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition-colors">
+                                <i class="fas fa-phone mr-2"></i>
+                                Book Service
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Posts -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 sm:mb-12" data-aos="fade-up">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Related Articles</h2>
+                <p class="text-gray-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
+                    Learn more about Apple device care and repair with our expert guides
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Related Post 1 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-600 group" data-aos="fade-up" data-aos-delay="100">
+                    <a href="blog-post-iphone-battery.html" class="block">
+                        <div class="overflow-hidden">
+                            <img src="images/slide1.webp" alt="iPhone battery replacement" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block mb-3 px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 rounded-full text-xs font-semibold">iPhone</span>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-apple-blue transition-colors">5 Signs Your iPhone Battery Needs Replacing</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Learn the key indicators that your iPhone battery needs professional replacement...</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Related Post 2 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-600 group" data-aos="fade-up" data-aos-delay="200">
+                    <a href="blog-post-ipad-water.html" class="block">
+                        <div class="overflow-hidden">
+                            <img src="images/slide3.webp" alt="iPad water damage" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block mb-3 px-3 py-1 bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300 rounded-full text-xs font-semibold">iPad</span>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-apple-blue transition-colors">iPad Water Damage: Emergency Steps</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Complete guide to water damage recovery and professional repair options...</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Related Post 3 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-600 group" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#" class="block">
+                        <div class="overflow-hidden">
+                            <img src="images/slide4.webp" alt="Apple Watch maintenance" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block mb-3 px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 rounded-full text-xs font-semibold">Maintenance</span>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-apple-blue transition-colors">Apple Watch Battery Optimization</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Maximize your Apple Watch battery life with these expert tips and settings...</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-cta">
+        <div class="flex space-x-3">
+            <a href="index.html#contact" class="flex-1 inline-flex items-center justify-center py-3 bg-apple-blue text-white rounded-lg font-semibold text-sm">
+                <i class="fas fa-calendar-check mr-2"></i>
+                Book Service
+            </a>
+            <a href="tel:+919742090321" class="flex-1 inline-flex items-center justify-center py-3 border-2 border-apple-blue text-apple-blue rounded-lg font-semibold text-sm">
+                <i class="fas fa-phone mr-2"></i>
+                Call Now
+            </a>
+        </div>
+    </div>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-gray-900 text-white font-poppins">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Footer Content -->
+            <div class="py-12 lg:py-16 grid lg:grid-cols-4 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Brand Section -->
+                <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="images/logo.png" alt="iCircuit Logo" class="h-8 lg:h-10 w-auto">
+                        <span class="text-xl lg:text-2xl font-bold">iCircuit.in</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 lg:mb-8 max-w-md leading-relaxed font-medium text-sm lg:text-base">
+                        Bangalore's most trusted Apple repair service. We specialize in iPhone, MacBook, iPad, iMac, and Apple Watch repairs with genuine parts and certified technicians.
+                    </p>
+                    
+                    <!-- Quick Contact -->
+                    <div class="space-y-4 mb-6 lg:mb-8">
+                        <a href="tel:+919742090321" class="flex items-center text-white hover:text-apple-blue transition-colors group">
+                            <div class="w-8 h-8 lg:w-10 lg:h-10 bg-apple-blue rounded-lg flex items-center justify-center mr-3 lg:mr-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone text-white text-sm lg:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-base lg:text-lg">+91 97420 90321</p>
+                                <p class="text-gray-400 text-xs lg:text-sm">Call for instant support</p>
+                            </div>
+                        </a>
+                        
+                        <div class="flex items-center text-gray-400">
+                            <div class="w-8 h-8 lg:w-10 lg:h-10 bg-gray-700 rounded-lg flex items-center justify-center mr-3 lg:mr-4">
+                                <i class="fas fa-clock text-sm lg:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white text-sm lg:text-base">Mon-Sun: 10AM - 8PM</p>
+                                <p class="text-xs lg:text-sm">Always here when you need us</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex space-x-3 lg:space-x-4">
+                        <a href="https://www.facebook.com/share/1SG5wiX1b8/?mibextid=qi2Omg" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #1877F2;" title="Follow us on Facebook">
+                            <i class="fab fa-facebook-f text-white text-sm lg:text-base"></i>
+                        </a>
+                        <a href="https://www.instagram.com/icircuit.in" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);" title="Follow us on Instagram">
+                            <i class="fab fa-instagram text-white text-sm lg:text-base"></i>
+                        </a>
+                       
+                        <a href="https://www.linkedin.com/company/icircuit" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #0077B5;" title="Connect on LinkedIn">
+                            <i class="fab fa-linkedin-in text-white text-sm lg:text-base"></i>
+                        </a>
+                        <a href="https://wa.me/919742090321" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #25D366;" title="Chat on WhatsApp">
+                            <i class="fab fa-whatsapp text-white text-sm lg:text-base"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Column -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg lg:text-xl font-bold mb-4 lg:mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-2 lg:space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Home</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Blog</a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">About Us</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services Column -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-lg lg:text-xl font-bold mb-4 lg:mb-6 text-white">Our Services</h3>
+                    <ul class="space-y-2 lg:space-y-3">
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-mobile-alt text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            iPhone Screen & Battery
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-laptop text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            MacBook Logic Board
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-tablet-alt text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            iPad Display Repair
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-desktop text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            iMac Upgrades
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-stopwatch text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            Apple Watch Service
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 py-6 lg:py-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center">
+                    <div class="text-center lg:text-left mb-4 lg:mb-0">
+                        <p class="text-gray-400 text-xs lg:text-sm font-medium">
+                            &copy; 2025 iCircuit.in - All Rights Reserved
+                        </p>
+                        <p class="text-gray-500 text-xs mt-1">
+                            Apple and the Apple logo are trademarks of Apple Inc.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+                        <div class="flex items-center space-x-2 text-gray-400 text-xs lg:text-sm">
+                            <i class="fas fa-shield-alt text-green-500"></i>
+                            <span>Certified Technicians</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-400 text-xs lg:text-sm">
+                            <i class="fas fa-tools text-blue-500"></i>
+                            <span>Genuine Parts</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-400 text-xs lg:text-sm">
+                            <i class="fas fa-medal text-yellow-500"></i>
+                            <span>1 Year Warranty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 100
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.classList.toggle('dark', currentTheme === 'dark');
+
+        darkModeToggle.addEventListener('click', function() {
+            const isDark = html.classList.contains('dark');
+            
+            if (isDark) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        function updateScrollButton() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        }
+
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Reading progress indicator
+        function updateReadingProgress() {
+            const article = document.querySelector('#article-content');
+            if (article) {
+                const scrollTop = window.pageYOffset;
+                const docHeight = document.body.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                
+                // You can add a progress bar here if desired
+                console.log('Reading progress:', scrollPercent + '%');
+            }
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-md');
+            } else {
+                header.classList.remove('backdrop-blur-md');
+            }
+        });
+
+        // Performance optimization for mobile
+        let ticking = false;
+        function optimizedScroll() {
+            if (!ticking) {
+                requestAnimationFrame(function() {
+                    updateScrollButton();
+                    updateReadingProgress();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', optimizedScroll, { passive: true });
+
+        // Touch gestures for mobile
+        let touchStartY = 0;
+        let touchEndY = 0;
+
+        document.addEventListener('touchstart', function(event) {
+            touchStartY = event.changedTouches[0].screenY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', function(event) {
+            touchEndY = event.changedTouches[0].screenY;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 100;
+            const diff = touchStartY - touchEndY;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe up - could show scroll to top
+                    if (window.pageYOffset > 300) {
+                        scrollToTopBtn.classList.add('show');
+                    }
+                } else {
+                    // Swipe down - could hide UI elements
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            }
+        }
+
+        // Copy link functionality
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                // You can add a toast notification here
+                console.log('Link copied to clipboard');
+            });
+        }
+
+        // Social sharing functions
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('The Ultimate Guide to MacBook Maintenance');
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent('The Ultimate Guide to MacBook Maintenance');
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`, '_blank');
+        }
+    </script>
+
+    <style>
+        /* Additional Custom Styles */
+        .gradient-text {
+            background: linear-gradient(135deg, #007AFF, #5856D6, #FF2D92);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .nav-link {
+            color: #6b7280;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #007AFF;
+            background-color: rgba(0, 122, 255, 0.1);
+        }
+
+        .dark .nav-link {
+            color: #9ca3af;
+        }
+
+        .dark .nav-link:hover {
+            color: #60a5fa;
+            background-color: rgba(96, 165, 250, 0.1);
+        }
+
+        .btn-glow {
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .mobile-nav-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-bottom: 0.25rem;
+            border-radius: 0.5rem;
+        }
+
+        .mobile-nav-item:hover {
+            background-color: rgba(0, 122, 255, 0.1);
+            color: #007AFF;
+            transform: translateX(4px);
+        }
+
+        .dark .mobile-nav-item {
+            color: #d1d5db;
+        }
+
+        .dark .mobile-nav-item:hover {
+            background-color: rgba(96, 165, 250, 0.1);
+            color: #60a5fa;
+        }
+
+        .mobile-sidebar-section {
+            background: white;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #f3f4f6;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-sidebar-section {
+                border-radius: 1.5rem;
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .dark .mobile-sidebar-section {
+            background: #1f2937;
+            border-color: #374151;
+        }
+
+        .mobile-cta {
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            padding: 1rem;
+            z-index: 50;
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-cta {
+                display: none;
+            }
+        }
+
+        .dark .mobile-cta {
+            background: #1f2937;
+            border-top-color: #374151;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+            box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
+        }
+
+        @media (min-width: 768px) {
+            .scroll-to-top {
+                bottom: 30px;
+                right: 30px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
+        }
+
+        .scroll-offset {
+            scroll-margin-top: 100px;
+        }
+
+        /* Blog Content Styles */
+        .blog-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            color: #1f2937;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h2 {
+                font-size: 2rem;
+                padding-left: 1rem;
+            }
+        }
+
+        .dark .blog-content h2 {
+            color: #f9fafb;
+        }
+
+        .blog-content h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            border-radius: 2px;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h2::before {
+                width: 4px;
+            }
+        }
+
+        .blog-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.75rem;
+            color: #374151;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h3 {
+                font-size: 1.5rem;
+                margin: 1.5rem 0 1rem;
+            }
+        }
+
+        .dark .blog-content h3 {
+            color: #e5e7eb;
+        }
+
+        .blog-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            color: #4b5563;
+            font-weight: 500;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content p {
+                font-size: 1.125rem;
+                line-height: 1.75;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .dark .blog-content p {
+            color: #d1d5db;
+        }
+
+        .blog-content ul {
+            margin: 1.25rem 0;
+            padding-left: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content ul {
+                margin: 1.5rem 0;
+                padding-left: 1.5rem;
+            }
+        }
+
+        .blog-content li {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+            color: #4b5563;
+            font-weight: 500;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content li {
+                font-size: 1.125rem;
+                line-height: 1.75;
+                margin-bottom: 0.75rem;
+            }
+        }
+
+        .dark .blog-content li {
+            color: #d1d5db;
+        }
+
+        .blog-content li::marker {
+            color: #007AFF;
+            font-weight: bold;
+        }
+
+        .blog-content strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .dark .blog-content strong {
+            color: #f9fafb;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .blog-content h2 {
+                font-size: 1.25rem;
+                margin: 1.5rem 0 0.75rem;
+                padding-left: 1rem;
+            }
+            
+            .blog-content h3 {
+                font-size: 1.125rem;
+                margin: 1rem 0 0.5rem;
+            }
+            
+            .blog-content p, .blog-content li {
+                font-size: 0.875rem;
+                line-height: 1.5;
+            }
+        }
+    </style>
+
+</body>
+</html>

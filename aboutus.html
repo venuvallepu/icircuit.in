@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - iCircuit.in | Professional Apple Repair Services | Bangalore</title>
+    <meta name="description" content="Learn about iCircuit - Bangalore's trusted Apple repair experts since 2015. Meet our certified technicians, discover our story, and see why thousands trust us with their Apple devices.">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papmLp9uWpG7hEJf2zYVrCB4x0gH4EFoExK1wFb4lCWDzFRVX7DqjE5dvz8G9Jc7tSk1klkCm4ww1nKkGgSoXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            gray: '#1D1D1F',
+                            lightGray: '#F5F5F7'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-down': 'fadeInDown 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(0, 122, 255, 0.3)' },
+                            '100%': { boxShadow: '0 0 30px rgba(0, 122, 255, 0.6)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Global Poppins font */
+        * {
+            font-family: 'Poppins', sans-serif !important;
+        }
+        
+        /* FontAwesome fallback and icon fixes */
+        .fas, .fab, .far, .fal, .fad, .fa {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free" !important;
+            font-weight: 900;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+        
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(0, 122, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 122, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        /* Dark mode transitions */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .scroll-offset {
+            scroll-margin-top: 100px;
+        }
+
+        /* Team member card animations */
+        .team-card {
+            transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Only apply transform hover effects on larger screens to avoid AOS conflicts */
+        @media (min-width: 1024px) {
+            .team-card {
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .team-card:hover {
+                transform: translateY(-8px) scale(1.02);
+                box-shadow: 0 15px 30px rgba(0, 122, 255, 0.15);
+            }
+        }
+        
+        /* Avatar hover effects work on all devices */
+        .team-card:hover .team-avatar {
+            transform: scale(1.05);
+        }
+        
+        .team-avatar {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Stats counter animation */
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Timeline styles */
+        .timeline-item {
+            position: relative;
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 23px;
+            top: 56px;
+            width: 2px;
+            height: calc(100% - 56px);
+            background: linear-gradient(to bottom, #007AFF, rgba(0, 122, 255, 0.3));
+        }
+        
+        .dark .timeline-item:not(:last-child)::after {
+            background: linear-gradient(to bottom, #60A5FA, rgba(96, 165, 250, 0.3));
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+            box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        /* Prevent AOS flickering on desktop */
+        @media (min-width: 1024px) {
+            [data-aos] {
+                pointer-events: none;
+            }
+            
+            [data-aos].aos-animate {
+                pointer-events: auto;
+            }
+        }
+
+        /* Ensure smooth transitions for mobile devices */
+        @media (max-width: 1023px) {
+            [data-aos] {
+                transform: none !important;
+                opacity: 1 !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 font-poppins">
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up text-white text-xl"></i>
+    </div>
+    
+    <!-- Sticky Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect bg-white/90 dark:bg-gray-900/90 border-b border-gray-200 dark:border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3" data-aos="fade-right">
+                    <img src="images/logo.png" alt="iCircuit Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold gradient-text">iCircuit.in</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Home</a>
+                    <a href="index.html#services" class="nav-link hover:text-apple-blue transition-colors font-medium">Services</a>
+                    <a href="index.html#why-us" class="nav-link hover:text-apple-blue transition-colors font-medium">Why Us</a>
+                    <a href="index.html#how-it-works" class="nav-link hover:text-apple-blue transition-colors font-medium">Process</a>
+                    <a href="index.html#locations" class="nav-link hover:text-apple-blue transition-colors font-medium">Locations</a>
+                    <a href="terms.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Terms</a>
+                    <a href="aboutus.html" class="nav-link text-apple-blue transition-colors font-medium">About Us</a>
+                    <a href="blog.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Blog</a>
+                    <a href="index.html#contact" class="nav-link hover:text-apple-blue transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & CTA -->
+                <div class="flex items-center space-x-4" data-aos="fade-left">
+                    <button id="darkModeToggle" class="relative w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:ring-offset-2 dark:focus:ring-offset-gray-900">
+                        <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center dark:translate-x-6">
+                            <i class="fas fa-sun text-xs text-yellow-500 dark:hidden"></i>
+                            <i class="fas fa-moon text-xs text-gray-600 hidden dark:inline"></i>
+                        </div>
+                    </button>
+                    <a href="tel:+919742090321" class="hidden sm:inline-flex items-center px-4 py-2 bg-apple-blue text-white rounded-lg hover:bg-blue-600 btn-glow font-medium">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                    <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-1">
+                <a href="index.html" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Home</a>
+                <a href="index.html#services" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Services</a>
+                <a href="index.html#why-us" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Why Us</a>
+                <a href="index.html#how-it-works" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Process</a>
+                <a href="index.html#locations" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Locations</a>
+                <a href="index.html#testimonials" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Reviews</a>
+                <a href="aboutus.html" class="block px-3 py-2 bg-apple-blue text-white rounded-lg font-medium">About Us</a>
+                <a href="blog.html" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Blog</a>
+                <a href="index.html#contact" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-16 min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-8" data-aos="fade-right" data-aos-duration="800">
+                    <div class="inline-flex items-center px-4 py-2 bg-apple-blue/10 dark:bg-apple-blue/20 rounded-full text-apple-blue font-semibold text-sm">
+                        <i class="fas fa-award mr-2"></i>
+                        Bangalore's Trusted Apple Repair Experts Since 2015
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                        <span class="block mb-4">Meet the Team Behind</span>
+                        <span class="gradient-text block">iCircuit's Success</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                        We're a passionate team of Apple-certified technicians dedicated to providing the highest quality repair services with genuine parts and exceptional customer care.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="index.html#contact" class="inline-flex items-center px-8 py-4 bg-apple-blue text-white rounded-xl hover:bg-blue-600 btn-glow font-semibold text-lg">
+                            <i class="fas fa-tools mr-3"></i>
+                            Book Your Repair
+                        </a>
+                        <a href="#our-story" class="inline-flex items-center px-8 py-4 border-2 border-apple-blue text-apple-blue rounded-xl hover:bg-apple-blue hover:text-white transition-all font-semibold text-lg">
+                            <i class="fas fa-book-open mr-3"></i>
+                            Our Story
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative" data-aos="fade-left" data-aos-duration="800">
+                    <div class="relative z-10 animate-float">
+                        <img src="images/slide2.webp" 
+                             alt="Professional Apple Repair Team" 
+                             class="rounded-2xl shadow-2xl w-full">
+                    </div>
+                    <!-- Floating elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-apple-blue rounded-full opacity-20 animate-bounce-slow"></div>
+                    <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-purple-500 rounded-full opacity-10 animate-pulse-slow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-apple-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 text-center text-white">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl lg:text-5xl font-bold mb-2 stat-number" data-target="8">0</div>
+                    <p class="text-xl font-medium opacity-90">Years of Excellence</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl lg:text-5xl font-bold mb-2 stat-number" data-target="15000">0</div>
+                    <p class="text-xl font-medium opacity-90">Devices Repaired</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl lg:text-5xl font-bold mb-2 stat-number" data-target="95">0</div>
+                    <p class="text-xl font-medium opacity-90">Success Rate %</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl lg:text-5xl font-bold mb-2 stat-number" data-target="4.9">0</div>
+                    <p class="text-xl font-medium opacity-90">Customer Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="py-20 bg-white dark:bg-gray-900 scroll-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Our Journey</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 font-medium">From a small repair shop to Bangalore's most trusted Apple service center</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Story Content -->
+                <div class="space-y-8" data-aos="fade-right">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-apple-blue">The Beginning (2015)</h3>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                            It all started when our founder, Vinod Kumar, was frustrated with the poor quality Apple repair services available in Bangalore. As an Apple enthusiast himself, he noticed that most repair shops used inferior parts and lacked proper expertise.
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold text-apple-blue">Building Excellence (2016-2019)</h3>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                            We invested heavily in Apple-certified training programs and established partnerships with authorized component suppliers. Our commitment to using only genuine parts and providing transparent service quickly gained customer trust.
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold text-apple-blue">Expansion & Innovation (2020-Present)</h3>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                            Today, we've expanded our services across Bangalore with doorstep repair, same-day service, and industry-leading warranties. We've successfully repaired over 15,000 Apple devices and maintain a 95% success rate.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Timeline -->
+                <div class="space-y-8" data-aos="fade-left">
+                    <div class="timeline-item flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-apple-blue rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-play text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">2015 - Founded</h4>
+                            <p class="text-gray-600 dark:text-gray-300 font-medium">Started with a vision to provide quality Apple repairs in Bangalore</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-certificate text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">2017 - Certified</h4>
+                            <p class="text-gray-600 dark:text-gray-300 font-medium">Achieved Apple-certified technician status and authorized parts sourcing</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-trophy text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">2020 - Recognition</h4>
+                            <p class="text-gray-600 dark:text-gray-300 font-medium">Became Bangalore's most reviewed and trusted Apple repair service</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-rocket text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">2023 - Innovation</h4>
+                            <p class="text-gray-600 dark:text-gray-300 font-medium">Launched doorstep service and same-day repair guarantee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Meet Our Expert Team</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 font-medium">Apple-certified technicians with years of specialized experience</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-avatar w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-apple-blue to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                        VK
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Vinod Kumar</h3>
+                    <p class="text-apple-blue font-semibold mb-4">Founder & Lead Technician</p>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium leading-relaxed mb-6">
+                        10+ years of Apple repair experience. Specialized in MacBook logic board repairs and iPhone water damage recovery.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <div class="bg-green-100 dark:bg-green-900 px-3 py-1 rounded-full text-xs font-semibold text-green-800 dark:text-green-300">
+                            Apple Certified
+                        </div>
+                        <div class="bg-blue-100 dark:bg-blue-900 px-3 py-1 rounded-full text-xs font-semibold text-blue-800 dark:text-blue-300">
+                            Logic Board Expert
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-avatar w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                        G
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Govardhan</h3>
+                    <p class="text-apple-blue font-semibold mb-4">Senior iPhone Specialist</p>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium leading-relaxed mb-6">
+                        Expert in iPhone screen replacements and camera repairs. Has successfully completed over 3,000 iPhone repairs.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <div class="bg-green-100 dark:bg-green-900 px-3 py-1 rounded-full text-xs font-semibold text-green-800 dark:text-green-300">
+                            8 Years Experience
+                        </div>
+                        <div class="bg-purple-100 dark:bg-purple-900 px-3 py-1 rounded-full text-xs font-semibold text-purple-800 dark:text-purple-300">
+                            iPhone Pro
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-avatar w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+                        C
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Chandu</h3>
+                    <p class="text-apple-blue font-semibold mb-4">iPad & iMac Technician</p>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium leading-relaxed mb-6">
+                        Specialized in iPad display repairs and iMac upgrades. Known for precision work and attention to detail.
+                    </p>
+                    <div class="flex justify-center space-x-4">
+                        <div class="bg-green-100 dark:bg-green-900 px-3 py-1 rounded-full text-xs font-semibold text-green-800 dark:text-green-300">
+                            6 Years Experience
+                        </div>
+                        <div class="bg-orange-100 dark:bg-orange-900 px-3 py-1 rounded-full text-xs font-semibold text-orange-800 dark:text-orange-300">
+                            iMac Specialist
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Our Core Values</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 font-medium">The principles that guide everything we do</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                        <i class="fas fa-handshake text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Transparency</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">Clear pricing, honest diagnostics, and no hidden charges. You know exactly what you're paying for.</p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                        <i class="fas fa-award text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Quality</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">Only genuine Apple parts and certified repair techniques. No compromises on quality, ever.</p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                        <i class="fas fa-heart text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Customer Care</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">Treating every device like our own and every customer like family. Your satisfaction is our priority.</p>
+                </div>
+
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
+                        <i class="fas fa-lightbulb text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Innovation</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">Constantly improving our techniques and services to provide the best repair experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Certifications & Awards</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 font-medium">Recognition of our expertise and commitment to excellence</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-apple-blue rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-apple-alt text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Apple Certified</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">Official Apple certification for repair techniques and component handling.</p>
+                </div>
+
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-star text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Best Service Award</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">Bangalore's Best Apple Repair Service 2022-2023 by Customer Choice Awards.</p>
+                </div>
+
+                <div class="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-purple-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">ISO Certified</h3>
+                    <p class="text-gray-600 dark:text-gray-300 font-medium">ISO 9001:2015 certification for quality management systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-apple-blue">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Ready to Experience the iCircuit Difference?</h2>
+                <p class="text-xl text-blue-100 mb-8 font-medium">Join thousands of satisfied customers who trust us with their Apple devices.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html#contact" class="inline-flex items-center px-8 py-4 bg-white text-apple-blue rounded-xl hover:bg-gray-100 font-semibold text-lg transition-all">
+                        <i class="fas fa-calendar-check mr-3"></i>
+                        Book Free Diagnosis
+                    </a>
+                    <a href="tel:+919742090321" class="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-xl hover:bg-white hover:text-apple-blue transition-all font-semibold text-lg">
+                        <i class="fas fa-phone mr-3"></i>
+                        Call: 97420 90321
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-gray-900 text-white font-poppins">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Footer Content -->
+            <div class="py-16 grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+                <!-- Brand Section -->
+                <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="images/logo.png" alt="iCircuit Logo" class="h-10 w-auto">
+                        <span class="text-2xl font-bold">iCircuit.in</span>
+                    </div>
+                    <p class="text-gray-400 mb-8 max-w-md leading-relaxed font-medium">
+                        Bangalore's most trusted Apple repair service. We specialize in iPhone, MacBook, iPad, iMac, and Apple Watch repairs with genuine parts and certified technicians.
+                    </p>
+                    
+                    <!-- Quick Contact -->
+                    <div class="space-y-4 mb-8">
+                        <a href="tel:+919742090321" class="flex items-center text-white hover:text-apple-blue transition-colors group">
+                            <div class="w-10 h-10 bg-apple-blue rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">+91 97420 90321</p>
+                                <p class="text-gray-400 text-sm">Call for instant support</p>
+                            </div>
+                        </a>
+                        
+                        <div class="flex items-center text-gray-400">
+                            <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Mon-Sun: 10AM - 8PM</p>
+                                <p class="text-sm">Always here when you need us</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/1SG5wiX1b8/?mibextid=qi2Omg" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #1877F2;" title="Follow us on Facebook">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="https://www.instagram.com/icircuit.in/" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);"
+                           title="Follow us on Instagram">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/vinod-kumar-554932345/" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #0A66C2;" title="Connect on LinkedIn">
+                            <i class="fab fa-linkedin-in text-white"></i>
+                        </a>
+                        <a href="https://wa.me/9742090321" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #25D366;" title="Chat on WhatsApp">
+                            <i class="fab fa-whatsapp text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Home
+                        </a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Our Services
+                        </a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            About Us
+                        </a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Our Blog
+                        </a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Contact Us
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-6 text-white">Repair Services</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-mobile-alt text-apple-blue mr-3"></i>
+                            iPhone Screen & Battery
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-laptop text-apple-blue mr-3"></i>
+                            MacBook Logic Board
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-tablet-alt text-apple-blue mr-3"></i>
+                            iPad Display Repair
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-desktop text-apple-blue mr-3"></i>
+                            iMac Upgrades
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-stopwatch text-apple-blue mr-3"></i>
+                            Apple Watch Service
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 py-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center">
+                    <div class="text-center lg:text-left mb-4 lg:mb-0">
+                        <p class="text-gray-400 text-sm font-medium">
+                            &copy; 2025 iCircuit.in - All Rights Reserved
+                        </p>
+                        <p class="text-gray-500 text-xs mt-1">
+                            Apple and the Apple logo are trademarks of Apple Inc. | Independent repair service
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center space-x-6 text-sm">
+                        <a href="privacy.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium">Privacy Policy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium">Terms of Service</a>
+                        <div class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-shield-check text-green-500 mr-2"></i>
+                            SSL Secured
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Function to check if device is desktop (screen width >= 1024px)
+        function isDesktop() {
+            return window.innerWidth >= 1024;
+        }
+
+        // Initialize AOS only for desktop devices
+        function initializeAOS() {
+            if (isDesktop()) {
+                // Small delay to prevent initial flickering
+                setTimeout(function() {
+                    AOS.init({
+                        duration: 600,
+                        once: true,
+                        offset: 100,
+                        easing: 'ease-out',
+                        disable: function() {
+                            // Disable AOS on mobile/tablet devices
+                            return window.innerWidth < 1024;
+                        }
+                    });
+                }, 100);
+            }
+        }
+
+        // Initialize on load
+        initializeAOS();
+
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                if (isDesktop() && typeof AOS !== 'undefined') {
+                    AOS.refresh();
+                }
+            }, 250);
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.classList.add('dark');
+        }
+
+        darkModeToggle.addEventListener('click', function() {
+            html.classList.toggle('dark');
+            
+            // Save theme preference
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll to Top Button Functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        function updateScrollButton() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        }
+
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        window.addEventListener('scroll', updateScrollButton);
+        updateScrollButton();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Animated Counter
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const count = parseInt(counter.innerText);
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(() => animateCounters(), 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+
+        // Trigger counter animation when section is visible
+        const statsSection = document.querySelector('.stat-number');
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Enhanced scroll animations (only for mobile/tablet when AOS is disabled)
+        if (!isDesktop()) {
+            const cardObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in-up');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            // Observe team cards only on mobile/tablet
+            document.querySelectorAll('.team-card').forEach(el => {
+                cardObserver.observe(el);
+            });
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-md');
+            } else {
+                header.classList.remove('backdrop-blur-md');
+            }
+        });
+
+        // FontAwesome fallback check
+        function checkFontAwesome() {
+            const testIcon = document.createElement('i');
+            testIcon.className = 'fas fa-home';
+            testIcon.style.position = 'absolute';
+            testIcon.style.left = '-9999px';
+            document.body.appendChild(testIcon);
+            
+            const computedStyle = window.getComputedStyle(testIcon, ':before');
+            const isLoaded = computedStyle.getPropertyValue('font-family').includes('Font Awesome');
+            
+            document.body.removeChild(testIcon);
+            
+            if (!isLoaded) {
+                console.log('FontAwesome not loaded, trying alternative CDN...');
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://use.fontawesome.com/releases/v6.4.0/css/all.css';
+                document.head.appendChild(link);
+            }
+        }
+
+        // Check FontAwesome after page load
+        window.addEventListener('load', function() {
+            setTimeout(checkFontAwesome, 1000);
+        });
+    </script>
+</body>
+</html>

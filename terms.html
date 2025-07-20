@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | iCircuit.in | Apple Device Repair Services</title>
+    <meta name="description" content="Terms and Conditions for iCircuit.in - Professional Apple device repair services in Bangalore. Read our service terms, warranty conditions, and user agreements.">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            gray: '#1D1D1F',
+                            lightGray: '#F5F5F7'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-down': 'fadeInDown 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'scroll-bounce': 'scrollBounce 2s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(0, 122, 255, 0.3)' },
+                            '100%': { boxShadow: '0 0 30px rgba(0, 122, 255, 0.6)' }
+                        },
+                        scrollBounce: {
+                            '0%, 100%': { transform: 'translateY(0px) scale(1)' },
+                            '50%': { transform: 'translateY(-5px) scale(1.05)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Global Poppins font */
+        * {
+            font-family: 'Poppins', sans-serif !important;
+        }
+        
+        /* FontAwesome fallback and icon fixes */
+        .fas, .fab, .far, .fal, .fad, .fa {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free" !important;
+            font-weight: 900;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+        }
+        
+        /* Ensure icons are visible */
+        i[class*="fa-"]::before {
+            font-family: "Font Awesome 6 Free" !important;
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+        
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(0, 122, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-glow:hover {
+            box-shadow: 0 0 30px rgba(0, 122, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        /* Dark mode transitions */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .scroll-offset {
+            scroll-margin-top: 100px;
+        }
+
+        /* Enhanced Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+            box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
+            background: linear-gradient(135deg, #0056CC, #4A47D6);
+        }
+
+        .scroll-to-top:active {
+            transform: translateY(-1px) scale(1.05);
+        }
+
+        .scroll-to-top i {
+            color: white;
+            font-size: 24px;
+            animation: scroll-bounce 2s ease-in-out infinite;
+            position: relative;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .scroll-to-top:hover i {
+            animation-play-state: paused;
+            transform: translateY(-2px);
+        }
+
+        /* Dark mode scroll button */
+        .dark .scroll-to-top {
+            background: linear-gradient(135deg, #1E40AF, #7C3AED);
+            box-shadow: 0 8px 32px rgba(30, 64, 175, 0.3);
+        }
+
+        .dark .scroll-to-top:hover {
+            background: linear-gradient(135deg, #1E3A8A, #6D28D9);
+            box-shadow: 0 12px 40px rgba(30, 64, 175, 0.4);
+        }
+
+        /* Progress ring around button */
+        .scroll-progress {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: conic-gradient(#007AFF 0deg, transparent 0deg);
+            transition: all 0.3s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .scroll-progress::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: transparent;
+            z-index: 2;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .scroll-to-top i {
+                font-size: 20px;
+            }
+
+            .scroll-progress {
+                width: 54px;
+                height: 54px;
+                top: -2px;
+                left: -2px;
+            }
+
+            .scroll-progress::before {
+                width: 50px;
+                height: 50px;
+                top: 2px;
+                left: 2px;
+            }
+        }
+
+        /* Instagram Gradient Background */
+        .instagram-gradient {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        }
+
+        /* Enhanced hover effects for social icons */
+        .social-icon-hover:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Pulse animation for WhatsApp */
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .whatsapp-pulse:hover {
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        /* Terms page specific styles */
+        .terms-section {
+            scroll-margin-top: 120px;
+        }
+
+        .terms-nav {
+            position: sticky;
+            top: 80px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            z-index: 40;
+        }
+
+        .dark .terms-nav {
+            background: rgba(31, 41, 55, 0.95);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .terms-nav-item {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .terms-nav-item.active {
+            border-left-color: #007AFF;
+            background-color: rgba(0, 122, 255, 0.1);
+            color: #007AFF;
+        }
+
+        .terms-nav-item:hover {
+            background-color: rgba(0, 122, 255, 0.05);
+            color: #007AFF;
+        }
+
+        .dark .terms-nav-item:hover {
+            background-color: rgba(0, 122, 255, 0.15);
+        }
+
+        /* Content typography */
+        .terms-content h2 {
+            color: #007AFF;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .terms-content h3 {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .terms-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .terms-content ul, .terms-content ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .terms-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        /* Highlight boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.1), rgba(88, 86, 214, 0.1));
+            border: 1px solid rgba(0, 122, 255, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .dark .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.15), rgba(88, 86, 214, 0.15));
+            border-color: rgba(0, 122, 255, 0.3);
+        }
+
+        /* Warning boxes */
+        .warning-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(245, 101, 101, 0.1));
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .dark .warning-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(245, 101, 101, 0.15));
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+
+        /* Success boxes */
+        .success-box {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(74, 222, 128, 0.1));
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .dark .success-box {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(74, 222, 128, 0.15));
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300 font-poppins">
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <div class="scroll-progress" id="scrollProgress"></div>
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    
+    <!-- Sticky Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect bg-white/90 dark:bg-gray-900/90 border-b border-gray-200 dark:border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3" data-aos="fade-right">
+                    <img src="images/logo.png" alt="iCircuit Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold gradient-text">iCircuit.in</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Home</a>
+                    <a href="index.html#services" class="nav-link hover:text-apple-blue transition-colors font-medium">Services</a>
+                    <a href="index.html#why-us" class="nav-link hover:text-apple-blue transition-colors font-medium">Why Us</a>
+                    <a href="index.html#how-it-works" class="nav-link hover:text-apple-blue transition-colors font-medium">Process</a>
+                    <a href="index.html#locations" class="nav-link hover:text-apple-blue transition-colors font-medium">Locations</a>
+                    <a href="terms.html" class="nav-link hover:text-apple-blue transition-colors font-medium text-apple-blue">Terms</a>
+                    <a href="aboutus.html" class="nav-link hover:text-apple-blue transition-colors font-medium">About Us</a>
+                    <a href="blog.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Blog</a>
+                    <a href="index.html#contact" class="nav-link hover:text-apple-blue transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & CTA -->
+                <div class="flex items-center space-x-4" data-aos="fade-left">
+                    <button id="darkModeToggle" class="relative w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:ring-offset-2 dark:focus:ring-offset-gray-900">
+                        <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center dark:translate-x-6">
+                            <i class="fas fa-sun text-xs text-yellow-500 dark:hidden"></i>
+                            <i class="fas fa-moon text-xs text-gray-600 hidden dark:inline"></i>
+                        </div>
+                    </button>
+                    <a href="tel:+919742090321" class="hidden sm:inline-flex items-center px-4 py-2 bg-apple-blue text-white rounded-lg hover:bg-blue-600 btn-glow font-medium">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                    <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-1">
+                <a href="index.html" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Home</a>
+                <a href="index.html#services" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Services</a>
+                <a href="index.html#why-us" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Why Us</a>
+                <a href="index.html#how-it-works" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Process</a>
+                <a href="index.html#locations" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Locations</a>
+                <a href="terms.html" class="block px-3 py-2 bg-apple-blue text-white rounded-lg font-medium">Terms</a>
+                <a href="aboutus.html" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">About Us</a>
+                <a href="blog.html" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Blog</a>
+                <a href="index.html#contact" class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-16 min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="space-y-8" data-aos="fade-right" data-aos-duration="800">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                        <span class="block mb-4">Terms &</span>
+                        <span class="gradient-text block">Conditions</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                        Clear and transparent terms for our professional Apple device repair services. Understanding your rights, responsibilities, and our service commitments.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#overview" class="inline-flex items-center px-8 py-4 bg-apple-blue text-white rounded-xl hover:bg-blue-600 btn-glow font-semibold text-lg">
+                            <i class="fas fa-file-contract mr-3"></i>
+                            Read Terms
+                        </a>
+                        <a href="index.html#contact" class="inline-flex items-center px-8 py-4 border-2 border-apple-blue text-apple-blue rounded-xl hover:bg-apple-blue hover:text-white transition-all font-semibold text-lg">
+                            <i class="fas fa-phone mr-3"></i>
+                            Contact Us
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-8 text-sm text-gray-600 dark:text-gray-400">
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-alt text-apple-blue mr-2"></i>
+                            <span class="font-medium">Effective: January 1, 2025</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-green-500 mr-2"></i>
+                            <span class="font-medium">8 min read</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-balance-scale text-purple-500 mr-2"></i>
+                            <span class="font-medium">Legal Agreement</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative" data-aos="fade-left" data-aos-duration="800">
+                    <div class="relative z-10 animate-float">
+                        <img src="https://angiarx.in/wp-content/uploads/2024/09/Website-Terms-and-Conditions-Guide-1.jpeg" 
+                             alt="Terms and Conditions - Legal Agreement" 
+                             class="rounded-2xl shadow-2xl w-full">
+                    </div>
+                    <!-- Floating elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-apple-blue rounded-full opacity-20 animate-bounce-slow"></div>
+                    <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-purple-500 rounded-full opacity-10 animate-pulse-slow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms & Conditions Content -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-4 gap-12">
+                <!-- Sticky Navigation -->
+                <div class="lg:col-span-1">
+                    <div class="terms-nav p-6" data-aos="fade-right">
+                        <h3 class="text-lg font-bold mb-4 text-gray-900 dark:text-white">Quick Navigation</h3>
+                        <nav class="space-y-2">
+                            <a href="#overview" class="terms-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Overview
+                            </a>
+                            <a href="#service-agreement" class="terms-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-handshake mr-2"></i>
+                                Service Agreement
+                            </a>
+                            <a href="#warranty-terms" class="terms-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-shield-alt mr-2"></i>
+                                Warranty Terms
+                            </a>
+                            <a href="#payment-terms" class="terms-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-credit-card mr-2"></i>
+                                Payment Terms
+                            </a>
+                            <a href="#device-data" class="terms-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-mobile-alt mr-2"></i>
+                                Device Data
+                            </a>
+                            <a href="#liability" class="terms-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>
+                                Liability
+                            </a>
+                            <a href="#user-responsibilities" class="terms-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-user-check mr-2"></i>
+                                User Responsibilities
+                            </a>
+                            <a href="#intellectual-property" class="terms-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-copyright mr-2"></i>
+                                Intellectual Property
+                            </a>
+                            <a href="#termination" class="terms-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-times-circle mr-2"></i>
+                                Termination
+                            </a>
+                            <a href="#contact-terms" class="terms-nav-item block px-4 py-3 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300">
+                                <i class="fas fa-envelope mr-2"></i>
+                                Contact Us
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="lg:col-span-3 terms-content" data-aos="fade-left">
+                    <!-- Overview -->
+                    <section id="overview" class="terms-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-info-circle text-apple-blue mr-4"></i>
+                                Terms & Conditions Overview
+                            </h2>
+                            
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-file-contract text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Legal Agreement</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            These Terms and Conditions constitute a legally binding agreement between you and iCircuit.in regarding the use of our Apple device repair services. By using our services, you agree to be bound by these terms.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                Welcome to iCircuit.in. These Terms and Conditions ("Terms") govern your use of our Apple device repair services, including our website, repair services, customer support, and related communications.
+                            </p>
+
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                These Terms apply to all customers, visitors, and users of our services. By accessing our website, booking a repair, or using any of our services, you acknowledge that you have read, understood, and agree to be bound by these Terms.
+                            </p>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Key Points</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Acceptance:</strong> Using our services means you accept these terms</li>
+                                <li><strong>Changes:</strong> We may update these terms with notice</li>
+                                <li><strong>Compliance:</strong> You must comply with all applicable laws</li>
+                                <li><strong>Professional Service:</strong> We provide expert Apple device repair services</li>
+                                <li><strong>Customer Rights:</strong> You have specific rights and protections</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Effective Date & Updates</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                These Terms are effective as of January 1, 2025. We reserve the right to modify these Terms at any time. Material changes will be communicated through email notification or prominent website notice at least 30 days before taking effect.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Service Agreement -->
+                    <section id="service-agreement" class="terms-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-handshake text-apple-blue mr-4"></i>
+                                Service Agreement
+                            </h2>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Services Provided</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                iCircuit.in provides professional repair services for Apple devices including:
+                            </p>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>iPhone Repairs:</strong> Screen replacement, battery replacement, charging port repair, camera repair, water damage recovery</li>
+                                <li><strong>MacBook Repairs:</strong> Logic board repair, keyboard replacement, display repair, battery replacement, SSD upgrades</li>
+                                <li><strong>iPad Repairs:</strong> Screen replacement, digitizer repair, charging port replacement, button repairs</li>
+                                <li><strong>Apple Watch Services:</strong> Screen replacement, battery replacement, water damage recovery, band connector repair</li>
+                                <li><strong>iMac Services:</strong> Display repair, logic board repair, hard drive replacement, memory upgrades</li>
+                                <li><strong>AirPods Services:</strong> Battery replacement, charging case repair, audio quality fixes</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Service Process</h3>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <span class="w-8 h-8 bg-apple-blue text-white rounded-full flex items-center justify-center mr-3 text-sm">1</span>
+                                        Diagnosis & Quote
+                                    </h4>
+                                    <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                        Free comprehensive diagnosis of your device with transparent pricing before any repair work begins.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <span class="w-8 h-8 bg-apple-blue text-white rounded-full flex items-center justify-center mr-3 text-sm">2</span>
+                                        Authorization
+                                    </h4>
+                                    <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                        Written authorization required before proceeding with any repairs. You have the right to decline any recommended service.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <span class="w-8 h-8 bg-apple-blue text-white rounded-full flex items-center justify-center mr-3 text-sm">3</span>
+                                        Professional Repair
+                                    </h4>
+                                    <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                        Expert repair using genuine Apple parts or high-quality certified alternatives with proper documentation.
+                                    </p>
+                                </div>
+
+                                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <span class="w-8 h-8 bg-apple-blue text-white rounded-full flex items-center justify-center mr-3 text-sm">4</span>
+                                        Quality Testing
+                                    </h4>
+                                    <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                        Comprehensive testing and quality assurance before device return, including functionality verification.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="warning-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-exclamation-triangle text-red-500 mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Service Limitations</h4>
+                                        <ul class="text-gray-600 dark:text-gray-300 font-medium list-disc ml-4">
+                                            <li>Some water-damaged devices may not be repairable</li>
+                                            <li>Devices with security locks (Find My iPhone) require proper ownership verification</li>
+                                            <li>Certain vintage devices may have limited parts availability</li>
+                                            <li>Modifications or jailbroken devices may void certain service options</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Warranty Terms -->
+                    <section id="warranty-terms" class="terms-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-shield-alt text-apple-blue mr-4"></i>
+                                Warranty Terms
+                            </h2>
+
+                            <div class="success-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-shield-check text-green-500 mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Our Warranty Promise</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            We stand behind our work with comprehensive warranties covering both parts and labor for specified periods.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Warranty Coverage Periods</h3>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="p-4 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-600 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <i class="fas fa-mobile-alt text-blue-500 mr-2"></i>
+                                        iPhone & iPad
+                                    </h4>
+                                    <ul class="text-gray-600 dark:text-gray-300 font-medium text-sm space-y-1">
+                                        <li>• Screen Replacements: 6 months</li>
+                                        <li>• Battery Replacements: 6 months</li>
+                                        <li>• Charging Port Repairs: 3 months</li>
+                                        <li>• Water Damage Repairs: 3 months</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-4 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-700 dark:to-gray-600 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <i class="fas fa-laptop text-purple-500 mr-2"></i>
+                                        MacBook & iMac
+                                    </h4>
+                                    <ul class="text-gray-600 dark:text-gray-300 font-medium text-sm space-y-1">
+                                        <li>• Logic Board Repairs: 12 months</li>
+                                        <li>• Display Replacements: 12 months</li>
+                                        <li>• Keyboard Replacements: 6 months</li>
+                                        <li>• Storage Upgrades: 12 months</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-700 dark:to-gray-600 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <i class="fas fa-stopwatch text-green-500 mr-2"></i>
+                                        Apple Watch
+                                    </h4>
+                                    <ul class="text-gray-600 dark:text-gray-300 font-medium text-sm space-y-1">
+                                        <li>• Screen Replacements: 3 months</li>
+                                        <li>• Battery Replacements: 3 months</li>
+                                        <li>• Water Damage Repairs: 1 month</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-gray-700 dark:to-gray-600 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <i class="fas fa-headphones text-orange-500 mr-2"></i>
+                                        AirPods
+                                    </h4>
+                                    <ul class="text-gray-600 dark:text-gray-300 font-medium text-sm space-y-1">
+                                        <li>• Battery Replacements: 2 months</li>
+                                        <li>• Charging Case Repairs: 2 months</li>
+                                        <li>• Audio Quality Fixes: 1 month</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">What's Covered</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li>Manufacturing defects in replacement parts</li>
+                                <li>Workmanship errors in repair services</li>
+                                <li>Premature failure of repaired components</li>
+                                <li>Labor costs for warranty-covered repairs</li>
+                                <li>Free re-repair if original issue recurs</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Warranty Exclusions</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li>Physical damage from drops, impacts, or accidents</li>
+                                <li>Liquid damage occurring after repair</li>
+                                <li>Damage from unauthorized repairs or modifications</li>
+                                <li>Normal wear and tear</li>
+                                <li>Software-related issues not caused by hardware repair</li>
+                                <li>Cosmetic damage that doesn't affect functionality</li>
+                            </ul>
+
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-file-alt text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Warranty Claims</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            To claim warranty service, present your original repair receipt and contact us within the warranty period. We'll evaluate the issue and provide free repair if covered under warranty terms.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Payment Terms -->
+                    <section id="payment-terms" class="terms-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-credit-card text-apple-blue mr-4"></i>
+                                Payment Terms
+                            </h2>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Accepted Payment Methods</h3>
+                            <div class="grid md:grid-cols-3 gap-4">
+                                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl text-center">
+                                    <i class="fas fa-money-bill-wave text-green-500 text-2xl mb-3"></i>
+                                    <h4 class="font-semibold mb-2">Cash</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">Cash payments accepted at our store</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl text-center">
+                                    <i class="fas fa-credit-card text-blue-500 text-2xl mb-3"></i>
+                                    <h4 class="font-semibold mb-2">Cards</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">All major credit & debit cards</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl text-center">
+                                    <i class="fas fa-mobile-alt text-purple-500 text-2xl mb-3"></i>
+                                    <h4 class="font-semibold mb-2">Digital</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">UPI, Paytm, PhonePe, GPay</p>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Payment Schedule</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Diagnosis:</strong> Free comprehensive device diagnosis with no obligation</li>
+                                <li><strong>Repair Authorization:</strong> Full payment required before repair work begins</li>
+                                <li><strong>Express Service:</strong> 20% additional charge for same-day repair service</li>
+                                <li><strong>Parts Ordering:</strong> 50% advance payment for special order parts</li>
+                                <li><strong>Pickup/Delivery:</strong> No additional charges within 10km of our service center</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Pricing & Quotes</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li>All prices are quoted in Indian Rupees (INR) including applicable taxes</li>
+                                <li>Repair quotes are valid for 7 days from the date of issue</li>
+                                <li>Parts prices may vary based on availability and market conditions</li>
+                                <li>Additional charges may apply for complex diagnostic requirements</li>
+                                <li>No hidden fees - all costs are clearly itemized in your quote</li>
+                            </ul>
+
+                            <div class="warning-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-exclamation-circle text-red-500 mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Payment Policies</h4>
+                                        <ul class="text-gray-600 dark:text-gray-300 font-medium list-disc ml-4">
+                                            <li>No refunds for completed repairs that meet specified requirements</li>
+                                            <li>If repair cannot be completed, full refund of any advance payment</li>
+                                            <li>Cancellation after parts ordering may incur restocking fees</li>
+                                            <li>Devices not collected within 30 days may incur storage charges</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Tax & GST</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                All services are subject to applicable Goods and Services Tax (GST) as per Indian tax regulations. GST-compliant invoices are provided for all transactions. Our GST registration number is available upon request.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Device Data -->
+                    <section id="device-data" class="terms-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-mobile-alt text-apple-blue mr-4"></i>
+                                Device Data & Privacy
+                            </h2>
+
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-shield-check text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Your Data Protection</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            We understand your device contains sensitive personal and professional data. We have strict protocols to protect your privacy throughout the repair process.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Data Backup Recommendations</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Before Service:</strong> We strongly recommend backing up your device using iCloud, iTunes, or Finder</li>
+                                <li><strong>Data Security:</strong> Remove or disable sensitive apps, payment methods, and personal information</li>
+                                <li><strong>Find My:</strong> Disable Find My iPhone/iPad to allow proper testing and service</li>
+                                <li><strong>Passcode:</strong> You may need to provide your passcode for diagnostic testing</li>
+                                <li><strong>Two-Factor Authentication:</strong> Temporarily disable 2FA if it may interfere with testing</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Our Data Handling Policy</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Minimum Access:</strong> We only access data necessary for diagnostic and repair purposes</li>
+                                <li><strong>No Data Mining:</strong> We never browse, copy, or extract your personal data</li>
+                                <li><strong>Secure Environment:</strong> All repair work performed in secure, monitored facilities</li>
+                                <li><strong>Temporary Backups:</strong> Any diagnostic backups are automatically deleted after repair completion</li>
+                                <li><strong>Staff Training:</strong> All technicians are trained on privacy protocols and sign confidentiality agreements</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Data Loss & Recovery</h3>
+                            <div class="warning-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-exclamation-triangle text-red-500 mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Important Data Disclaimer</h4>
+                                        <ul class="text-gray-600 dark:text-gray-300 font-medium list-disc ml-4">
+                                            <li>While we take every precaution, some repairs may result in data loss</li>
+                                            <li>We are not responsible for data loss during legitimate repair procedures</li>
+                                            <li>Water damage and logic board repairs carry higher risk of data loss</li>
+                                            <li>Always maintain current backups of important data</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Device Security Features</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Activation Lock:</strong> Devices with Activation Lock enabled require original owner verification</li>
+                                <li><strong>Touch ID/Face ID:</strong> Biometric features may need recalibration after screen repairs</li>
+                                <li><strong>Secure Enclave:</strong> Hardware security features are preserved during authorized repairs</li>
+                                <li><strong>Software Integrity:</strong> We maintain original software configuration whenever possible</li>
+                            </ul>
+
+                            <div class="success-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-user-shield text-green-500 mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Data Recovery Services</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            We offer specialized data recovery services for severely damaged devices. Success rates vary based on damage type and extent. Data recovery attempts are performed at additional cost with no guarantee of success.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Liability -->
+                    <section id="liability" class="terms-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-exclamation-triangle text-apple-blue mr-4"></i>
+                                Limitation of Liability
+                            </h2>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Service Limitations</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                While we strive to provide the highest quality repair services, certain limitations apply to our liability and service guarantees.
+                            </p>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Maximum Liability</h3>
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-calculator text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Liability Cap</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            Our total liability for any claim related to our services is limited to the cost of the repair service provided, not to exceed the current market value of your device.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Excluded Damages</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                We are not liable for the following types of damages:
+                            </p>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Consequential Damages:</strong> Lost profits, business interruption, or opportunity costs</li>
+                                <li><strong>Data Loss:</strong> Loss of data, photos, contacts, or other digital content</li>
+                                <li><strong>Software Issues:</strong> iOS/macOS corruption not directly caused by hardware repair</li>
+                                <li><strong>Third-Party Apps:</strong> Compatibility issues with third-party applications</li>
+                                <li><strong>Time-Sensitive Losses:</strong> Missed calls, appointments, or deadlines due to device downtime</li>
+                                <li><strong>Cosmetic Preferences:</strong> Minor color variations or cosmetic differences in replacement parts</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Force Majeure</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                We are not liable for delays or failure to perform due to circumstances beyond our reasonable control, including:
+                            </p>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li>Natural disasters, pandemics, or government restrictions</li>
+                                <li>Supply chain disruptions affecting parts availability</li>
+                                <li>Utility failures or internet service interruptions</li>
+                                <li>Labor disputes or transportation delays</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Pre-Existing Conditions</h3>
+                            <div class="warning-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-search text-red-500 mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Device Condition Assessment</h4>
+                                        <ul class="text-gray-600 dark:text-gray-300 font-medium list-disc ml-4">
+                                            <li>We thoroughly document device condition before repair</li>
+                                            <li>Pre-existing damage or wear is noted and excluded from warranty</li>
+                                            <li>Hidden damage may be discovered during repair process</li>
+                                            <li>Additional issues found during repair will be disclosed before proceeding</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Insurance & Protection</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                We maintain comprehensive business insurance to protect against operational risks. However, customers are encouraged to maintain their own device insurance or extended warranty coverage for maximum protection.
+                            </p>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Dispute Resolution</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                Any disputes arising from our services will be resolved through good faith negotiation. If resolution cannot be reached, disputes will be subject to the jurisdiction of Bangalore courts under Indian law.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- User Responsibilities -->
+                    <section id="user-responsibilities" class="terms-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-user-check text-apple-blue mr-4"></i>
+                                User Responsibilities
+                            </h2>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Device Ownership & Authorization</h3>
+                            <div class="success-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-id-card text-green-500 mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Proof of Ownership Required</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            You must provide valid proof of device ownership (purchase receipt, warranty card, or government ID matching device registration) for all repair services.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Legal Ownership:</strong> You warrant that you are the legal owner or authorized user of the device</li>
+                                <li><strong>Authorization:</strong> You have the right to authorize repairs and modifications to the device</li>
+                                <li><strong>Stolen Devices:</strong> We do not service devices reported as lost or stolen</li>
+                                <li><strong>Corporate Devices:</strong> Company devices require written authorization from the organization</li>
+                                <li><strong>ID Verification:</strong> Valid government-issued photo ID required for all services</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Pre-Service Preparation</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Data Backup:</strong> Create complete backups of all important data before service</li>
+                                <li><strong>Security Settings:</strong> Disable Find My iPhone/iPad and remove passcodes when requested</li>
+                                <li><strong>Personal Information:</strong> Remove or secure sensitive personal and financial information</li>
+                                <li><strong>Accessories:</strong> Remove all cases, screen protectors, and non-essential accessories</li>
+                                <li><strong>Honest Disclosure:</strong> Accurately describe the device issues and any previous repairs</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">During Service Period</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Communication:</strong> Respond promptly to our requests for authorization or additional information</li>
+                                <li><strong>Accessibility:</strong> Remain accessible via provided contact information during repair period</li>
+                                <li><strong>Decision Making:</strong> Make timely decisions regarding additional repairs or costs discovered</li>
+                                <li><strong>Payment:</strong> Pay all authorized charges promptly upon service completion</li>
+                                <li><strong>Collection:</strong> Collect your device within reasonable time after completion notification</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Legal Compliance</h3>
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-balance-scale text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Legal Requirements</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            You agree to comply with all applicable laws and regulations regarding device usage, import/export restrictions, and intellectual property rights.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Import Regulations:</strong> Comply with Indian customs and import regulations for international devices</li>
+                                <li><strong>Software Licensing:</strong> Maintain valid licenses for all software on your device</li>
+                                <li><strong>Prohibited Content:</strong> Devices must not contain illegal or prohibited content</li>
+                                <li><strong>Privacy Laws:</strong> Comply with applicable data protection and privacy regulations</li>
+                                <li><strong>Warranty Terms:</strong> Understand that third-party repairs may void manufacturer warranties</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Post-Service Responsibilities</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Testing:</strong> Thoroughly test all device functions before leaving our premises</li>
+                                <li><strong>Warranty Claims:</strong> Report any warranty issues promptly within the specified period</li>
+                                <li><strong>Proper Usage:</strong> Use the device according to manufacturer specifications and guidelines</li>
+                                <li><strong>Care Instructions:</strong> Follow any specific care instructions provided for repaired components</li>
+                                <li><strong>Feedback:</strong> Provide honest feedback about our services to help us improve</li>
+                            </ul>
+
+                            <div class="warning-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-ban text-red-500 mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Prohibited Actions</h4>
+                                        <ul class="text-gray-600 dark:text-gray-300 font-medium list-disc ml-4">
+                                            <li>Providing false information about device ownership or condition</li>
+                                            <li>Attempting to service locked or stolen devices</li>
+                                            <li>Requesting illegal modifications or bypasses</li>
+                                            <li>Interfering with our diagnostic or repair processes</li>
+                                            <li>Making false warranty claims or fraudulent requests</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Intellectual Property -->
+                    <section id="intellectual-property" class="terms-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-copyright text-apple-blue mr-4"></i>
+                                Intellectual Property
+                            </h2>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Trademarks & Brand Names</h3>
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-trademark text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Independent Service Provider</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            iCircuit.in is an independent repair service provider. We are not affiliated with, authorized by, or endorsed by Apple Inc. Apple, iPhone, iPad, MacBook, iMac, Apple Watch, and AirPods are trademarks of Apple Inc.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Apple Trademarks:</strong> All Apple product names and logos are property of Apple Inc.</li>
+                                <li><strong>Service Marks:</strong> We use Apple trademarks only to identify compatibility and service categories</li>
+                                <li><strong>No Endorsement:</strong> Our services are not endorsed or approved by Apple Inc.</li>
+                                <li><strong>Independent Business:</strong> We operate as an independent third-party repair service</li>
+                                <li><strong>Brand Compliance:</strong> We comply with applicable trademark usage guidelines</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Our Intellectual Property</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Website Content:</strong> All content on our website is owned by iCircuit.in or licensed for use</li>
+                                <li><strong>Service Methods:</strong> Our repair techniques and processes are proprietary business methods</li>
+                                <li><strong>Documentation:</strong> Repair guides, procedures, and training materials are our intellectual property</li>
+                                <li><strong>Brand Identity:</strong> The iCircuit.in name, logo, and brand elements are our trademarks</li>
+                                <li><strong>Software Tools:</strong> Any diagnostic or repair software we develop is proprietary</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Customer Content</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Device Data:</strong> All data on your device remains your intellectual property</li>
+                                <li><strong>Personal Content:</strong> We claim no rights to your photos, documents, or personal files</li>
+                                <li><strong>Software Licenses:</strong> You retain all rights to licensed software on your device</li>
+                                <li><strong>Privacy Protection:</strong> We do not access or claim rights to your personal content</li>
+                                <li><strong>Content Security:</strong> We protect your intellectual property during the repair process</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Third-Party Rights</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Parts Suppliers:</strong> Replacement parts may be subject to third-party intellectual property rights</li>
+                                <li><strong>Software Components:</strong> Third-party software components retain their respective copyrights</li>
+                                <li><strong>Licensing Compliance:</strong> We ensure compliance with applicable software and hardware licenses</li>
+                                <li><strong>Patent Rights:</strong> We respect patent rights of component manufacturers and technology providers</li>
+                            </ul>
+
+                            <div class="warning-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-shield-alt text-red-500 mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">DMCA & Copyright Protection</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium mb-2">
+                                            We respect intellectual property rights and comply with the Digital Millennium Copyright Act (DMCA) and applicable Indian copyright laws.
+                                        </p>
+                                        <ul class="text-gray-600 dark:text-gray-300 font-medium list-disc ml-4">
+                                            <li>Report copyright violations to: legal@icircuit.in</li>
+                                            <li>Include specific details of alleged infringement</li>
+                                            <li>Provide proof of ownership or authorization</li>
+                                            <li>We will investigate and respond to valid claims promptly</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Fair Use & Educational Purpose</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                We may use device information, repair procedures, and technical documentation for educational purposes, training, and service improvement under fair use principles. This does not include personal customer data or proprietary information.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Termination -->
+                    <section id="termination" class="terms-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-times-circle text-apple-blue mr-4"></i>
+                                Termination of Service
+                            </h2>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Service Termination Reasons</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                We reserve the right to terminate or refuse service under the following circumstances:
+                            </p>
+
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="p-4 bg-red-50 dark:bg-red-900/20 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <i class="fas fa-ban text-red-500 mr-2"></i>
+                                        Immediate Termination
+                                    </h4>
+                                    <ul class="text-gray-600 dark:text-gray-300 font-medium text-sm space-y-1">
+                                        <li>• Suspected stolen or fraudulent devices</li>
+                                        <li>• False information about ownership</li>
+                                        <li>• Threatening or abusive behavior</li>
+                                        <li>• Illegal content on devices</li>
+                                        <li>• Violation of our policies</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-xl">
+                                    <h4 class="font-semibold text-lg mb-2 flex items-center">
+                                        <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                                        Service Refusal
+                                    </h4>
+                                    <ul class="text-gray-600 dark:text-gray-300 font-medium text-sm space-y-1">
+                                        <li>• Devices beyond economical repair</li>
+                                        <li>• Inability to verify ownership</li>
+                                        <li>• Safety concerns with device condition</li>
+                                        <li>• Non-payment of previous services</li>
+                                        <li>• Capacity or technical limitations</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Customer-Initiated Cancellation</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Before Repair:</strong> Full refund of any advance payment if repair has not commenced</li>
+                                <li><strong>During Diagnosis:</strong> No charges for cancellation during free diagnosis period</li>
+                                <li><strong>After Parts Ordered:</strong> Cancellation may incur parts restocking fees</li>
+                                <li><strong>Partial Completion:</strong> Payment required for completed work and non-returnable parts</li>
+                                <li><strong>Device Collection:</strong> Devices must be collected within 48 hours of cancellation notice</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Suspension of Service</h3>
+                            <div class="warning-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-pause-circle text-red-500 mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Temporary Suspension</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium mb-2">
+                                            Service may be temporarily suspended for:
+                                        </p>
+                                        <ul class="text-gray-600 dark:text-gray-300 font-medium list-disc ml-4">
+                                            <li>Non-payment of outstanding invoices</li>
+                                            <li>Pending verification of device ownership</li>
+                                            <li>Investigation of policy violations</li>
+                                            <li>Safety concerns requiring additional evaluation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Effect of Termination</h3>
+                            <ul class="list-disc text-gray-700 dark:text-gray-300 font-medium">
+                                <li><strong>Immediate Effect:</strong> All services cease immediately upon termination</li>
+                                <li><strong>Payment Obligations:</strong> Outstanding payments remain due regardless of termination</li>
+                                <li><strong>Device Return:</strong> Devices will be returned in current condition</li>
+                                <li><strong>Warranty Void:</strong> Termination may void existing warranty coverage</li>
+                                <li><strong>Data Deletion:</strong> Any temporary backups or diagnostic data will be securely deleted</li>
+                            </ul>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Unclaimed Devices</h3>
+                            <div class="highlight-box">
+                                <div class="flex items-start">
+                                    <i class="fas fa-clock text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Device Collection Policy</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium mb-2">
+                                            Devices not collected within specified timeframes are subject to the following policy:
+                                        </p>
+                                        <ul class="text-gray-600 dark:text-gray-300 font-medium list-disc ml-4">
+                                            <li><strong>0-30 days:</strong> Free storage with completion notification</li>
+                                            <li><strong>31-60 days:</strong> Storage fees apply (₹100 per week)</li>
+                                            <li><strong>61-90 days:</strong> Final notice sent with additional fees</li>
+                                            <li><strong>90+ days:</strong> Device may be disposed of per legal requirements</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Reinstatement</h3>
+                            <p class="text-gray-700 dark:text-gray-300 font-medium">
+                                Terminated customers may request service reinstatement by addressing the issues that led to termination. Reinstatement is at our sole discretion and may require additional terms or conditions.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Contact Terms -->
+                    <section id="contact-terms" class="terms-section mb-16">
+                        <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                            <h2 class="text-3xl font-bold mb-6 flex items-center">
+                                <i class="fas fa-envelope text-apple-blue mr-4"></i>
+                                Contact Us About Terms
+                            </h2>
+
+                            <p class="text-gray-700 dark:text-gray-300 font-medium mb-6">
+                                If you have questions about these Terms and Conditions, need clarification on our policies, or want to discuss specific service requirements, please contact us using the information below.
+                            </p>
+
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Contact Information</h3>
+                                    <div class="space-y-4">
+                                        <div class="flex items-center">
+                                            <i class="fas fa-envelope text-apple-blue mr-3"></i>
+                                            <div>
+                                                <p class="font-semibold">Legal & Terms</p>
+                                                <a href="mailto:legal@icircuit.in" class="text-apple-blue hover:underline font-medium">legal@icircuit.in</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex items-center">
+                                            <i class="fas fa-phone text-apple-blue mr-3"></i>
+                                            <div>
+                                                <p class="font-semibold">Customer Service</p>
+                                                <a href="tel:+919742090321" class="text-apple-blue hover:underline font-medium">+91 97420 90321</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="flex items-start">
+                                            <i class="fas fa-map-marker-alt text-apple-blue mr-3 mt-1"></i>
+                                            <div>
+                                                <p class="font-semibold">Service Center</p>
+                                                <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                                    104/A, Shop No. F8, 1st Floor,<br>
+                                                    Anjanadri Krest Complex,<br>
+                                                    Above SBI ATM, Near Govt School,<br>
+                                                    Munnekollala, Bengaluru-560037
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center">
+                                            <i class="fas fa-clock text-apple-blue mr-3"></i>
+                                            <div>
+                                                <p class="font-semibold">Business Hours</p>
+                                                <p class="text-gray-600 dark:text-gray-300 font-medium">Monday - Sunday: 10:00 AM - 8:00 PM</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-6">
+                                    <h4 class="font-bold text-lg mb-4 flex items-center">
+                                        <i class="fas fa-info-circle text-apple-blue mr-2"></i>
+                                        Legal Information
+                                    </h4>
+                                    <div class="space-y-3 text-gray-600 dark:text-gray-300 font-medium text-sm">
+                                        <div class="flex justify-between">
+                                            <span class="font-semibold">Business Name:</span>
+                                            <span>iCircuit.in</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="font-semibold">GST Number:</span>
+                                            <span>Available on request</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="font-semibold">Jurisdiction:</span>
+                                            <span>Bangalore, Karnataka, India</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span class="font-semibold">Governing Law:</span>
+                                            <span>Indian Law</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="highlight-box mt-8">
+                                <div class="flex items-start">
+                                    <i class="fas fa-edit text-apple-blue mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Terms Updates & Notifications</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            We may update these Terms and Conditions periodically to reflect changes in our services, legal requirements, or business practices. Material changes will be communicated via email or prominent website notice at least 30 days before taking effect.
+                                        </p>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium mt-2">
+                                            <strong>Current Version:</strong> January 1, 2025 | <strong>Next Review:</strong> January 1, 2026
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="success-box mt-6">
+                                <div class="flex items-start">
+                                    <i class="fas fa-handshake text-green-500 mr-4 mt-1 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-2">Agreement Acceptance</h4>
+                                        <p class="text-gray-600 dark:text-gray-300 font-medium">
+                                            By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-gray-900 text-white font-poppins">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Footer Content -->
+            <div class="py-16 grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+                <!-- Brand Section -->
+                <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="images/logo.png" alt="iCircuit Logo" class="h-10 w-auto">
+                        <span class="text-2xl font-bold">iCircuit.in</span>
+                    </div>
+                    <p class="text-gray-400 mb-8 max-w-md leading-relaxed font-medium">
+                        Bangalore's most trusted Apple repair service. We specialize in iPhone, MacBook, iPad, iMac, and Apple Watch repairs with genuine parts and certified technicians.
+                    </p>
+                    
+                    <!-- Quick Contact -->
+                    <div class="space-y-4 mb-8">
+                        <a href="tel:+919742090321" class="flex items-center text-white hover:text-apple-blue transition-colors group">
+                            <div class="w-10 h-10 bg-apple-blue rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">+91 97420 90321</p>
+                                <p class="text-gray-400 text-sm">Call for instant support</p>
+                            </div>
+                        </a>
+                        
+                        <div class="flex items-center text-gray-400">
+                            <div class="w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white">Mon-Sun: 10AM - 8PM</p>
+                                <p class="text-sm">Always here when you need us</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Social Links -->
+                    <div class="flex space-x-4">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/share/1SG5wiX1b8/?mibextid=qi2Omg" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #1877F2;"
+                           title="Follow us on Facebook">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/icircuit.in/" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg instagram-gradient"
+                           title="Follow us on Instagram">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/vinod-kumar-554932345/" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #0A66C2;"
+                           title="Connect on LinkedIn">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/9742090321" target="_blank" 
+                           class="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg whatsapp-pulse"
+                           style="background-color: #25D366;"
+                           title="Chat on WhatsApp">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.89 3.488"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-4">
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Our Services
+                        </a></li>
+                        <li><a href="index.html#why-us" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Why Choose Us
+                        </a></li>
+                        <li><a href="index.html#how-it-works" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Repair Process
+                        </a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            About Us
+                        </a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Our Blog
+                        </a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-apple-blue transition-colors font-medium flex items-center group">
+                            <i class="fas fa-chevron-right mr-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                            Book Repair
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-6 text-white">Repair Services</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-mobile-alt text-apple-blue mr-3"></i>
+                            iPhone Screen & Battery
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-laptop text-apple-blue mr-3"></i>
+                            MacBook Logic Board
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-tablet-alt text-apple-blue mr-3"></i>
+                            iPad Display Repair
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-desktop text-apple-blue mr-3"></i>
+                            iMac Upgrades
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-stopwatch text-apple-blue mr-3"></i>
+                            Apple Watch Service
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 py-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center">
+                    <div class="text-center lg:text-left mb-4 lg:mb-0">
+                        <p class="text-gray-400 text-sm font-medium">
+                            &copy; 2025 iCircuit.in - All Rights Reserved
+                        </p>
+                        <p class="text-gray-500 text-xs mt-1">
+                            Apple and the Apple logo are trademarks of Apple Inc. | Independent repair service
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center space-x-6 text-sm">
+                        <a href="privacy.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium">Privacy Policy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium">Terms of Service</a>
+                        <div class="flex items-center text-gray-400 font-medium">
+                            <i class="fas fa-shield-check text-green-500 mr-2"></i>
+                            SSL Secured
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            html.classList.add('dark');
+        }
+
+        darkModeToggle.addEventListener('click', function() {
+            html.classList.toggle('dark');
+            
+            // Save theme preference
+            if (html.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Enhanced Scroll to Top Button Functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        const scrollProgress = document.getElementById('scrollProgress');
+
+        // Show/hide scroll to top button and update progress
+        function updateScrollButton() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+
+            // Show button after scrolling 300px
+            if (scrollTop > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+
+            // Update progress ring
+            scrollProgress.style.background = `conic-gradient(#007AFF ${scrollPercentage * 3.6}deg, transparent 0deg)`;
+        }
+
+        // Scroll to top functionality
+        scrollToTopBtn.addEventListener('click', function() {
+            // Add click animation
+            scrollToTopBtn.style.transform = 'translateY(-1px) scale(0.95)';
+            
+            // Smooth scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+
+            // Reset button animation
+            setTimeout(() => {
+                scrollToTopBtn.style.transform = '';
+            }, 150);
+        });
+
+        // Listen for scroll events
+        window.addEventListener('scroll', updateScrollButton);
+
+        // Initial call
+        updateScrollButton();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Terms navigation active state and smooth scrolling
+        const termsNavItems = document.querySelectorAll('.terms-nav-item');
+        const termsSections = document.querySelectorAll('.terms-section');
+
+        // Function to update active navigation item
+        function updateActiveNavItem() {
+            const scrollPosition = window.pageYOffset;
+
+            termsSections.forEach((section, index) => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    // Remove active class from all nav items
+                    termsNavItems.forEach(item => item.classList.remove('active'));
+                    // Add active class to current nav item
+                    if (termsNavItems[index]) {
+                        termsNavItems[index].classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // Smooth scroll for terms navigation
+        termsNavItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    // Calculate offset for sticky header
+                    const headerHeight = 100;
+                    const elementPosition = targetSection.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: elementPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Listen for scroll to update active navigation item
+        window.addEventListener('scroll', updateActiveNavItem);
+
+        // Initial call to set active nav item
+        updateActiveNavItem();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-md');
+            } else {
+                header.classList.remove('backdrop-blur-md');
+            }
+        });
+
+        // FontAwesome fallback check
+        function checkFontAwesome() {
+            const testIcon = document.createElement('i');
+            testIcon.className = 'fas fa-home';
+            testIcon.style.position = 'absolute';
+            testIcon.style.left = '-9999px';
+            document.body.appendChild(testIcon);
+            
+            const computedStyle = window.getComputedStyle(testIcon, ':before');
+            const isLoaded = computedStyle.getPropertyValue('font-family').includes('Font Awesome');
+            
+            document.body.removeChild(testIcon);
+            
+            if (!isLoaded) {
+                console.log('FontAwesome not loaded, trying alternative CDN...');
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = 'https://use.fontawesome.com/releases/v6.4.0/css/all.css';
+                document.head.appendChild(link);
+            }
+        }
+
+        // Check FontAwesome after page load
+        window.addEventListener('load', function() {
+            setTimeout(checkFontAwesome, 1000);
+        });
+
+        // Additional scroll to top button enhancements
+        scrollToTopBtn.addEventListener('mouseenter', function() {
+            this.style.animation = 'none';
+        });
+
+        scrollToTopBtn.addEventListener('mouseleave', function() {
+            this.style.animation = '';
+        });
+
+        // Keyboard accessibility for scroll to top
+        scrollToTopBtn.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                this.click();
+            }
+        });
+
+        // Add tabindex for keyboard navigation
+        scrollToTopBtn.setAttribute('tabindex', '0');
+        scrollToTopBtn.setAttribute('aria-label', 'Scroll to top');
+        scrollToTopBtn.setAttribute('title', 'Scroll to top');
+    </script>
+</body>
+</html>

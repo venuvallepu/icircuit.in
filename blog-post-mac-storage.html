@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Free Up Storage Space on Your Mac: Complete Optimization Guide - iCircuit Blog</title>
+    <meta name="description" content="Running out of storage on your Mac? Learn expert techniques to free up space, optimize storage, and boost performance. Complete guide from iCircuit.in.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Multiple FontAwesome CDN sources for reliability -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Backup FontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
+    
+    <!-- Alternative CDN as fallback -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'sans': ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            gray: '#1D1D1F',
+                            lightGray: '#F5F5F7'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-down': 'fadeInDown 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-poppins bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-chevron-up text-white text-lg"></i>
+    </div>
+    
+    <!-- Sticky Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect bg-white/90 dark:bg-gray-900/90 border-b border-gray-200 dark:border-gray-700">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3" data-aos="fade-right">
+                    <img src="images/logo.png" alt="iCircuit Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold gradient-text">iCircuit.in</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link hover:text-apple-blue transition-colors font-medium">Home</a>
+                    <a href="index.html#services" class="nav-link hover:text-apple-blue transition-colors font-medium">Services</a>
+                    
+                    <a href="index.html#testimonials" class="nav-link hover:text-apple-blue transition-colors font-medium">Reviews</a>
+                    <a href="aboutus.html" class="nav-link hover:text-apple-blue transition-colors font-medium">About Us</a>
+                    <a href="blog.html" class="nav-link text-apple-blue transition-colors font-medium">Blog</a>
+                    <a href="index.html#contact" class="nav-link hover:text-apple-blue transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Dark Mode Toggle & CTA -->
+                <div class="flex items-center space-x-4" data-aos="fade-left">
+                    <button id="darkModeToggle" class="relative w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-apple-blue focus:ring-offset-2 dark:focus:ring-offset-gray-900">
+                        <div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center dark:translate-x-6">
+                            <i class="fas fa-sun text-xs text-yellow-500 dark:hidden"></i>
+                            <i class="fas fa-moon text-xs text-gray-600 hidden dark:inline"></i>
+                        </div>
+                    </button>
+                    <a href="tel:+919742090321" class="hidden sm:inline-flex items-center px-4 py-2 bg-apple-blue text-white rounded-lg hover:bg-blue-600 btn-glow font-medium">
+                        <i class="fas fa-phone mr-2"></i>
+                        Call Now
+                    </a>
+                    <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-4 py-2 space-y-1">
+                <a href="index.html" class="mobile-nav-item">Home</a>
+                <a href="index.html#services" class="mobile-nav-item">Services</a>
+                <a href="index.html#why-us" class="mobile-nav-item">Why Us</a>
+                <a href="index.html#how-it-works" class="mobile-nav-item">Process</a>
+                <a href="index.html#locations" class="mobile-nav-item">Locations</a>
+                <a href="index.html#testimonials" class="mobile-nav-item">Reviews</a>
+                <a href="aboutus.html" class="mobile-nav-item">About Us</a>
+                <a href="blog.html" class="mobile-nav-item bg-apple-blue text-white">Blog</a>
+                <a href="index.html#contact" class="mobile-nav-item">Contact</a>
+                <a href="tel:+919742090321" class="mobile-nav-item bg-green-500 text-white text-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Mobile Optimized -->
+    <section class="pt-16 min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Content -->
+                <div class="space-y-6 lg:space-y-8 text-center lg:text-left" data-aos="fade-right" data-aos-duration="800">
+                    <div class="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-apple-blue/10 dark:bg-apple-blue/20 rounded-full text-apple-blue font-semibold text-xs sm:text-sm mb-4 lg:mb-6">
+                        <i class="fas fa-hdd mr-2"></i>
+                        Mac Storage Optimization
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                        <span class="block mb-2 lg:mb-4">How to Free Up</span>
+                        <span class="gradient-text block">Storage Space on Your Mac</span>
+                    </h1>
+                    <p class="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 leading-relaxed font-medium">
+                        Running out of space? Follow our simple guide to clear junk files, optimize storage, and boost your Mac's performance with proven techniques that actually work.
+                    </p>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#quick-fixes" class="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-purple-500 hover:bg-purple-600 text-white rounded-xl font-semibold text-sm sm:text-base lg:text-lg transition-colors shadow-lg">
+                            <i class="fas fa-magic mr-2 sm:mr-3"></i>
+                            Quick Fixes
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-apple-blue text-apple-blue rounded-xl hover:bg-apple-blue hover:text-white transition-all font-semibold text-sm sm:text-base lg:text-lg">
+                            <i class="fas fa-tools mr-2 sm:mr-3"></i>
+                            Professional Cleanup
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image -->
+                <div class="relative order-first lg:order-last" data-aos="fade-left" data-aos-duration="800">
+                    <div class="relative z-10 animate-float">
+                        <img src="images/slide5.webp" 
+                             alt="Mac storage optimization and cleanup" 
+                             class="rounded-2xl shadow-2xl w-full">
+                    </div>
+                    <!-- Floating elements -->
+                    <div class="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-24 sm:h-24 bg-apple-blue rounded-full opacity-20 animate-bounce"></div>
+                    <div class="absolute -bottom-4 -left-4 sm:-bottom-8 sm:-left-8 w-20 h-20 sm:w-32 sm:h-32 bg-purple-500 rounded-full opacity-10 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section id="article-content" class="py-8 sm:py-12 lg:py-20 bg-white dark:bg-gray-900 scroll-offset">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Mobile Author Card -->
+            <div class="lg:hidden mobile-sidebar-section mb-6" data-aos="fade-up">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700">
+                    <div class="text-center">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-apple-blue to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                            <i class="fas fa-user-cog text-2xl sm:text-3xl text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-lg sm:text-xl mb-2 text-gray-900 dark:text-white">Expert Technician</h3>
+                        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-3 sm:mb-4">Certified Mac optimization specialist with 8+ years experience in storage management</p>
+                        <div class="flex items-center justify-center text-yellow-500 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">5.0 Rating</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Published: June 21, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-4 gap-8 lg:gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-3">
+                    <!-- Table of Contents - Mobile -->
+                    <div class="lg:hidden mb-8" data-aos="fade-up">
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-4 sm:p-6 border border-blue-200 dark:border-blue-800">
+                            <h3 class="font-bold text-lg sm:text-xl mb-4 text-blue-900 dark:text-blue-100 flex items-center">
+                                <i class="fas fa-list-ul mr-3"></i>
+                                Quick Navigation
+                            </h3>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#storage-analysis" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        1. Storage Analysis
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#quick-fixes" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        2. Quick Fixes
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#system-cleanup" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        3. System Cleanup
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#advanced-optimization" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        4. Advanced Methods
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#prevention-tips" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium text-sm sm:text-base">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        5. Prevention Tips
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Article Content -->
+                    <article class="blog-content" data-aos="fade-up" data-aos-delay="200">
+                        
+                        <!-- Introduction -->
+                        <div class="mb-8 sm:mb-12">
+                            <p>Nothing slows down your Mac quite like a full storage drive. When your Mac's storage approaches capacity, you'll notice significant performance degradation, slower boot times, and difficulty installing updates or new applications. The good news is that with the right techniques, you can reclaim substantial storage space and restore your Mac's performance to optimal levels.</p>
+                            
+                            <p>At iCircuit, we regularly help customers optimize their Mac storage, often freeing up 20-50GB or more through systematic cleanup procedures. This comprehensive guide will walk you through proven methods to identify what's consuming your storage and eliminate unnecessary files safely and efficiently. Whether you're dealing with a completely full drive or just want to optimize for better performance, these techniques will help you maximize your available space.</p>
+                        </div>
+
+                        <!-- Storage Analysis -->
+                        <div id="storage-analysis" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>📊 Understanding Your Storage: Complete Analysis</h2>
+                            
+                            <div class="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-4 sm:p-6 rounded-r-xl mb-6">
+                                <div class="flex items-start">
+                                    <i class="fas fa-chart-pie text-blue-500 mr-3 mt-1 text-lg"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-blue-800 dark:text-blue-200 mb-2">First Step: Know What's Using Your Space</h4>
+                                        <p class="text-blue-700 dark:text-blue-300 text-sm sm:text-base">Before cleaning, you need to understand exactly what's consuming your storage space:</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Built-in Storage Management Tool</h3>
+                            <p>macOS includes a powerful storage analysis tool that provides detailed insights into your space usage:</p>
+                            
+                            <ul>
+                                <li>Click the Apple menu > "About This Mac" > "Storage" > "Manage"</li>
+                                <li>Review the color-coded storage breakdown showing Applications, Documents, Photos, etc.</li>
+                                <li>Click each category to see detailed breakdowns and recommendations</li>
+                                <li>Note the "Other" category - this often contains hidden space hogs</li>
+                            </ul>
+
+                            <h3>Using Disk Utility for Deep Analysis</h3>
+                            <ul>
+                                <li>Open Applications > Utilities > Disk Utility</li>
+                                <li>Select your startup disk and click "First Aid" to check for errors</li>
+                                <li>Review disk usage and identify any corruption that might be wasting space</li>
+                                <li>Check for multiple partitions that might be consuming space unnecessarily</li>
+                            </ul>
+
+                            <h3>Terminal Commands for Power Users</h3>
+                            <p>For detailed analysis, use these Terminal commands:</p>
+                            <ul>
+                                <li><strong>du -h -d 1 ~/</strong> - Shows folder sizes in your home directory</li>
+                                <li><strong>df -h</strong> - Displays overall disk usage and available space</li>
+                                <li><strong>sudo du -h -d 1 /</strong> - Analyzes root directory (use with caution)</li>
+                                <li><strong>find / -size +1G 2>/dev/null</strong> - Finds files larger than 1GB</li>
+                            </ul>
+
+                            <h3>Storage Breakdown: What Takes Up Space</h3>
+                            <p>Understanding typical storage consumers helps prioritize cleanup efforts:</p>
+                            <ul>
+                                <li><strong>System files (10-15GB):</strong> macOS, system updates, and essential files</li>
+                                <li><strong>Applications (5-20GB):</strong> Installed software and their support files</li>
+                                <li><strong>Documents & Downloads (Variable):</strong> Personal files, often forgotten large downloads</li>
+                                <li><strong>Photos & Videos (10-100GB+):</strong> Media files, especially 4K videos</li>
+                                <li><strong>Cache & Logs (1-10GB):</strong> Temporary files that can usually be safely deleted</li>
+                                <li><strong>Mail & Messages (1-20GB):</strong> Email attachments and message databases</li>
+                                <li><strong>Other/Hidden files (Variable):</strong> Often the biggest surprise storage consumer</li>
+                            </ul>
+                        </div>
+
+                        <!-- Quick Fixes -->
+                        <div id="quick-fixes" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>⚡ Quick Wins: Immediate Storage Relief</h2>
+                            
+                            <p>These quick actions can often free up 5-20GB of space in just a few minutes, providing immediate relief for critically full drives.</p>
+
+                            <h3>Empty the Trash (Including All Trash Locations)</h3>
+                            <ul>
+                                <li><strong>Main Trash:</strong> Right-click Trash in Dock > "Empty Trash"</li>
+                                <li><strong>iPhoto/Photos Trash:</strong> Open Photos app > Recently Deleted > Delete All</li>
+                                <li><strong>Mail Trash:</strong> In Mail app, select Trash mailbox > Delete permanently</li>
+                                <li><strong>External drive trash:</strong> Check .Trashes folders on external drives</li>
+                            </ul>
+
+                            <h3>Clear Downloads and Desktop</h3>
+                            <ul>
+                                <li>Open Downloads folder and delete old installers, ZIP files, and forgotten downloads</li>
+                                <li>Move important files from Desktop to appropriate folders (Desktop files use extra memory)</li>
+                                <li>Delete duplicate downloads (often multiple versions of the same installer)</li>
+                                <li>Remove old disk images (.dmg files) after installing applications</li>
+                            </ul>
+
+                            <h3>Use Built-in macOS Recommendations</h3>
+                            <p>Apple menu > About This Mac > Storage > Manage provides automated recommendations:</p>
+                            <ul>
+                                <li><strong>Store in iCloud:</strong> Move Desktop, Documents, and Photos to iCloud</li>
+                                <li><strong>Optimize Storage:</strong> Automatically removes watched iTunes movies and TV shows</li>
+                                <li><strong>Empty Trash Automatically:</strong> Deletes items in Trash after 30 days</li>
+                                <li><strong>Reduce Clutter:</strong> Identifies large files and old downloads for review</li>
+                            </ul>
+
+                            <h3>Clear Browser Caches</h3>
+                            <ul>
+                                <li><strong>Safari:</strong> Develop menu > Empty Caches (enable Developer menu in Preferences)</li>
+                                <li><strong>Chrome:</strong> Chrome menu > More Tools > Clear Browsing Data</li>
+                                <li><strong>Firefox:</strong> History menu > Clear Recent History</li>
+                                <li><strong>All browsers:</strong> Remove old downloaded files from browser download folders</li>
+                            </ul>
+
+                            <h3>Delete Language Files (Safe Method)</h3>
+                            <p>Many applications include language files for dozens of languages you don't use:</p>
+                            <ul>
+                                <li>Use Monolingual (free app) to safely remove unwanted language files</li>
+                                <li>Can typically save 2-5GB depending on installed applications</li>
+                                <li>Always backup before removing language files</li>
+                                <li>Focus on large applications like Adobe Creative Suite, Microsoft Office</li>
+                            </ul>
+                        </div>
+
+                        <!-- System Cleanup -->
+                        <div id="system-cleanup" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>🧹 Deep System Cleanup: Reclaim Hidden Space</h2>
+                            
+                            <p>System files and caches can accumulate gigabytes of unnecessary data over time. These cleanup methods target hidden files that most users never think to check.</p>
+
+                            <h3>Clear System Caches</h3>
+                            <p>Cache files help applications run faster but can become bloated over time:</p>
+                            <ul>
+                                <li><strong>User caches:</strong> ~/Library/Caches/ - Safe to delete while applications are closed</li>
+                                <li><strong>System caches:</strong> /Library/Caches/ - Delete contents, not folders themselves</li>
+                                <li><strong>DNS cache:</strong> Terminal command "sudo dscacheutil -flushcache"</li>
+                                <li><strong>Font cache:</strong> Use Font Book > File > Restore Standard Fonts</li>
+                            </ul>
+
+                            <h3>Clean Log Files</h3>
+                            <ul>
+                                <li>Navigate to ~/Library/Logs/ and /var/log/</li>
+                                <li>Delete old log files (keep recent ones for troubleshooting)</li>
+                                <li>Console app crash reports can be deleted after reviewing</li>
+                                <li>System diagnostic reports rarely needed after 30 days</li>
+                            </ul>
+
+                            <h3>Remove iOS Backups and Updates</h3>
+                            <ul>
+                                <li><strong>iOS device backups:</strong> System Preferences > Apple ID > iCloud > Manage > Backups</li>
+                                <li><strong>Local iTunes backups:</strong> ~/Library/Application Support/MobileSync/Backup/</li>
+                                <li><strong>iOS update files:</strong> ~/Library/iTunes/iPhone Software Updates/</li>
+                                <li><strong>Old iOS beta profiles:</strong> System Preferences > Profiles</li>
+                            </ul>
+
+                            <h3>Clean Mail and Messages Data</h3>
+                            <ul>
+                                <li><strong>Mail attachments:</strong> ~/Library/Mail/V*/MailData/Attachments/</li>
+                                <li><strong>Downloaded email attachments:</strong> Mail > Window > Message Viewer</li>
+                                <li><strong>Messages attachments:</strong> Messages app > Details > attachments list</li>
+                                <li><strong>Mail database optimization:</strong> Rebuild mailboxes in Mail app</li>
+                            </ul>
+
+                            <h3>Clear Application Support Files</h3>
+                            <ul>
+                                <li>Review ~/Library/Application Support/ for oversized folders</li>
+                                <li>Adobe applications often cache gigabytes of preview files</li>
+                                <li>Video editing apps may store large render files</li>
+                                <li>Steam and gaming platforms cache game data</li>
+                                <li>Spotify and music apps download offline content</li>
+                            </ul>
+                        </div>
+
+                        <!-- Advanced Optimization -->
+                        <div id="advanced-optimization" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>🔬 Advanced Storage Optimization Techniques</h2>
+                            
+                            <p>These advanced methods can free up significant space but require more technical knowledge and caution. Always backup your data before attempting these procedures.</p>
+
+                            <h3>Optimize Photos and Media Libraries</h3>
+                            <ul>
+                                <li><strong>Photos library optimization:</strong> Photos > Preferences > Optimize Mac Storage</li>
+                                <li><strong>Duplicate photo detection:</strong> Use PowerPhotos or similar tools to find duplicates</li>
+                                <li><strong>Video compression:</strong> Re-encode large video files with lower bitrates</li>
+                                <li><strong>RAW file management:</strong> Delete RAW files after final edits if not needed</li>
+                                <li><strong>Music library cleanup:</strong> Remove duplicate songs, low-quality files</li>
+                            </ul>
+
+                            <h3>Application Management</h3>
+                            <ul>
+                                <li><strong>Uninstall unused applications:</strong> Use AppCleaner to remove all associated files</li>
+                                <li><strong>Application thinning:</strong> Remove unused architectures (Intel/Apple Silicon)</li>
+                                <li><strong>Browser extension cleanup:</strong> Remove unused extensions and their data</li>
+                                <li><strong>Plugin removal:</strong> Delete unused Audio Units, VST plugins, and Photoshop plugins</li>
+                                <li><strong>Font management:</strong> Remove unused fonts with Font Book</li>
+                            </ul>
+
+                            <h3>Virtual Machine and Development Cleanup</h3>
+                            <ul>
+                                <li><strong>Docker containers:</strong> docker system prune -a to remove unused containers</li>
+                                <li><strong>Virtual machines:</strong> Delete snapshots and unused VM files</li>
+                                <li><strong>Xcode:</strong> ~/Library/Developer/Xcode/DerivedData/ and old simulator runtimes</li>
+                                <li><strong>Node.js:</strong> Clean npm cache and node_modules in old projects</li>
+                                <li><strong>Git repositories:</strong> Clean up old branches and unused repos</li>
+                            </ul>
+
+                            <h3>System File Optimization</h3>
+                            <ul>
+                                <li><strong>Purge RAM to disk:</strong> Terminal command "sudo purge" to clear inactive memory</li>
+                                <li><strong>Spotlight reindexing:</strong> May free space used by corrupted indexes</li>
+                                <li><strong>Time Machine snapshots:</strong> tmutil listlocalsnapshotdates / and delete old ones</li>
+                                <li><strong>Sleep image files:</strong> /var/vm/sleepimage can be large on high-RAM Macs</li>
+                            </ul>
+
+                            <h3>External Storage Solutions</h3>
+                            <ul>
+                                <li><strong>Move large files:</strong> Archive old projects to external drives</li>
+                                <li><strong>Cloud storage integration:</strong> Use iCloud Drive, Dropbox, or Google Drive for documents</li>
+                                <li><strong>Network attached storage:</strong> Store media libraries on NAS devices</li>
+                                <li><strong>External SSD caching:</strong> Use fast external drives for active projects</li>
+                            </ul>
+                        </div>
+
+                        <!-- Prevention Tips -->
+                        <div id="prevention-tips" class="mb-8 sm:mb-12 scroll-mt-24">
+                            <h2>🛡️ Preventing Future Storage Issues</h2>
+                            
+                            <p>The best storage management strategy is prevention. These habits and settings will help you maintain optimal storage levels and avoid future space crises.</p>
+
+                            <h3>Automated Storage Management</h3>
+                            <ul>
+                                <li><strong>Enable "Optimize Mac Storage":</strong> System Preferences > Apple ID > iCloud > Photos</li>
+                                <li><strong>Automatic empty trash:</strong> Finder > Preferences > Advanced > Remove items from Trash after 30 days</li>
+                                <li><strong>iCloud Drive optimization:</strong> Store documents in the cloud, download only when needed</li>
+                                <li><strong>Streaming services:</strong> Use streaming instead of downloading music and movies</li>
+                                <li><strong>Email auto-delete:</strong> Set up rules to automatically delete old emails</li>
+                            </ul>
+
+                            <h3>Smart Download Habits</h3>
+                            <ul>
+                                <li>Delete installer files immediately after installing applications</li>
+                                <li>Use streaming instead of downloading when possible</li>
+                                <li>Regularly review and clean Downloads folder</li>
+                                <li>Avoid saving files to Desktop (they use extra memory)</li>
+                                <li>Use cloud services for document storage rather than local storage</li>
+                            </ul>
+
+                            <h3>Regular Maintenance Schedule</h3>
+                            <ul>
+                                <li><strong>Weekly:</strong> Empty all trash, review Downloads folder</li>
+                                <li><strong>Monthly:</strong> Clear browser caches, check for large files</li>
+                                <li><strong>Quarterly:</strong> Deep cache cleanup, uninstall unused applications</li>
+                                <li><strong>Bi-annually:</strong> Full system cleanup, optimize photos and media libraries</li>
+                                <li><strong>Before major updates:</strong> Free up at least 20GB for smooth system updates</li>
+                            </ul>
+
+                            <h3>Storage Monitoring Tools</h3>
+                            <ul>
+                                <li><strong>DaisyDisk:</strong> Visual disk usage analyzer with interactive interface</li>
+                                <li><strong>GrandPerspective:</strong> Free tool for visualizing disk usage</li>
+                                <li><strong>CleanMyMac:</strong> Automated cleanup with safety features</li>
+                                <li><strong>Disk Diag:</strong> Simple menu bar storage monitor</li>
+                                <li><strong>Built-in alerts:</strong> System notifications when storage is low</li>
+                            </ul>
+
+                            <h3>Best Practices for Different Mac Models</h3>
+                            <ul>
+                                <li><strong>MacBook Air (256GB or less):</strong> Aggressive use of cloud storage, minimal local files</li>
+                                <li><strong>MacBook Pro (512GB):</strong> Balance of local working files and cloud archive</li>
+                                <li><strong>iMac/Mac Pro (1TB+):</strong> Can store more locally but still benefit from organization</li>
+                                <li><strong>Older Macs:</strong> May need more frequent cleanup due to less efficient storage management</li>
+                            </ul>
+                        </div>
+
+                        <!-- Conclusion -->
+                        <div class="mb-8">
+                            <p class="text-lg font-medium text-gray-800 dark:text-gray-200">Effective storage management is an ongoing process, not a one-time fix. By implementing these techniques and developing good storage habits, you can keep your Mac running smoothly while maximizing the available space on your drive.</p>
+                            
+                            <p>Remember that storage optimization isn't just about freeing up space—it's about improving your Mac's overall performance, ensuring smooth system updates, and maintaining a organized digital workspace. If you're uncomfortable performing any of these cleanup procedures yourself, or if you're dealing with a severely degraded system, professional help can save you time and prevent accidental data loss.</p>
+                        </div>
+
+                        <!-- Call to Action -->
+                        <div class="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-2xl lg:rounded-3xl p-6 sm:p-8 lg:p-12 text-center text-white overflow-hidden" data-aos="fade-up" data-aos-delay="800">
+                            <!-- Background Pattern -->
+                            <div class="absolute inset-0 opacity-10">
+                                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-pink-300/20"></div>
+                            </div>
+                            
+                            <div class="relative z-10 max-w-2xl mx-auto">
+                                <div class="w-16 h-16 sm:w-20 sm:h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 border border-white/30">
+                                    <i class="fas fa-hdd text-2xl sm:text-3xl text-white drop-shadow-lg"></i>
+                                </div>
+                                <h3 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-white dark:text-white drop-shadow-lg" style="color: white !important;">Need Professional Storage Optimization?</h3>
+                                <p class="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-white dark:text-white font-medium leading-relaxed drop-shadow-sm" style="color: white !important;">
+                                    Our experts can safely optimize your Mac's storage, remove junk files, and improve performance. Professional cleanup with guaranteed results and data safety.
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                    <a href="tel:+919742090321" class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-purple-500 hover:bg-purple-600 text-white rounded-xl font-bold text-base sm:text-lg transition-all transform hover:scale-105 shadow-xl">
+                                        <i class="fas fa-phone mr-2 sm:mr-3"></i>
+                                        Call Now
+                                    </a>
+                                    <a href="index.html#contact" class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white rounded-xl font-bold text-base sm:text-lg transition-all border border-white/30">
+                                        <i class="fas fa-tools mr-2 sm:mr-3"></i>
+                                        Book Cleanup
+                                    </a>
+                                </div>
+                                <p class="text-sm sm:text-base text-white/90 mt-4 font-medium">
+                                    <i class="fas fa-shield-alt mr-2"></i>
+                                    Safe data handling with complete backup protection
+                                </p>
+                            </div>
+                        </div>
+
+                    </article>
+                </div>
+
+                <!-- Desktop Sidebar -->
+                <div class="hidden lg:block lg:col-span-1">
+                    <div class="sticky top-24 space-y-6">
+                        
+                        <!-- Author Card -->
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700" data-aos="fade-left" data-aos-delay="300">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gradient-to-br from-apple-blue to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                                    <i class="fas fa-user-cog text-3xl text-white"></i>
+                                </div>
+                                <h3 class="font-bold text-xl mb-2 text-gray-900 dark:text-white">Expert Technician</h3>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">Certified Mac optimization specialist with 8+ years experience in storage management</p>
+                                <div class="flex items-center justify-center text-yellow-500 mb-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">5.0 Rating</span>
+                                </div>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Published: June 21, 2025</p>
+                            </div>
+                        </div>
+
+                        <!-- Table of Contents -->
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-6 border border-blue-200 dark:border-blue-800" data-aos="fade-left" data-aos-delay="400">
+                            <h3 class="font-bold text-xl mb-4 text-blue-900 dark:text-blue-100 flex items-center">
+                                <i class="fas fa-list-ul mr-3"></i>
+                                Quick Navigation
+                            </h3>
+                            <ul class="space-y-3">
+                                <li>
+                                    <a href="#storage-analysis" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        1. Storage Analysis
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#quick-fixes" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        2. Quick Fixes
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#system-cleanup" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        3. System Cleanup
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#advanced-optimization" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        4. Advanced Methods
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#prevention-tips" class="flex items-center text-blue-700 dark:text-blue-300 hover:text-apple-blue transition-colors font-medium">
+                                        <i class="fas fa-chevron-right mr-3 text-xs"></i>
+                                        5. Prevention Tips
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Storage Cleanup Contact -->
+                        <div class="bg-purple-50 dark:bg-purple-900/20 rounded-2xl p-6 border border-purple-200 dark:border-purple-800 text-center" data-aos="fade-left" data-aos-delay="500">
+                            <i class="fas fa-magic text-3xl text-purple-600 dark:text-purple-400 mb-3"></i>
+                            <h3 class="font-bold text-lg mb-2 text-purple-900 dark:text-purple-100">Professional Cleanup</h3>
+                            <p class="text-purple-700 dark:text-purple-300 text-sm mb-4">Let our experts optimize your Mac's storage safely and efficiently</p>
+                            <a href="tel:+919742090321" class="w-full inline-flex items-center justify-center px-4 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-lg font-semibold transition-colors">
+                                <i class="fas fa-phone mr-2"></i>
+                                Get Help Now
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Posts -->
+    <section class="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 sm:mb-12" data-aos="fade-up">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Related Articles</h2>
+                <p class="text-gray-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
+                    Discover more ways to optimize and maintain your Mac's performance
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Related Post 1 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-600 group" data-aos="fade-up" data-aos-delay="100">
+                    <a href="blog-post.html" class="block">
+                        <div class="overflow-hidden">
+                            <img src="images/slide2.webp" alt="MacBook maintenance guide" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block mb-3 px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 rounded-full text-xs font-semibold">Maintenance</span>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-apple-blue transition-colors">Ultimate MacBook Maintenance Guide</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Learn essential maintenance tips to keep your MacBook running smoothly...</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Related Post 2 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-600 group" data-aos="fade-up" data-aos-delay="200">
+                    <a href="blog-post-iphone-battery.html" class="block">
+                        <div class="overflow-hidden">
+                            <img src="images/slide1.webp" alt="iPhone battery replacement" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block mb-3 px-3 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300 rounded-full text-xs font-semibold">iPhone</span>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-apple-blue transition-colors">iPhone Battery Replacement Signs</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Key indicators that your iPhone battery needs professional replacement...</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Related Post 3 -->
+                <article class="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-600 group" data-aos="fade-up" data-aos-delay="300">
+                    <a href="blog-post-ipad-water.html" class="block">
+                        <div class="overflow-hidden">
+                            <img src="images/slide3.webp" alt="iPad water damage guide" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block mb-3 px-3 py-1 bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300 rounded-full text-xs font-semibold">Emergency</span>
+                            <h3 class="text-xl font-bold mb-3 group-hover:text-apple-blue transition-colors">iPad Water Damage Emergency Steps</h3>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">Critical steps to save your water-damaged iPad and prevent permanent damage...</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-cta">
+        <div class="flex space-x-3">
+            <a href="index.html#contact" class="flex-1 inline-flex items-center justify-center py-3 bg-apple-blue text-white rounded-lg font-semibold text-sm">
+                <i class="fas fa-tools mr-2"></i>
+                Book Cleanup
+            </a>
+            <a href="tel:+919742090321" class="flex-1 inline-flex items-center justify-center py-3 border-2 border-apple-blue text-apple-blue rounded-lg font-semibold text-sm">
+                <i class="fas fa-phone mr-2"></i>
+                Call Now
+            </a>
+        </div>
+    </div>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-gray-900 text-white font-poppins">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Footer Content -->
+            <div class="py-12 lg:py-16 grid lg:grid-cols-4 md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Brand Section -->
+                <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="images/logo.png" alt="iCircuit Logo" class="h-8 lg:h-10 w-auto">
+                        <span class="text-xl lg:text-2xl font-bold">iCircuit.in</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 lg:mb-8 max-w-md leading-relaxed font-medium text-sm lg:text-base">
+                        Bangalore's most trusted Apple repair service. We specialize in iPhone, MacBook, iPad, iMac, and Apple Watch repairs with genuine parts and certified technicians.
+                    </p>
+                    
+                    <!-- Quick Contact -->
+                    <div class="space-y-4 mb-6 lg:mb-8">
+                        <a href="tel:+919742090321" class="flex items-center text-white hover:text-apple-blue transition-colors group">
+                            <div class="w-8 h-8 lg:w-10 lg:h-10 bg-apple-blue rounded-lg flex items-center justify-center mr-3 lg:mr-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone text-white text-sm lg:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-base lg:text-lg">+91 97420 90321</p>
+                                <p class="text-gray-400 text-xs lg:text-sm">Call for instant support</p>
+                            </div>
+                        </a>
+                        
+                        <div class="flex items-center text-gray-400">
+                            <div class="w-8 h-8 lg:w-10 lg:h-10 bg-gray-700 rounded-lg flex items-center justify-center mr-3 lg:mr-4">
+                                <i class="fas fa-clock text-sm lg:text-base"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-white text-sm lg:text-base">Mon-Sun: 10AM - 8PM</p>
+                                <p class="text-xs lg:text-sm">Always here when you need us</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex space-x-3 lg:space-x-4">
+                        <a href="https://www.facebook.com/share/1SG5wiX1b8/?mibextid=qi2Omg" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #1877F2;" title="Follow us on Facebook">
+                            <i class="fab fa-facebook-f text-white text-sm lg:text-base"></i>
+                        </a>
+                        <a href="https://www.instagram.com/icircuit.in" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);" title="Follow us on Instagram">
+                            <i class="fab fa-instagram text-white text-sm lg:text-base"></i>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/company/icircuit" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #0077B5;" title="Connect on LinkedIn">
+                            <i class="fab fa-linkedin-in text-white text-sm lg:text-base"></i>
+                        </a>
+                        <a href="https://wa.me/919742090321" target="_blank" 
+                           class="w-8 h-8 lg:w-10 lg:h-10 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                           style="background-color: #25D366;" title="Chat on WhatsApp">
+                            <i class="fab fa-whatsapp text-white text-sm lg:text-base"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links Column -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg lg:text-xl font-bold mb-4 lg:mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-2 lg:space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Home</a></li>
+                        <li><a href="index.html#services" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Blog</a></li>
+                        <li><a href="aboutus.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">About Us</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-apple-blue transition-colors font-medium text-sm lg:text-base block py-1">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services Column -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-lg lg:text-xl font-bold mb-4 lg:mb-6 text-white">Our Services</h3>
+                    <ul class="space-y-2 lg:space-y-3">
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-mobile-alt text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            iPhone Screen & Battery
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-laptop text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            MacBook Logic Board
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-tablet-alt text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            iPad Display Repair
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-desktop text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            iMac Upgrades
+                        </li>
+                        <li class="flex items-center text-gray-400 font-medium text-sm lg:text-base">
+                            <i class="fas fa-stopwatch text-apple-blue mr-2 lg:mr-3 text-sm lg:text-base"></i>
+                            Apple Watch Service
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 py-6 lg:py-8">
+                <div class="flex flex-col lg:flex-row justify-between items-center">
+                    <div class="text-center lg:text-left mb-4 lg:mb-0">
+                        <p class="text-gray-400 text-xs lg:text-sm font-medium">
+                            &copy; 2025 iCircuit.in - All Rights Reserved
+                        </p>
+                        <p class="text-gray-500 text-xs mt-1">
+                            Apple and the Apple logo are trademarks of Apple Inc.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+                        <div class="flex items-center space-x-2 text-gray-400 text-xs lg:text-sm">
+                            <i class="fas fa-shield-alt text-green-500"></i>
+                            <span>Certified Technicians</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-400 text-xs lg:text-sm">
+                            <i class="fas fa-tools text-blue-500"></i>
+                            <span>Genuine Parts</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-400 text-xs lg:text-sm">
+                            <i class="fas fa-medal text-yellow-500"></i>
+                            <span>1 Year Warranty</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 100
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.classList.toggle('dark', currentTheme === 'dark');
+
+        darkModeToggle.addEventListener('click', function() {
+            const isDark = html.classList.contains('dark');
+            
+            if (isDark) {
+                html.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        function updateScrollButton() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        }
+
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Reading progress indicator
+        function updateReadingProgress() {
+            const article = document.querySelector('#article-content');
+            if (article) {
+                const scrollTop = window.pageYOffset;
+                const docHeight = document.body.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                
+                // You can add a progress bar here if desired
+                console.log('Reading progress:', scrollPercent + '%');
+            }
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-md');
+            } else {
+                header.classList.remove('backdrop-blur-md');
+            }
+        });
+
+        // Performance optimization for mobile
+        let ticking = false;
+        function optimizedScroll() {
+            if (!ticking) {
+                requestAnimationFrame(function() {
+                    updateScrollButton();
+                    updateReadingProgress();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', optimizedScroll, { passive: true });
+
+        // Touch gestures for mobile
+        let touchStartY = 0;
+        let touchEndY = 0;
+
+        document.addEventListener('touchstart', function(event) {
+            touchStartY = event.changedTouches[0].screenY;
+        }, { passive: true });
+
+        document.addEventListener('touchend', function(event) {
+            touchEndY = event.changedTouches[0].screenY;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 100;
+            const diff = touchStartY - touchEndY;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe up - could show scroll to top
+                    if (window.pageYOffset > 300) {
+                        scrollToTopBtn.classList.add('show');
+                    }
+                } else {
+                    // Swipe down - could hide UI elements
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            }
+        }
+
+        // Copy link functionality
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                // You can add a toast notification here
+                console.log('Link copied to clipboard');
+            });
+        }
+
+        // Social sharing functions
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('How to Free Up Storage Space on Your Mac');
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+        }
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function shareOnLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent('How to Free Up Storage Space on Your Mac');
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}`, '_blank');
+        }
+    </script>
+
+    <style>
+        /* Additional Custom Styles */
+        .gradient-text {
+            background: linear-gradient(135deg, #007AFF, #5856D6, #FF2D92);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .nav-link {
+            color: #6b7280;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #007AFF;
+            background-color: rgba(0, 122, 255, 0.1);
+        }
+
+        .dark .nav-link {
+            color: #9ca3af;
+        }
+
+        .dark .nav-link:hover {
+            color: #60a5fa;
+            background-color: rgba(96, 165, 250, 0.1);
+        }
+
+        .btn-glow {
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .mobile-nav-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-bottom: 0.25rem;
+            border-radius: 0.5rem;
+        }
+
+        .mobile-nav-item:hover {
+            background-color: rgba(0, 122, 255, 0.1);
+            color: #007AFF;
+            transform: translateX(4px);
+        }
+
+        .dark .mobile-nav-item {
+            color: #d1d5db;
+        }
+
+        .dark .mobile-nav-item:hover {
+            background-color: rgba(96, 165, 250, 0.1);
+            color: #60a5fa;
+        }
+
+        .mobile-sidebar-section {
+            background: white;
+            border-radius: 1rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #f3f4f6;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-sidebar-section {
+                border-radius: 1.5rem;
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .dark .mobile-sidebar-section {
+            background: #1f2937;
+            border-color: #374151;
+        }
+
+        .mobile-cta {
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            padding: 1rem;
+            z-index: 50;
+        }
+
+        @media (min-width: 1024px) {
+            .mobile-cta {
+                display: none;
+            }
+        }
+
+        .dark .mobile-cta {
+            background: #1f2937;
+            border-top-color: #374151;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px) scale(0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+            box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
+        }
+
+        @media (min-width: 768px) {
+            .scroll-to-top {
+                bottom: 30px;
+                right: 30px;
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 12px 40px rgba(0, 122, 255, 0.4);
+        }
+
+        .scroll-offset {
+            scroll-margin-top: 100px;
+        }
+
+        /* Blog Content Styles */
+        .blog-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            color: #1f2937;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h2 {
+                font-size: 2rem;
+                padding-left: 1rem;
+            }
+        }
+
+        .dark .blog-content h2 {
+            color: #f9fafb;
+        }
+
+        .blog-content h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            border-radius: 2px;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h2::before {
+                width: 4px;
+            }
+        }
+
+        .blog-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.75rem;
+            color: #374151;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content h3 {
+                font-size: 1.5rem;
+                margin: 1.5rem 0 1rem;
+            }
+        }
+
+        .dark .blog-content h3 {
+            color: #e5e7eb;
+        }
+
+        .blog-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            color: #4b5563;
+            font-weight: 500;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content p {
+                font-size: 1.125rem;
+                line-height: 1.75;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .dark .blog-content p {
+            color: #d1d5db;
+        }
+
+        .blog-content ul {
+            margin: 1.25rem 0;
+            padding-left: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content ul {
+                margin: 1.5rem 0;
+                padding-left: 1.5rem;
+            }
+        }
+
+        .blog-content li {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+            color: #4b5563;
+            font-weight: 500;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .blog-content li {
+                font-size: 1.125rem;
+                line-height: 1.75;
+                margin-bottom: 0.75rem;
+            }
+        }
+
+        .dark .blog-content li {
+            color: #d1d5db;
+        }
+
+        .blog-content li::marker {
+            color: #007AFF;
+            font-weight: bold;
+        }
+
+        .blog-content strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .dark .blog-content strong {
+            color: #f9fafb;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .blog-content h2 {
+                font-size: 1.25rem;
+                margin: 1.5rem 0 0.75rem;
+                padding-left: 1rem;
+            }
+            
+            .blog-content h3 {
+                font-size: 1.125rem;
+                margin: 1rem 0 0.5rem;
+            }
+            
+            .blog-content p, .blog-content li {
+                font-size: 0.875rem;
+                line-height: 1.5;
+            }
+        }
+    </style>
+
+</body>
+</html>
